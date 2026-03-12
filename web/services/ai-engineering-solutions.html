@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Engineering Services for Production Systems | OpenTechiz</title>
   <meta name="description" content="We engineer AI integration layers, RAG pipelines, and AI ops infrastructure for production — not demos. Built for CTOs who need AI shipped, not consulted on.">
-  <link rel="canonical" href="https://opentechiz.ai/services/ai-engineering-solutions.html">
+  <link rel="canonical" href="https://opentechiz.com/services/ai-engineering-solutions.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://opentechiz.ai/services/ai-engineering-solutions.html">
+  <meta property="og:url" content="https://opentechiz.com/services/ai-engineering-solutions.html">
   <meta property="og:title" content="AI Engineering Services for Production Systems | OpenTechiz">
   <meta property="og:description" content="We engineer AI integration layers, RAG pipelines, and AI ops infrastructure for production — not demos. Built for CTOs who need AI shipped, not consulted on.">
   <meta property="og:site_name" content="OpenTechiz AI">
@@ -25,12 +25,12 @@
       theme: {
         extend: {
           colors: {
-            'bg-base': '#0D0D0D',
-            'surface-1': '#1A1A2E',
-            'surface-2': '#252542',
-            'border-color': '#3D3D5C',
-            'text-body': '#B8B8D0',
-            'text-muted': '#6B6B8D',
+            'bg-base': '#070D1A',
+            'surface-1': '#0D1830',
+            'surface-2': '#162040',
+            'border-color': '#1E3558',
+            'text-body': '#C5D0E8',
+            'text-muted': '#6B82A8',
             'blue': '#3B82F6',
             'blue-dark': '#2563EB',
             'amber': '#F59E0B',
@@ -55,9 +55,9 @@
       {
         "@type": "Service",
         "name": "AI Engineering Solutions",
-        "provider": { "@type": "Organization", "name": "OpenTechiz", "url": "https://opentechiz.ai" },
+        "provider": { "@type": "Organization", "name": "OpenTechiz", "url": "https://opentechiz.com" },
         "description": "Production AI engineering — RAG pipelines, AI integration layers, observability, and architecture documentation for businesses that need AI shipped.",
-        "url": "https://opentechiz.ai/services/ai-engineering-solutions.html"
+        "url": "https://opentechiz.com/services/ai-engineering-solutions.html"
       },
       {
         "@type": "Offer",
@@ -79,7 +79,7 @@
 <body class="bg-bg-base text-text-body">
 
   <!-- ── Navigation ──────────────────────────────────────── -->
-  <nav class="nav" x-data="nav" :class="{ 'scrolled': scrolled }">
+  <nav class="nav page-top-bar-amber" x-data="nav" :class="{ 'scrolled': scrolled }">
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
       <a href="/" class="font-space font-700 text-white text-xl tracking-tight flex items-center gap-2">
         <span class="text-blue">Open</span>Techiz <span class="text-text-muted font-mono text-sm ml-1">AI</span>
@@ -97,9 +97,9 @@
             <a href="ai-engineering-solutions.html" class="block px-5 py-3 text-sm text-white bg-surface-2">AI Engineering Solutions</a>
           </div>
         </div>
-        <a href="/use-cases/" class="text-text-body hover:text-white transition-colors text-sm font-medium">Use Cases</a>
-        <a href="/process.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Process</a>
-        <a href="/about.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">About</a>
+        <a href="../use-cases/index.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Use Cases</a>
+        <a href="../process.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Process</a>
+        <a href="../about.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">About</a>
         <a href="../contact.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Contact</a>
       </div>
       <div class="hidden md:flex">
@@ -123,10 +123,11 @@
   </nav>
 
   <!-- ── Hero ─────────────────────────────────────────────── -->
-  <section class="hero-glow section pt-32 pb-20 md:pt-40 md:pb-24">
+  <section class="section pt-32 pb-20 md:pt-40 md:pb-24" style="position:relative;overflow:hidden;"><div style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%, rgba(245,158,11,0.08) 0%, transparent 65%);pointer-events:none;z-index:0;"></div>
     <div class="max-w-7xl mx-auto px-6">
       <div class="max-w-4xl">
         <p class="label-tag mb-4">AI Engineering Solutions</p>
+        <span class="page-identity-badge engineering">AI Engineering Solutions</span>
         <h1 class="page-h1 mb-6">Production AI. Not Prototypes.</h1>
         <p class="text-text-body text-lg leading-relaxed mb-10 max-w-3xl" style="font-family: 'Inter', sans-serif;">We build the engineering layer that makes AI work reliably in production — integration, observability, error handling, and architecture documentation. Most AI projects fail here.</p>
         <a href="../contact.html" class="btn-primary inline-flex">Talk to an AI Engineer</a>
@@ -169,7 +170,7 @@
   </section>
 
   <!-- ── What We Build ─────────────────────────────────────── -->
-  <section class="section border-t border-border-color">
+  <section class="section border-t border-border-color bg-grid">
     <div class="max-w-7xl mx-auto px-6">
       <div class="mb-12">
         <h2 class="section-h2 mb-4">The Engineering Components We Design and Deliver</h2>
@@ -248,7 +249,7 @@
   </section>
 
   <!-- ── Process ───────────────────────────────────────────── -->
-  <section class="section border-t border-border-color">
+  <section class="section border-t border-border-color bg-grid">
     <div class="max-w-7xl mx-auto px-6">
       <div class="mb-12">
         <h2 class="section-h2 mb-4">The Engineering Process: From Discovery to Production</h2>
@@ -332,7 +333,7 @@
   </section>
 
   <!-- ── Tech Stack ────────────────────────────────────────── -->
-  <section class="section border-t border-border-color">
+  <section class="section border-t border-border-color bg-grid">
     <div class="max-w-7xl mx-auto px-6">
       <div class="mb-10">
         <h2 class="section-h2 mb-4">Tech Stack</h2>
@@ -420,7 +421,7 @@
   </section>
 
   <!-- ── FAQ ──────────────────────────────────────────────── -->
-  <section class="section border-t border-border-color">
+  <section class="section border-t border-border-color bg-grid">
     <div class="max-w-4xl mx-auto px-6">
       <div class="mb-10 text-center">
         <h2 class="section-h2">Common Questions About AI Engineering</h2>
@@ -507,7 +508,15 @@
             <span class="text-blue">Open</span>Techiz <span class="text-text-muted font-mono text-sm ml-1">AI</span>
           </a>
           <p class="text-text-muted text-sm italic mb-6" style="font-family: 'Inter', sans-serif;">"AI That Works. Not Just Promises."</p>
-          <a href="mailto:hello@opentechiz.ai" class="text-text-body hover:text-blue text-sm transition-colors" style="font-family: 'Inter', sans-serif;">hello@opentechiz.ai</a>
+          <a href="mailto:hoanv@opentechiz.com" class="text-text-body hover:text-blue text-sm transition-colors" style="font-family: 'Inter', sans-serif;">hoanv@opentechiz.com</a>
+          <div class="flex gap-3 mt-5">
+            <a href="https://www.linkedin.com/company/opentechiz" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://github.com/opentechiz" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            </a>
+          </div>
         </div>
         <div>
           <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Services</p>
@@ -520,9 +529,9 @@
         <div>
           <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Company</p>
           <div class="space-y-3">
-            <a href="/use-cases/" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Use Cases</a>
-            <a href="/process.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Process</a>
-            <a href="/about.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">About</a>
+            <a href="../use-cases/index.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Use Cases</a>
+            <a href="../process.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Process</a>
+            <a href="../about.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">About</a>
             <a href="../contact.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Contact</a>
           </div>
         </div>
@@ -531,8 +540,8 @@
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-text-muted text-xs" style="font-family: 'Inter', sans-serif;">
         <p>© 2026 OpenTechiz. All rights reserved.</p>
         <div class="flex gap-6">
-          <a href="/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="/terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+          <a href="../privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="../terms.html" class="hover:text-white transition-colors">Terms of Service</a>
         </div>
       </div>
     </div>

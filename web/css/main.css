@@ -5,15 +5,16 @@
 
 /* ── 1. CSS Custom Properties ─────────────────────────────── */
 :root {
-  --bg-base:      #0D0D0D;
-  --surface-1:    #1A1A2E;
-  --surface-2:    #252542;
-  --border:       #3D3D5C;
+  --bg-base:      #070D1A;
+  --surface-1:    #0D1830;
+  --surface-2:    #162040;
+  --border:       #1E3558;
   --text-primary: #FFFFFF;
-  --text-body:    #B8B8D0;
-  --text-muted:   #6B6B8D;
+  --text-body:    #C5D0E8;
+  --text-muted:   #6B82A8;
   --blue:         #3B82F6;
   --blue-dark:    #2563EB;
+  --blue-bright:  #60A5FA;
   --amber:        #F59E0B;
   --emerald:      #10B981;
 
@@ -701,4 +702,248 @@ select.form-input option {
   border-left: 3px solid var(--blue);
   border-radius: 12px;
   padding: 24px;
+}
+
+/* ── 37. Page Identity Badges (Part 3 Visual Differentiation) */
+.page-identity-badge {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.page-identity-badge.automation { background: rgba(59,130,246,0.12); color: #3B82F6; border: 1px solid rgba(59,130,246,0.3); }
+.page-identity-badge.agentic    { background: rgba(16,185,129,0.12); color: #10B981; border: 1px solid rgba(16,185,129,0.3); }
+.page-identity-badge.engineering{ background: rgba(245,158,11,0.12); color: #F59E0B; border: 1px solid rgba(245,158,11,0.3); }
+
+.page-top-bar-blue    { border-top: 3px solid #3B82F6; }
+.page-top-bar-emerald { border-top: 3px solid #10B981; }
+.page-top-bar-amber   { border-top: 3px solid #F59E0B; }
+
+/* ── 38. Animations & Keyframes ─────────────────────────── */
+
+/* Hero glow pulse — slow, breathing effect */
+@keyframes hero-pulse {
+  0%, 100% { opacity: 0.14; transform: scale(1) translate(0, 0); }
+  33%       { opacity: 0.22; transform: scale(1.06) translate(-1.5%, 1%); }
+  66%       { opacity: 0.17; transform: scale(1.03) translate(1.5%, -1%); }
+}
+
+/* Secondary glow orb */
+@keyframes hero-pulse-2 {
+  0%, 100% { opacity: 0.07; transform: scale(1) translate(0, 0); }
+  50%       { opacity: 0.13; transform: scale(1.10) translate(-2%, 2%); }
+}
+
+/* Dot grid drift */
+@keyframes grid-drift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+/* Stat number shimmer */
+@keyframes stat-shimmer {
+  0%, 100% { opacity: 0.85; }
+  50%       { opacity: 1; }
+}
+
+/* CTA section glow pulse */
+@keyframes cta-glow-pulse {
+  0%, 100% { opacity: 0.06; }
+  50%       { opacity: 0.14; }
+}
+
+/* Floating orb for decorative use */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  25%       { transform: translateY(-12px) translateX(6px); }
+  75%       { transform: translateY(6px) translateX(-6px); }
+}
+
+/* Nav link underline slide */
+@keyframes nav-underline {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* ── 39. Animated Hero ───────────────────────────────────── */
+
+/* Two-layer animated glow in hero */
+.hero-glow::before {
+  animation: hero-pulse 10s ease-in-out infinite;
+}
+
+.hero-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 25% 70%, rgba(96, 165, 250, 0.07) 0%, transparent 55%);
+  pointer-events: none;
+  z-index: 0;
+  animation: hero-pulse-2 14s ease-in-out infinite;
+}
+
+/* ── 40. Animated Dot Grid Background ───────────────────── */
+.bg-grid {
+  position: relative;
+}
+
+.bg-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(59, 130, 246, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: grid-drift 25s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-grid > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── 41. CTA Section Animated Glow ──────────────────────── */
+.cta-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(59, 130, 246, 0.10) 0%, transparent 70%);
+  animation: cta-glow-pulse 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cta-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── 42. Stat Number Animation ───────────────────────────── */
+.stat-number {
+  animation: stat-shimmer 4s ease-in-out infinite;
+}
+
+/* ── 43. Service Card Hover Glow ─────────────────────────── */
+.service-card {
+  transition: border-color var(--transition-std), box-shadow var(--transition-std), transform var(--transition-std);
+}
+
+.service-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ── 44. Floating Decorative Orb ─────────────────────────── */
+.orb-float {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float-slow 8s ease-in-out infinite;
+  filter: blur(60px);
+}
+
+.orb-float-blue {
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.orb-float-blue-2 {
+  background: rgba(96, 165, 250, 0.08);
+  animation-delay: -4s;
+  animation-duration: 11s;
+}
+
+/* ── 45. Social Icons ────────────────────────────────────── */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(59, 130, 246, 0.10);
+  border: 1px solid rgba(59, 130, 246, 0.20);
+  color: var(--text-muted);
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.social-icon:hover {
+  background: rgba(59, 130, 246, 0.20);
+  border-color: rgba(59, 130, 246, 0.40);
+  color: var(--blue-bright);
+}
+
+/* ── 46. Section Animated Border Top ─────────────────────── */
+.section-accent-line {
+  display: block;
+  width: 40px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--blue);
+  margin-bottom: 16px;
+}
+
+/* ── 47. Nav Link Hover Underline ────────────────────────── */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 200ms ease-out;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* ── 48. Scroll-in ready class (no-JS visible) ───────────── */
+.fade-up {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── 49. Updated nav backdrop for blue theme ─────────────── */
+.nav {
+  background: rgba(7, 13, 26, 0.92);
+}
+
+/* ── 50. Updated footer for blue theme ───────────────────── */
+.footer {
+  background: var(--surface-1);
+  border-top: 1px solid var(--border);
+}
+
+/* ── 51. Btn pulse on hover for primary CTA ──────────────── */
+.btn-primary {
+  transition: background var(--transition-fast), box-shadow var(--transition-fast), transform 150ms ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
 }
