@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Free AI Audit for Your Business | OpenTechiz</title>
+  <meta name="description" content="Book a free 30-minute AI audit. We map your highest-impact automation opportunities and tell you exactly what's buildable for your systems.">
+  <link rel="canonical" href="https://opentechiz.ai/contact.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://opentechiz.ai/contact.html">
+  <meta property="og:title" content="Book a Free AI Audit for Your Business | OpenTechiz">
+  <meta property="og:description" content="Book a free 30-minute AI audit. We map your highest-impact automation opportunities and tell you exactly what's buildable for your systems.">
+  <meta property="og:site_name" content="OpenTechiz AI">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bg-base': '#0D0D0D',
+            'surface-1': '#1A1A2E',
+            'surface-2': '#252542',
+            'border-color': '#3D3D5C',
+            'text-body': '#B8B8D0',
+            'text-muted': '#6B6B8D',
+            'blue': '#3B82F6',
+            'blue-dark': '#2563EB',
+            'amber': '#F59E0B',
+            'emerald': '#10B981',
+          },
+          fontFamily: {
+            'space': ['Space Grotesk', 'sans-serif'],
+            'inter': ['Inter', 'sans-serif'],
+            'mono': ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Book a Free AI Audit",
+    "url": "https://opentechiz.ai/contact.html",
+    "description": "Book a free 30-minute AI audit with OpenTechiz. Get your highest-impact automation opportunities mapped.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "OpenTechiz",
+      "email": "hello@opentechiz.ai",
+      "url": "https://opentechiz.ai"
+    }
+  }
+  </script>
+</head>
+<body class="bg-bg-base text-text-body">
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <nav class="nav" x-data="nav" :class="{ 'scrolled': scrolled }">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+
+      <a href="/" class="font-space font-700 text-white text-xl tracking-tight flex items-center gap-2">
+        <span class="text-blue">Open</span>Techiz <span class="text-text-muted font-mono text-sm ml-1">AI</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8">
+        <div class="relative" @mouseenter="servicesOpen=true" @mouseleave="servicesOpen=false">
+          <button class="flex items-center gap-1 text-text-body hover:text-white transition-colors text-sm font-medium">
+            Services
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div x-show="servicesOpen" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0"
+            class="absolute top-full left-0 mt-2 w-64 bg-surface-1 border border-border-color rounded-xl shadow-2xl overflow-hidden z-50" style="display:none;">
+            <a href="services/ai-automation-workflow.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Automation Workflow</a>
+            <a href="services/agentic-ai-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">Agentic AI Solutions</a>
+            <a href="services/ai-engineering-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Engineering Solutions</a>
+          </div>
+        </div>
+        <a href="/use-cases/" class="text-text-body hover:text-white transition-colors text-sm font-medium">Use Cases</a>
+        <a href="/process.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Process</a>
+        <a href="/about.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">About</a>
+        <a href="contact.html" class="text-white transition-colors text-sm font-medium">Contact</a>
+      </div>
+
+      <div class="hidden md:flex items-center gap-4">
+        <a href="contact.html" class="btn-primary text-sm" style="height:44px; padding: 10px 20px;">Book a Free Audit</a>
+      </div>
+
+      <button class="md:hidden text-text-body hover:text-white" @click="navOpen = !navOpen" aria-label="Toggle menu">
+        <svg x-show="!navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        <svg x-show="navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div x-show="navOpen" x-transition class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-4" style="display:none;">
+      <div class="space-y-2">
+        <p class="text-text-muted text-xs uppercase tracking-wider font-semibold mb-2">Services</p>
+        <a href="services/ai-automation-workflow.html" class="block text-text-body hover:text-white text-sm py-1">AI Automation Workflow</a>
+        <a href="services/agentic-ai-solutions.html" class="block text-text-body hover:text-white text-sm py-1">Agentic AI Solutions</a>
+        <a href="services/ai-engineering-solutions.html" class="block text-text-body hover:text-white text-sm py-1">AI Engineering Solutions</a>
+      </div>
+      <hr class="divider">
+      <a href="/use-cases/" class="block text-text-body hover:text-white text-sm py-1">Use Cases</a>
+      <a href="/process.html" class="block text-text-body hover:text-white text-sm py-1">Process</a>
+      <a href="/about.html" class="block text-text-body hover:text-white text-sm py-1">About</a>
+      <a href="contact.html" class="block text-text-body hover:text-white text-sm py-1">Contact</a>
+      <a href="contact.html" class="btn-primary w-full justify-center mt-2">Book a Free Audit</a>
+    </div>
+  </nav>
+
+  <!-- ── Page Header ───────────────────────────────────────── -->
+  <section class="section pt-32 pb-12 md:pt-40 md:pb-16 hero-glow">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-2xl">
+        <p class="label-tag mb-4">Free AI Audit</p>
+        <h1 class="page-h1 mb-5">Book Your Free AI Audit</h1>
+        <p class="text-text-body text-lg leading-relaxed" style="font-family: 'Inter', sans-serif;">A focused 30-minute conversation about your workflows. You leave with a clear picture of your highest-ROI automation opportunities and what's realistically buildable — at no cost, no commitment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Two-column Layout ─────────────────────────────────── -->
+  <section class="section pt-0">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-14 lg:gap-20">
+
+        <!-- Left — Form -->
+        <div>
+          <form class="space-y-6" x-data="{ submitting: false }" @submit.prevent="submitting = true">
+
+            <div>
+              <label class="form-label" for="fullName">Full Name <span class="text-blue">*</span></label>
+              <input type="text" id="fullName" name="fullName" required placeholder="Jane Smith" class="form-input">
+            </div>
+
+            <div>
+              <label class="form-label" for="workEmail">Work Email <span class="text-blue">*</span></label>
+              <input type="email" id="workEmail" name="workEmail" required placeholder="jane@company.com" class="form-input">
+            </div>
+
+            <div>
+              <label class="form-label" for="companyName">Company Name <span class="text-blue">*</span></label>
+              <input type="text" id="companyName" name="companyName" required placeholder="Acme Corp" class="form-input">
+            </div>
+
+            <div>
+              <label class="form-label" for="roleTitle">Role / Title</label>
+              <input type="text" id="roleTitle" name="roleTitle" placeholder="Head of Operations" class="form-input">
+            </div>
+
+            <div>
+              <label class="form-label" for="lookingToAutomate">What are you looking to automate or improve? <span class="text-blue">*</span></label>
+              <textarea id="lookingToAutomate" name="lookingToAutomate" required rows="5" placeholder="Describe your current workflow challenges, manual processes you'd like to automate, or operational problems you're trying to solve..." class="form-input" style="resize: vertical; height: auto;"></textarea>
+            </div>
+
+            <div>
+              <label class="form-label" for="timeline">How soon are you looking to move?</label>
+              <select id="timeline" name="timeline" class="form-input">
+                <option value="">Please select...</option>
+                <option value="asap">ASAP — We have a clear problem to solve</option>
+                <option value="1-3months">Within 1–3 months</option>
+                <option value="3-6months">Within 3–6 months</option>
+                <option value="exploring">Just exploring for now</option>
+              </select>
+            </div>
+
+            <div>
+              <button type="submit" class="btn-primary w-full justify-center" :disabled="submitting">
+                <span x-show="!submitting">Get My Free AI Audit</span>
+                <span x-show="submitting" style="display:none;">Sending...</span>
+              </button>
+              <p class="microcopy text-center mt-3">We respond within 24 business hours. No sales pitch. No obligation.</p>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Right — What Happens Next -->
+        <div class="lg:pt-4">
+          <h3 class="text-white font-semibold mb-8" style="font-family: 'Space Grotesk', sans-serif; font-size: 22px;">What Happens Next</h3>
+
+          <div class="space-y-8 mb-10">
+
+            <div class="next-step">
+              <div class="next-step__number">1</div>
+              <div>
+                <p class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">We review your submission</p>
+                <p class="text-text-body text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">Within 24 business hours, a member of our team reviews your workflows and prepares for the call.</p>
+              </div>
+            </div>
+
+            <div class="next-step">
+              <div class="next-step__number">2</div>
+              <div>
+                <p class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">You get a calendar invite</p>
+                <p class="text-text-body text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">We send a 30-minute calendar link. You pick the time. No back-and-forth.</p>
+              </div>
+            </div>
+
+            <div class="next-step">
+              <div class="next-step__number">3</div>
+              <div>
+                <p class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">Your audit call</p>
+                <p class="text-text-body text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">A structured 30-minute conversation. We focus on your specific workflows, identify automation opportunities, and give you a straight answer on what we can build.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Direct email callout -->
+          <div class="callout-box">
+            <p class="text-text-body text-sm" style="font-family: 'Inter', sans-serif;">
+              Prefer to email us directly?<br>
+              <a href="mailto:hello@opentechiz.ai" class="text-blue hover:text-blue-dark font-semibold transition-colors mt-1 inline-block">hello@opentechiz.ai</a>
+            </p>
+          </div>
+
+          <!-- Assurance bullets -->
+          <div class="mt-8 space-y-3">
+            <div class="flex items-center gap-3 text-sm text-text-body" style="font-family: 'Inter', sans-serif;">
+              <span class="guarantee-check flex-shrink-0">✓</span>
+              No sales script. Straight answers.
+            </div>
+            <div class="flex items-center gap-3 text-sm text-text-body" style="font-family: 'Inter', sans-serif;">
+              <span class="guarantee-check flex-shrink-0">✓</span>
+              Written audit output — not just a verbal call.
+            </div>
+            <div class="flex items-center gap-3 text-sm text-text-body" style="font-family: 'Inter', sans-serif;">
+              <span class="guarantee-check flex-shrink-0">✓</span>
+              No commitment required after the audit.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer class="footer py-16 mt-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <a href="/" class="font-space font-700 text-white text-xl tracking-tight flex items-center gap-2 mb-3">
+            <span class="text-blue">Open</span>Techiz <span class="text-text-muted font-mono text-sm ml-1">AI</span>
+          </a>
+          <p class="text-text-muted text-sm italic mb-6" style="font-family: 'Inter', sans-serif;">"AI That Works. Not Just Promises."</p>
+          <a href="mailto:hello@opentechiz.ai" class="text-text-body hover:text-blue text-sm transition-colors" style="font-family: 'Inter', sans-serif;">hello@opentechiz.ai</a>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Services</p>
+          <div class="space-y-3">
+            <a href="services/ai-automation-workflow.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">AI Automation Workflow</a>
+            <a href="services/agentic-ai-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Agentic AI Solutions</a>
+            <a href="services/ai-engineering-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">AI Engineering Solutions</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Company</p>
+          <div class="space-y-3">
+            <a href="/use-cases/" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Use Cases</a>
+            <a href="/process.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Process</a>
+            <a href="/about.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">About</a>
+            <a href="contact.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Contact</a>
+          </div>
+        </div>
+      </div>
+      <hr class="divider mb-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-text-muted text-xs" style="font-family: 'Inter', sans-serif;">
+        <p>© 2026 OpenTechiz. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="/terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>

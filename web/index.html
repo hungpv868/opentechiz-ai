@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Automation &amp; Agentic AI Solutions for Business | OpenTechiz</title>
+  <meta name="description" content="We build AI automation workflows, agentic AI agents, and production AI systems integrated into your CRM, ERP, and operations stack. Free AI audit.">
+  <link rel="canonical" href="https://opentechiz.ai/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://opentechiz.ai/">
+  <meta property="og:title" content="AI Automation &amp; Agentic AI Solutions for Business | OpenTechiz">
+  <meta property="og:description" content="We build AI automation workflows, agentic AI agents, and production AI systems integrated into your CRM, ERP, and operations stack. Free AI audit.">
+  <meta property="og:site_name" content="OpenTechiz AI">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bg-base': '#0D0D0D',
+            'surface-1': '#1A1A2E',
+            'surface-2': '#252542',
+            'border-color': '#3D3D5C',
+            'text-body': '#B8B8D0',
+            'text-muted': '#6B6B8D',
+            'blue': '#3B82F6',
+            'blue-dark': '#2563EB',
+            'amber': '#F59E0B',
+            'emerald': '#10B981',
+          },
+          fontFamily: {
+            'space': ['Space Grotesk', 'sans-serif'],
+            'inter': ['Inter', 'sans-serif'],
+            'mono': ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "OpenTechiz",
+        "url": "https://opentechiz.ai",
+        "email": "hello@opentechiz.ai",
+        "description": "B2B AI implementation company building AI automation workflows, agentic AI systems, and production AI engineering for operations-driven businesses.",
+        "sameAs": []
+      },
+      {
+        "@type": "WebSite",
+        "url": "https://opentechiz.ai",
+        "name": "OpenTechiz AI"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "name": "Services",
+        "url": "https://opentechiz.ai/services/"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-bg-base text-text-body">
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <nav class="nav" x-data="nav" :class="{ 'scrolled': scrolled }">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+
+      <!-- Logo -->
+      <a href="/" class="font-space font-700 text-white text-xl tracking-tight flex items-center gap-2">
+        <span class="text-blue">Open</span>Techiz <span class="text-text-muted font-mono text-sm ml-1">AI</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-8">
+
+        <!-- Services Dropdown -->
+        <div class="relative" @mouseenter="servicesOpen=true" @mouseleave="servicesOpen=false">
+          <button class="flex items-center gap-1 text-text-body hover:text-white transition-colors text-sm font-medium">
+            Services
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div x-show="servicesOpen" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0"
+            class="absolute top-full left-0 mt-2 w-64 bg-surface-1 border border-border-color rounded-xl shadow-2xl overflow-hidden z-50" style="display:none;">
+            <a href="services/ai-automation-workflow.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Automation Workflow</a>
+            <a href="services/agentic-ai-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">Agentic AI Solutions</a>
+            <a href="services/ai-engineering-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Engineering Solutions</a>
+          </div>
+        </div>
+
+        <a href="/use-cases/" class="text-text-body hover:text-white transition-colors text-sm font-medium">Use Cases</a>
+        <a href="/process.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Process</a>
+        <a href="/about.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">About</a>
+        <a href="contact.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Contact</a>
+      </div>
+
+      <!-- CTA -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="contact.html" class="btn-primary text-sm px-5" style="height:44px; padding: 10px 20px;">Book a Free Audit</a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button class="md:hidden text-text-body hover:text-white" @click="navOpen = !navOpen" aria-label="Toggle menu">
+        <svg x-show="!navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        <svg x-show="navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div x-show="navOpen" x-transition class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-4" style="display:none;">
+      <div class="space-y-2">
+        <p class="text-text-muted text-xs uppercase tracking-wider font-semibold mb-2">Services</p>
+        <a href="services/ai-automation-workflow.html" class="block text-text-body hover:text-white text-sm py-1">AI Automation Workflow</a>
+        <a href="services/agentic-ai-solutions.html" class="block text-text-body hover:text-white text-sm py-1">Agentic AI Solutions</a>
+        <a href="services/ai-engineering-solutions.html" class="block text-text-body hover:text-white text-sm py-1">AI Engineering Solutions</a>
+      </div>
+      <hr class="divider">
+      <a href="/use-cases/" class="block text-text-body hover:text-white text-sm py-1">Use Cases</a>
+      <a href="/process.html" class="block text-text-body hover:text-white text-sm py-1">Process</a>
+      <a href="/about.html" class="block text-text-body hover:text-white text-sm py-1">About</a>
+      <a href="contact.html" class="block text-text-body hover:text-white text-sm py-1">Contact</a>
+      <a href="contact.html" class="btn-primary w-full justify-center mt-2">Book a Free Audit</a>
+    </div>
+  </nav>
+
+  <!-- ── Hero Section ─────────────────────────────────────── -->
+  <section class="hero-glow section pt-32 pb-20 md:pt-40 md:pb-28">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-4xl">
+
+        <!-- Pre-headline -->
+        <p class="label-tag mb-6">AI Implementation for Operations-Driven Businesses</p>
+
+        <!-- H1 -->
+        <h1 class="hero-h1 mb-6">
+          Cut Your Operations Cost. Deploy AI That Actually Runs.
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-text-body text-lg md:text-xl leading-relaxed mb-10 max-w-3xl" style="font-family: 'Inter', sans-serif;">
+          We design and deploy AI automation workflows, agentic AI systems, and production-grade AI engineering — integrated directly into your CRM, ERP, APIs, and internal tools. Your team handles less manual work. Your operations run 24/7.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-4 mb-5">
+          <a href="contact.html" class="btn-primary">Book a Free AI Audit</a>
+          <button onclick="scrollToSection('how-it-works')" class="btn-secondary">See How It Works</button>
+        </div>
+
+        <!-- Microcopy -->
+        <p class="microcopy">No sales pitch. No commitment. We review your situation and give you a straight answer.</p>
+
+        <!-- Trust Badges -->
+        <div class="flex flex-wrap gap-x-6 gap-y-2 mt-10 text-text-muted text-sm" style="font-family: 'Inter', sans-serif;">
+          <span>✦ Production-grade delivery</span>
+          <span>✦ 4–8 week deployment</span>
+          <span>✦ CRM &amp; ERP integration</span>
+          <span>✦ 24/7 automation</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Pain Bar Section ──────────────────────────────────── -->
+  <section class="section border-t border-border-color" style="background: var(--surface-1);">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-text-muted text-sm font-medium mb-10" style="font-family: 'Inter', sans-serif;">If any of these sound familiar, you're in the right place.</p>
+      <div class="grid md:grid-cols-3 gap-10">
+
+        <div class="pain-bar-item">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Your team is doing work that AI should handle.</h3>
+          <p class="text-text-body text-sm leading-relaxed">Data entry, manual handoffs, report-building, copy-paste between systems. Every hour your team spends on repeatable tasks is an hour you're paying for twice.</p>
+        </div>
+
+        <div class="pain-bar-item">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Your operations cost scales with your revenue.</h3>
+          <p class="text-text-body text-sm leading-relaxed">Adding customers means adding manual work. Hiring more people to handle growth isn't a strategy — it's a bottleneck with a payroll attached.</p>
+        </div>
+
+        <div class="pain-bar-item">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Your business stops when your team stops.</h3>
+          <p class="text-text-body text-sm leading-relaxed">Customer inquiries after hours go unanswered. Reports run late. Follow-ups get missed. Your operational reliability depends entirely on who's available.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Services Overview ─────────────────────────────────── -->
+  <section class="section">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="mb-14">
+        <h2 class="section-h2 mb-4">Three Ways We Put AI to Work in Your Business</h2>
+        <p class="text-text-body text-lg" style="font-family: 'Inter', sans-serif;">Each service targets a specific operational problem. Most clients combine two or more.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <div class="service-card flex flex-col">
+          <p class="service-number-tag mb-3">Service 01 · AI Automation Workflow</p>
+          <h3 class="sub-h3 mb-4">Replace Manual Processes With Reliable, Auditable Pipelines.</h3>
+          <p class="text-text-body text-sm leading-relaxed mb-6 flex-1">We map your highest-volume repetitive tasks and build automation pipelines that connect your existing systems — running every process the same way, every time, without human involvement.</p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="outcome-tag">40–70% manual task time reduction</span>
+            <span class="outcome-tag">Near-zero process errors</span>
+            <span class="outcome-tag">24/7 execution</span>
+          </div>
+          <a href="services/ai-automation-workflow.html" class="text-blue hover:text-blue-dark text-sm font-semibold transition-colors" style="font-family: 'Inter', sans-serif;">See AI Automation Workflow →</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card flex flex-col">
+          <p class="service-number-tag mb-3">Service 02 · Agentic AI Solutions</p>
+          <h3 class="sub-h3 mb-4">AI Agents That Take Action — Not Just Answer Questions.</h3>
+          <p class="text-text-body text-sm leading-relaxed mb-6 flex-1">Our agents don't generate text and wait for a human to act on it. They read your CRM, classify the situation, make a decision within defined boundaries, and execute the task — end to end, at any hour.</p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="outcome-tag">24/7 autonomous execution</span>
+            <span class="outcome-tag">Sub-60-second response times</span>
+            <span class="outcome-tag">Scales without headcount</span>
+          </div>
+          <a href="services/agentic-ai-solutions.html" class="text-blue hover:text-blue-dark text-sm font-semibold transition-colors" style="font-family: 'Inter', sans-serif;">See Agentic AI Solutions →</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card flex flex-col">
+          <p class="service-number-tag mb-3">Service 03 · AI Engineering Solutions</p>
+          <h3 class="sub-h3 mb-4">Production AI. Not Prototypes.</h3>
+          <p class="text-text-body text-sm leading-relaxed mb-6 flex-1">We build the engineering infrastructure your AI needs to run reliably in production — integration layers, observability, error handling, and documentation. Not a proof of concept. A live system your team can depend on.</p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="outcome-tag">Live in 4–8 weeks</span>
+            <span class="outcome-tag">Full architecture ownership</span>
+            <span class="outcome-tag">Model-agnostic build</span>
+          </div>
+          <a href="services/ai-engineering-solutions.html" class="text-blue hover:text-blue-dark text-sm font-semibold transition-colors" style="font-family: 'Inter', sans-serif;">See AI Engineering Solutions →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How It Works ──────────────────────────────────────── -->
+  <section class="section border-t border-border-color" id="how-it-works" style="background: var(--surface-1);">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="mb-14">
+        <h2 class="section-h2 mb-4">From Discovery to Live System — Here's the Path</h2>
+        <p class="text-text-body text-lg" style="font-family: 'Inter', sans-serif;">Every project starts with a free audit. Scope is clear before any contract is signed. Most clients are live within 4–8 weeks.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10 mb-14">
+
+        <!-- Step 1 -->
+        <div class="process-step">
+          <div class="process-step__number">01</div>
+          <div class="process-step__content">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-8 h-8 rounded-full bg-blue/10 border border-blue/30 flex items-center justify-center text-blue font-bold text-sm font-space flex-shrink-0">1</span>
+              <div>
+                <p class="text-white font-semibold" style="font-family: 'Space Grotesk', sans-serif;">AI Audit</p>
+                <p class="text-text-muted text-xs">Week 1</p>
+              </div>
+            </div>
+            <p class="text-text-body text-sm leading-relaxed mb-4">We review your workflows in a focused 30-minute call, identify your highest-ROI automation targets, and produce a prioritized implementation plan. No commitment required.</p>
+            <div class="callout-box">
+              <p class="text-xs text-text-muted mb-1">You get:</p>
+              <p class="text-sm text-emerald font-medium" style="font-family: 'Inter', sans-serif;">Prioritized automation plan</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step">
+          <div class="process-step__number">02</div>
+          <div class="process-step__content">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-8 h-8 rounded-full bg-blue/10 border border-blue/30 flex items-center justify-center text-blue font-bold text-sm font-space flex-shrink-0">2</span>
+              <div>
+                <p class="text-white font-semibold" style="font-family: 'Space Grotesk', sans-serif;">Design &amp; Build</p>
+                <p class="text-text-muted text-xs">Weeks 2–6</p>
+              </div>
+            </div>
+            <p class="text-text-body text-sm leading-relaxed mb-4">We architect the solution and build it — connected to your systems, tested against your real data, reviewed at every stage.</p>
+            <div class="callout-box">
+              <p class="text-xs text-text-muted mb-1">You get:</p>
+              <p class="text-sm text-emerald font-medium" style="font-family: 'Inter', sans-serif;">Running system in staging</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step">
+          <div class="process-step__number">03</div>
+          <div class="process-step__content">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-8 h-8 rounded-full bg-blue/10 border border-blue/30 flex items-center justify-center text-blue font-bold text-sm font-space flex-shrink-0">3</span>
+              <div>
+                <p class="text-white font-semibold" style="font-family: 'Space Grotesk', sans-serif;">Deploy &amp; Hand Over</p>
+                <p class="text-text-muted text-xs">Week 6–8</p>
+              </div>
+            </div>
+            <p class="text-text-body text-sm leading-relaxed mb-4">We deploy to production, verify all integrations, and hand over with full documentation and a team walkthrough.</p>
+            <div class="callout-box">
+              <p class="text-xs text-text-muted mb-1">You get:</p>
+              <p class="text-sm text-emerald font-medium" style="font-family: 'Inter', sans-serif;">Live system + full documentation</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center">
+        <p class="text-text-body text-sm mb-6 italic">You know exactly what you're getting before we start. No surprises. No scope creep without your approval.</p>
+        <a href="contact.html" class="btn-primary inline-flex">Start with a Free AI Audit</a>
+        <p class="microcopy mt-3">Free assessment. No commitment. Clear scope output.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Integration Logos ─────────────────────────────────── -->
+  <section class="section border-t border-border-color">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+      <p class="label-tag mb-3">We integrate with your existing stack</p>
+      <p class="text-text-body text-base mb-10 max-w-xl mx-auto" style="font-family: 'Inter', sans-serif;">Your CRM stays. Your ERP stays. Your team's tools stay. We make AI work inside them.</p>
+
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.6;">Salesforce</span>
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.6;">HubSpot</span>
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.6;">SAP</span>
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.6;">Notion</span>
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.6;">Slack</span>
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.6;">WhatsApp Business</span>
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.6;">Google Workspace</span>
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.6;">Airtable</span>
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.6;">PostgreSQL</span>
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.6;">REST APIs</span>
+      </div>
+
+      <p class="text-text-muted text-sm" style="font-family: 'Inter', sans-serif;">Don't see your system? If it has an API, we can build to it.</p>
+
+    </div>
+  </section>
+
+  <!-- ── Business Impact Stats ─────────────────────────────── -->
+  <section class="section border-t border-border-color cta-section">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="mb-14 text-center">
+        <h2 class="section-h2 mb-4">Measured in Business Outcomes, Not AI Features</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+
+        <div class="stat-border-left pl-5">
+          <p class="stat-number">40–70%</p>
+          <p class="stat-label">Reduction in time spent on manual, repetitive operational tasks</p>
+        </div>
+
+        <div class="stat-border-left pl-5">
+          <p class="stat-number">&lt; 60 sec</p>
+          <p class="stat-label">Average response time for AI-agent-handled customer inquiries</p>
+        </div>
+
+        <div class="stat-border-left pl-5">
+          <p class="stat-number">4–8 wks</p>
+          <p class="stat-label">From discovery call to live, production-grade system</p>
+        </div>
+
+        <div class="stat-border-left pl-5">
+          <p class="stat-number">24/7</p>
+          <p class="stat-label">Operational coverage on all automated and agentic workflows</p>
+        </div>
+
+      </div>
+
+      <p class="text-text-muted text-sm text-center max-w-2xl mx-auto" style="font-family: 'Inter', sans-serif;">These are typical results across our implementations. The free AI audit tells you what's realistic for your specific workflows.</p>
+
+    </div>
+  </section>
+
+  <!-- ── Use Cases Preview ─────────────────────────────────── -->
+  <section class="section border-t border-border-color">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="mb-12">
+        <h2 class="section-h2 mb-4">Problems We've Automated</h2>
+        <p class="text-text-body text-lg" style="font-family: 'Inter', sans-serif;">Specific operational scenarios — not hypotheticals.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-10">
+
+        <div class="use-case-card">
+          <span class="inline-block px-3 py-1 text-xs font-semibold text-emerald bg-emerald/10 border border-emerald/20 rounded-full mb-4" style="font-family: 'Inter', sans-serif;">Agentic AI</span>
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Cut Tier-1 Support Volume by 80%</h3>
+          <p class="text-text-body text-sm leading-relaxed">An AI agent monitors your support inbox, classifies tickets, resolves standard inquiries autonomously, and routes complex cases with full context.</p>
+        </div>
+
+        <div class="use-case-card">
+          <span class="inline-block px-3 py-1 text-xs font-semibold text-blue bg-blue/10 border border-blue/20 rounded-full mb-4" style="font-family: 'Inter', sans-serif;">AI Automation</span>
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Zero Manual CRM Entry. 100% Follow-Up Rate.</h3>
+          <p class="text-text-body text-sm leading-relaxed">Lead data captured across every channel — automatically enriched, scored, and routed.</p>
+        </div>
+
+        <div class="use-case-card">
+          <span class="inline-block px-3 py-1 text-xs font-semibold text-blue bg-blue/10 border border-blue/20 rounded-full mb-4" style="font-family: 'Inter', sans-serif;">AI Automation</span>
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">6 Hours of Manual Reporting → 20-Minute Automated Run</h3>
+          <p class="text-text-body text-sm leading-relaxed">Weekly reports generated automatically from multiple data sources.</p>
+        </div>
+
+      </div>
+
+      <div class="text-center">
+        <a href="/use-cases/index.html" class="text-blue hover:text-blue-dark font-semibold text-sm transition-colors" style="font-family: 'Inter', sans-serif;">See all use cases →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Why Choose OpenTechiz ─────────────────────────────── -->
+  <section class="section border-t border-border-color" style="background: var(--surface-1);">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="mb-12">
+        <h2 class="section-h2 mb-4">Why Businesses Choose OpenTechiz Over Consultants, Tools, and Generic Agencies</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="diff-item">
+          <div class="diff-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">We Build. We Don't Just Advise.</h3>
+            <p class="text-text-body text-sm leading-relaxed">Consulting firms give you a strategy deck. We give you a running system. The deliverable is production software connected to your real tools.</p>
+          </div>
+        </div>
+
+        <div class="diff-item">
+          <div class="diff-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">We Measure in Business Outcomes.</h3>
+            <p class="text-text-body text-sm leading-relaxed">Not model accuracy. Not API response time. Hours saved. Error rate. Operational cost.</p>
+          </div>
+        </div>
+
+        <div class="diff-item">
+          <div class="diff-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">We Work With What You Have.</h3>
+            <p class="text-text-body text-sm leading-relaxed">No rip-and-replace. AI built to operate inside your existing CRM, ERP, and workflow stack.</p>
+          </div>
+        </div>
+
+        <div class="diff-item">
+          <div class="diff-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">You Own Everything We Build.</h3>
+            <p class="text-text-body text-sm leading-relaxed">Code, architecture, documentation, runbook. All of it. There is no lock-in.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Social Proof ──────────────────────────────────────── -->
+  <section class="section border-t border-border-color">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="mb-8">
+        <p class="label-tag mb-4">Trusted by operations teams in</p>
+        <div class="flex flex-wrap gap-3">
+          <span class="industry-tag">E-commerce</span>
+          <span class="industry-tag">Logistics</span>
+          <span class="industry-tag">Professional Services</span>
+          <span class="industry-tag">SaaS</span>
+          <span class="industry-tag">Healthcare Administration</span>
+          <span class="industry-tag">Recruitment</span>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- PLACEHOLDER: Replace with real testimonial before launch -->
+        <div class="testimonial-card">
+          <p class="text-text-body text-base leading-relaxed mb-6 pt-8">"Before, our support team was manually handling 150 tickets per day. Now the AI agent handles 80% of them automatically. Our team went from reactive to strategic in 6 weeks."</p>
+          <div>
+            <p class="text-white font-semibold text-sm" style="font-family: 'Space Grotesk', sans-serif;">Operations Director</p>
+            <p class="text-text-muted text-xs mt-1">[Industry, Company size]</p>
+          </div>
+        </div>
+
+        <!-- PLACEHOLDER: Replace with real testimonial before launch -->
+        <div class="testimonial-card">
+          <p class="text-text-body text-base leading-relaxed mb-6 pt-8">"We'd been trying to get AI into production for 8 months. OpenTechiz delivered a working, integrated system in 5 weeks — connected to HubSpot and our internal database."</p>
+          <div>
+            <p class="text-white font-semibold text-sm" style="font-family: 'Space Grotesk', sans-serif;">CTO</p>
+            <p class="text-text-muted text-xs mt-1">[Industry, Company size]</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ──────────────────────────────────────────────── -->
+  <section class="section border-t border-border-color" style="background: var(--surface-1);">
+    <div class="max-w-4xl mx-auto px-6">
+
+      <div class="mb-12 text-center">
+        <h2 class="section-h2 mb-4">Common Questions — Answered Directly</h2>
+      </div>
+
+      <div x-data="faq" class="space-y-4">
+
+        <!-- FAQ 1 -->
+        <div class="faq-item" :class="{ 'open': openItem === 1 }">
+          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(1)">
+            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">Will AI replace my team?</span>
+            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 1 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-5" x-show="openItem === 1" x-collapse style="display:none;">
+            <p class="text-text-body text-sm leading-relaxed">No. We automate rule-based, repetitive tasks — the work your team shouldn't be spending time on. Your team focuses on judgment-heavy work that moves the business forward.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item" :class="{ 'open': openItem === 2 }">
+          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(2)">
+            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">How long does a project take?</span>
+            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 2 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-5" x-show="openItem === 2" x-collapse style="display:none;">
+            <p class="text-text-body text-sm leading-relaxed">Most clients go from discovery call to live system in 4–8 weeks. The free AI audit gives you an exact timeline before any contract is signed.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item" :class="{ 'open': openItem === 3 }">
+          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(3)">
+            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">Do we need to change our existing tools?</span>
+            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 3 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-5" x-show="openItem === 3" x-collapse style="display:none;">
+            <p class="text-text-body text-sm leading-relaxed">No. We build around your current stack — CRM, ERP, databases, communication tools, APIs. Nothing gets replaced unless you want it to.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item" :class="{ 'open': openItem === 4 }">
+          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(4)">
+            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">What if we have no in-house technical team?</span>
+            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 4 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-5" x-show="openItem === 4" x-collapse style="display:none;">
+            <p class="text-text-body text-sm leading-relaxed">We handle the entire build — architecture, integration, testing, deployment, and documentation. You don't need a technical team.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item" :class="{ 'open': openItem === 5 }">
+          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(5)">
+            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">What exactly is the free AI audit?</span>
+            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 5 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-5" x-show="openItem === 5" x-collapse style="display:none;">
+            <p class="text-text-body text-sm leading-relaxed">A 30-minute structured conversation about your workflows. You get a written document: prioritized automation opportunities, realistic scope, and a clear answer on what's buildable — no cost, no commitment.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Final CTA Block ───────────────────────────────────── -->
+  <section class="section border-t border-border-color cta-section">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-text-muted text-sm mb-6" style="font-family: 'Inter', sans-serif;">Your competitors are automating. The businesses that do it well start with a clear picture of where AI creates the most value.</p>
+      <h2 class="section-h2 mb-6">Ready to Stop Running Your Operations on Manual?</h2>
+      <p class="text-text-body text-base leading-relaxed mb-8" style="font-family: 'Inter', sans-serif;">Book a free 30-minute AI audit. We map your highest-impact automation opportunities and give you a straight answer on what's buildable — no sales scripts, no commitment.</p>
+      <a href="contact.html" class="btn-primary inline-flex">Book My Free AI Audit</a>
+      <p class="microcopy mt-4">We respond within 24 business hours. No obligation. No pitch.</p>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer class="footer py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+
+        <!-- Brand -->
+        <div class="md:col-span-2">
+          <a href="/" class="font-space font-700 text-white text-xl tracking-tight flex items-center gap-2 mb-3">
+            <span class="text-blue">Open</span>Techiz <span class="text-text-muted font-mono text-sm ml-1">AI</span>
+          </a>
+          <p class="text-text-muted text-sm italic mb-6" style="font-family: 'Inter', sans-serif;">"AI That Works. Not Just Promises."</p>
+          <a href="mailto:hello@opentechiz.ai" class="text-text-body hover:text-blue text-sm transition-colors" style="font-family: 'Inter', sans-serif;">hello@opentechiz.ai</a>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Services</p>
+          <div class="space-y-3">
+            <a href="services/ai-automation-workflow.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">AI Automation Workflow</a>
+            <a href="services/agentic-ai-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Agentic AI Solutions</a>
+            <a href="services/ai-engineering-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">AI Engineering Solutions</a>
+          </div>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Company</p>
+          <div class="space-y-3">
+            <a href="/use-cases/" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Use Cases</a>
+            <a href="/process.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Process</a>
+            <a href="/about.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">About</a>
+            <a href="contact.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Contact</a>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="divider mb-8">
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-text-muted text-xs" style="font-family: 'Inter', sans-serif;">
+        <p>© 2026 OpenTechiz. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="/terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

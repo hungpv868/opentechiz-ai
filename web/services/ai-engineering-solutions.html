@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Engineering Services for Production Systems | OpenTechiz</title>
+  <meta name="description" content="We engineer AI integration layers, RAG pipelines, and AI ops infrastructure for production — not demos. Built for CTOs who need AI shipped, not consulted on.">
+  <link rel="canonical" href="https://opentechiz.ai/services/ai-engineering-solutions.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://opentechiz.ai/services/ai-engineering-solutions.html">
+  <meta property="og:title" content="AI Engineering Services for Production Systems | OpenTechiz">
+  <meta property="og:description" content="We engineer AI integration layers, RAG pipelines, and AI ops infrastructure for production — not demos. Built for CTOs who need AI shipped, not consulted on.">
+  <meta property="og:site_name" content="OpenTechiz AI">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bg-base': '#0D0D0D',
+            'surface-1': '#1A1A2E',
+            'surface-2': '#252542',
+            'border-color': '#3D3D5C',
+            'text-body': '#B8B8D0',
+            'text-muted': '#6B6B8D',
+            'blue': '#3B82F6',
+            'blue-dark': '#2563EB',
+            'amber': '#F59E0B',
+            'emerald': '#10B981',
+          },
+          fontFamily: {
+            'space': ['Space Grotesk', 'sans-serif'],
+            'inter': ['Inter', 'sans-serif'],
+            'mono': ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="../css/main.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "AI Engineering Solutions",
+        "provider": { "@type": "Organization", "name": "OpenTechiz", "url": "https://opentechiz.ai" },
+        "description": "Production AI engineering — RAG pipelines, AI integration layers, observability, and architecture documentation for businesses that need AI shipped.",
+        "url": "https://opentechiz.ai/services/ai-engineering-solutions.html"
+      },
+      {
+        "@type": "Offer",
+        "name": "Technical AI Engineering Consultation",
+        "description": "Technical conversation about your AI engineering challenges — not a sales call.",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What's the difference between AI engineering and AI consulting?", "acceptedAnswer": { "@type": "Answer", "text": "Consultants advise. We build. The deliverable is production software — integrated, tested, documented, and running." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-bg-base text-text-body">
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <nav class="nav" x-data="nav" :class="{ 'scrolled': scrolled }">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+      <a href="/" class="font-space font-700 text-white text-xl tracking-tight flex items-center gap-2">
+        <span class="text-blue">Open</span>Techiz <span class="text-text-muted font-mono text-sm ml-1">AI</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <div class="relative" @mouseenter="servicesOpen=true" @mouseleave="servicesOpen=false">
+          <button class="flex items-center gap-1 text-white font-medium text-sm">
+            Services
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div x-show="servicesOpen" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0"
+            class="absolute top-full left-0 mt-2 w-64 bg-surface-1 border border-border-color rounded-xl shadow-2xl overflow-hidden z-50" style="display:none;">
+            <a href="ai-automation-workflow.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Automation Workflow</a>
+            <a href="agentic-ai-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">Agentic AI Solutions</a>
+            <a href="ai-engineering-solutions.html" class="block px-5 py-3 text-sm text-white bg-surface-2">AI Engineering Solutions</a>
+          </div>
+        </div>
+        <a href="/use-cases/" class="text-text-body hover:text-white transition-colors text-sm font-medium">Use Cases</a>
+        <a href="/process.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Process</a>
+        <a href="/about.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">About</a>
+        <a href="../contact.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Contact</a>
+      </div>
+      <div class="hidden md:flex">
+        <a href="../contact.html" class="btn-primary text-sm" style="height:44px; padding: 10px 20px;">Book a Free Audit</a>
+      </div>
+      <button class="md:hidden text-text-body hover:text-white" @click="navOpen = !navOpen" aria-label="Toggle menu">
+        <svg x-show="!navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        <svg x-show="navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div x-show="navOpen" x-transition class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-4" style="display:none;">
+      <div class="space-y-2">
+        <p class="text-text-muted text-xs uppercase tracking-wider font-semibold mb-2">Services</p>
+        <a href="ai-automation-workflow.html" class="block text-text-body hover:text-white text-sm py-1">AI Automation Workflow</a>
+        <a href="agentic-ai-solutions.html" class="block text-text-body hover:text-white text-sm py-1">Agentic AI Solutions</a>
+        <a href="ai-engineering-solutions.html" class="block text-white text-sm py-1">AI Engineering Solutions</a>
+      </div>
+      <hr class="divider">
+      <a href="../contact.html" class="btn-primary w-full justify-center mt-2">Book a Free Audit</a>
+    </div>
+  </nav>
+
+  <!-- ── Hero ─────────────────────────────────────────────── -->
+  <section class="hero-glow section pt-32 pb-20 md:pt-40 md:pb-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-4xl">
+        <p class="label-tag mb-4">AI Engineering Solutions</p>
+        <h1 class="page-h1 mb-6">Production AI. Not Prototypes.</h1>
+        <p class="text-text-body text-lg leading-relaxed mb-10 max-w-3xl" style="font-family: 'Inter', sans-serif;">We build the engineering layer that makes AI work reliably in production — integration, observability, error handling, and architecture documentation. Most AI projects fail here.</p>
+        <a href="../contact.html" class="btn-primary inline-flex">Talk to an AI Engineer</a>
+        <p class="microcopy mt-3">Technical conversation, not a sales call. Tell us your stack and your problem.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Core Problem ──────────────────────────────────────── -->
+  <section class="section border-t border-border-color" style="background: var(--surface-1);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-8">
+        <h2 class="section-h2 mb-6">Most AI Projects Don't Fail at the Model Level. They Fail at Engineering.</h2>
+        <p class="text-text-body text-base leading-relaxed mb-10 max-w-3xl" style="font-family: 'Inter', sans-serif;">The model works in the notebook. It fails in production. Why? The integration layer wasn't designed for real system load. Error handling was an afterthought. Observability doesn't exist. The architecture isn't documented.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Prototype stuck in staging</h3>
+          <p class="text-text-body text-sm leading-relaxed">Your proof of concept works. Moving it to production requires engineering work that wasn't scoped. It sits.</p>
+        </div>
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">No error handling means production incidents</h3>
+          <p class="text-text-body text-sm leading-relaxed">AI calls fail silently. The integration layer has no retry logic, no fallback. Users see errors.</p>
+        </div>
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">No observability means no control</h3>
+          <p class="text-text-body text-sm leading-relaxed">You can't see latency, cost, or error rate. You find out something's wrong when users complain.</p>
+        </div>
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Vendor lock-in from poor architecture</h3>
+          <p class="text-text-body text-sm leading-relaxed">The integration is tightly coupled to one LLM provider. Swapping models means rebuilding from scratch.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── What We Build ─────────────────────────────────────── -->
+  <section class="section border-t border-border-color">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <h2 class="section-h2 mb-4">The Engineering Components We Design and Deliver</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="service-card">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">RAG Pipelines</h3>
+          <p class="text-text-body text-sm leading-relaxed">AI that answers from your data, not generic training data. We design, build, and optimize the full retrieval-augmented generation stack — embedding, retrieval, reranking, generation.</p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">API Integration Layer</h3>
+          <p class="text-text-body text-sm leading-relaxed">Production-grade integration with auth, rate limiting, retry logic, structured output parsing, and graceful degradation.</p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Model Fine-Tuning &amp; Prompt Engineering</h3>
+          <p class="text-text-body text-sm leading-relaxed">Domain-specific optimization for your use case — fine-tuned models or engineered prompts with systematic evaluation.</p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">AI Operations Infrastructure</h3>
+          <p class="text-text-body text-sm leading-relaxed">Full observability stack: logging, monitoring, alerting, and cost tracking. You see latency, error rate, token usage, and cost — in real time.</p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Multi-Model Architectures</h3>
+          <p class="text-text-body text-sm leading-relaxed">Routing layer that selects the right model for each request — optimized for cost, latency, and accuracy. Swap providers without rebuilding.</p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">AI System Reliability Engineering</h3>
+          <p class="text-text-body text-sm leading-relaxed">Error handling, fallback chains, and graceful degradation designed from day one. Not bolted on after the first incident.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Engineering Standards ─────────────────────────────── -->
+  <section class="section border-t border-border-color" style="background: var(--surface-1);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <h2 class="section-h2 mb-4">How We Build: Production Standards From Day One</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Error Handling Is Not Optional</h3>
+          <p class="text-text-body text-sm leading-relaxed">Every failure mode defined at the architecture stage. Retry logic, fallback paths, and escalation triggers built in.</p>
+        </div>
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Observability Built In</h3>
+          <p class="text-text-body text-sm leading-relaxed">Latency, error rate, token usage, and cost tracked and dashboarded. No flying blind.</p>
+        </div>
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Security &amp; Data Handling Scoped Explicitly</h3>
+          <p class="text-text-body text-sm leading-relaxed">PII handling, audit trails, and access controls defined and implemented — not assumed.</p>
+        </div>
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Architecture Documentation Is a Deliverable</h3>
+          <p class="text-text-body text-sm leading-relaxed">Full system diagram, API contracts, runbook, and dependency map handed over at project completion.</p>
+        </div>
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Model-Agnostic Design</h3>
+          <p class="text-text-body text-sm leading-relaxed">Swap LLM providers without rebuilding the integration layer. Your architecture survives vendor changes.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Process ───────────────────────────────────────────── -->
+  <section class="section border-t border-border-color">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <h2 class="section-h2 mb-4">The Engineering Process: From Discovery to Production</h2>
+      </div>
+      <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+        <div class="process-step">
+          <div class="process-step__number">01</div>
+          <div class="process-step__content">
+            <p class="text-text-muted text-xs font-mono mb-2">Week 1</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Technical Discovery</h3>
+            <p class="text-text-body text-xs leading-relaxed">We review your existing codebase, AI components, integration points, and failure modes.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step__number">02</div>
+          <div class="process-step__content">
+            <p class="text-text-muted text-xs font-mono mb-2">Week 2</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Architecture Design</h3>
+            <p class="text-text-body text-xs leading-relaxed">We design the full system — integration layer, observability stack, error handling, data flow.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step__number">03</div>
+          <div class="process-step__content">
+            <p class="text-text-muted text-xs font-mono mb-2">Weeks 3–6</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Build</h3>
+            <p class="text-text-body text-xs leading-relaxed">We build to the architecture. Every component tested. Every integration verified.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step__number">04</div>
+          <div class="process-step__content">
+            <p class="text-text-muted text-xs font-mono mb-2">Week 7</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">QA &amp; Load Testing</h3>
+            <p class="text-text-body text-xs leading-relaxed">Performance validated under realistic load. Edge cases tested.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step__number">05</div>
+          <div class="process-step__content">
+            <p class="text-text-muted text-xs font-mono mb-2">Week 8</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Deploy &amp; Handover</h3>
+            <p class="text-text-body text-xs leading-relaxed">Live in production with full documentation, runbook, and team walkthrough.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Engagement Models ─────────────────────────────────── -->
+  <section class="section border-t border-border-color" style="background: var(--surface-1);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <h2 class="section-h2 mb-4">How We Structure AI Engineering Engagements</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="engagement-card">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Project-Based</h3>
+          <p class="text-text-body text-sm leading-relaxed">Fixed scope, 4–8 weeks, full handover. Clear deliverables, clear cost, clean end state.</p>
+        </div>
+
+        <div class="engagement-card">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Embedded Retainer</h3>
+          <p class="text-text-body text-sm leading-relaxed">Ongoing AI engineering capacity. 3-month minimum. We function as your AI engineering team.</p>
+        </div>
+
+        <div class="engagement-card">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Intensive Sprint</h3>
+          <p class="text-text-body text-sm leading-relaxed">2–4 weeks to unblock a specific stalled project. Scoped tightly. Fast output.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Tech Stack ────────────────────────────────────────── -->
+  <section class="section border-t border-border-color">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-10">
+        <h2 class="section-h2 mb-4">Tech Stack</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+
+        <div>
+          <p class="text-text-muted text-xs font-semibold uppercase tracking-wider mb-4" style="font-family: 'Inter', sans-serif;">LLMs</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-badge">OpenAI</span>
+            <span class="tech-badge">Anthropic Claude</span>
+            <span class="tech-badge">Google Gemini</span>
+            <span class="tech-badge">Llama</span>
+            <span class="tech-badge">Mistral</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-text-muted text-xs font-semibold uppercase tracking-wider mb-4" style="font-family: 'Inter', sans-serif;">Vector &amp; Retrieval</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-badge">Pinecone</span>
+            <span class="tech-badge">pgvector</span>
+            <span class="tech-badge">Weaviate</span>
+            <span class="tech-badge">Qdrant</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-text-muted text-xs font-semibold uppercase tracking-wider mb-4" style="font-family: 'Inter', sans-serif;">Frameworks</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-badge">LangChain</span>
+            <span class="tech-badge">LlamaIndex</span>
+            <span class="tech-badge">Python</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-text-muted text-xs font-semibold uppercase tracking-wider mb-4" style="font-family: 'Inter', sans-serif;">Infrastructure</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-badge">AWS</span>
+            <span class="tech-badge">GCP</span>
+            <span class="tech-badge">Azure</span>
+            <span class="tech-badge">Cloudflare Workers</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-text-muted text-xs font-semibold uppercase tracking-wider mb-4" style="font-family: 'Inter', sans-serif;">Observability</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-badge">LangSmith</span>
+            <span class="tech-badge">Langfuse</span>
+            <span class="tech-badge">Custom dashboards</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Who It's For ──────────────────────────────────────── -->
+  <section class="section border-t border-border-color" style="background: var(--surface-1);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <h2 class="section-h2 mb-4">Who This Is Right For</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="profile-card">
+          <p class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">CTOs with a working prototype that isn't production-ready</p>
+          <p class="text-text-body text-sm leading-relaxed">You've proven the concept. You need the engineering.</p>
+        </div>
+
+        <div class="profile-card">
+          <p class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Engineering teams whose AI project is stalled at integration</p>
+          <p class="text-text-body text-sm leading-relaxed">The model works. The integration doesn't. We know why.</p>
+        </div>
+
+        <div class="profile-card">
+          <p class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Businesses that need AI in production without hiring a full AI team</p>
+          <p class="text-text-body text-sm leading-relaxed">We function as your AI engineering capacity for the duration of the project.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ──────────────────────────────────────────────── -->
+  <section class="section border-t border-border-color">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="mb-10 text-center">
+        <h2 class="section-h2">Common Questions About AI Engineering</h2>
+      </div>
+
+      <div x-data="faq" class="space-y-4">
+
+        <div class="faq-item" :class="{ 'open': openItem === 1 }">
+          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(1)">
+            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">What's the difference between AI engineering and AI consulting?</span>
+            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 1 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-5" x-show="openItem === 1" x-collapse style="display:none;">
+            <p class="text-text-body text-sm leading-relaxed">Consultants advise. We build. The deliverable is production software — integrated, tested, documented, and running.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" :class="{ 'open': openItem === 2 }">
+          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(2)">
+            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">We already have a prototype. Can you take it from there?</span>
+            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 2 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-5" x-show="openItem === 2" x-collapse style="display:none;">
+            <p class="text-text-body text-sm leading-relaxed">Yes. That's our most common engagement. We audit the existing build, identify what needs to change for production, and complete the engineering.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" :class="{ 'open': openItem === 3 }">
+          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(3)">
+            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">Do you work with a specific LLM provider?</span>
+            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 3 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-5" x-show="openItem === 3" x-collapse style="display:none;">
+            <p class="text-text-body text-sm leading-relaxed">No. We're model-agnostic. We help you select the right model for your use case and build the architecture so you can swap providers without rebuilding.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" :class="{ 'open': openItem === 4 }">
+          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(4)">
+            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">How is this different from using an AI tool or platform?</span>
+            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 4 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-5" x-show="openItem === 4" x-collapse style="display:none;">
+            <p class="text-text-body text-sm leading-relaxed">Tools give you a surface-level capability. We build custom engineering — integration logic, error handling, observability — specific to your system and your use case.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" :class="{ 'open': openItem === 5 }">
+          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(5)">
+            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">What do we own at the end?</span>
+            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 5 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-5" x-show="openItem === 5" x-collapse style="display:none;">
+            <p class="text-text-body text-sm leading-relaxed">Everything. Code, architecture documentation, runbook, API contracts. No lock-in to us.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" :class="{ 'open': openItem === 6 }">
+          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(6)">
+            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">What if the project is more complex than expected?</span>
+            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 6 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-5" x-show="openItem === 6" x-collapse style="display:none;">
+            <p class="text-text-body text-sm leading-relaxed">We scope precisely at the architecture stage. Complexity that emerges during build is captured in the scope document before work begins. No surprises.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-14 text-center">
+        <a href="../contact.html" class="btn-primary inline-flex">Talk to an AI Engineer</a>
+        <p class="microcopy mt-3">Technical conversation, not a sales call. Tell us your stack and your problem.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer class="footer py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <a href="/" class="font-space font-700 text-white text-xl tracking-tight flex items-center gap-2 mb-3">
+            <span class="text-blue">Open</span>Techiz <span class="text-text-muted font-mono text-sm ml-1">AI</span>
+          </a>
+          <p class="text-text-muted text-sm italic mb-6" style="font-family: 'Inter', sans-serif;">"AI That Works. Not Just Promises."</p>
+          <a href="mailto:hello@opentechiz.ai" class="text-text-body hover:text-blue text-sm transition-colors" style="font-family: 'Inter', sans-serif;">hello@opentechiz.ai</a>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Services</p>
+          <div class="space-y-3">
+            <a href="ai-automation-workflow.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">AI Automation Workflow</a>
+            <a href="agentic-ai-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Agentic AI Solutions</a>
+            <a href="ai-engineering-solutions.html" class="block text-white text-sm" style="font-family: 'Inter', sans-serif;">AI Engineering Solutions</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Company</p>
+          <div class="space-y-3">
+            <a href="/use-cases/" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Use Cases</a>
+            <a href="/process.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Process</a>
+            <a href="/about.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">About</a>
+            <a href="../contact.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Contact</a>
+          </div>
+        </div>
+      </div>
+      <hr class="divider mb-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-text-muted text-xs" style="font-family: 'Inter', sans-serif;">
+        <p>© 2026 OpenTechiz. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="/terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

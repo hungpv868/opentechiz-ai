@@ -1,0 +1,704 @@
+/* ============================================================
+   OpenTechiz AI — main.css
+   Design tokens, base resets, components
+   ============================================================ */
+
+/* ── 1. CSS Custom Properties ─────────────────────────────── */
+:root {
+  --bg-base:      #0D0D0D;
+  --surface-1:    #1A1A2E;
+  --surface-2:    #252542;
+  --border:       #3D3D5C;
+  --text-primary: #FFFFFF;
+  --text-body:    #B8B8D0;
+  --text-muted:   #6B6B8D;
+  --blue:         #3B82F6;
+  --blue-dark:    #2563EB;
+  --amber:        #F59E0B;
+  --emerald:      #10B981;
+
+  --radius-card:  16px;
+  --radius-btn:   12px;
+  --transition-fast: 200ms ease-out;
+  --transition-std:  250ms ease;
+
+  --section-padding-desktop: 80px 0;
+  --section-padding-mobile:  56px 0;
+}
+
+/* ── 2. Base Resets ──────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-body);
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+/* ── 3. Custom Scrollbar ─────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* ── 4. Focus Ring Accessibility ─────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── 5. Responsive Typography ────────────────────────────── */
+h1.hero-h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(44px, 6vw, 72px);
+  line-height: 1.1;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+h1.page-h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(36px, 4.5vw, 52px);
+  line-height: 1.15;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+h2.section-h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: clamp(28px, 3.5vw, 38px);
+  line-height: 1.2;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+h3.sub-h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: clamp(22px, 2.5vw, 26px);
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+/* ── 6. Section Padding System ───────────────────────────── */
+.section {
+  padding: var(--section-padding-desktop);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--section-padding-mobile);
+  }
+}
+
+/* ── 7. Navigation ───────────────────────────────────────── */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(13, 13, 13, 0.9);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition-fast);
+}
+
+.nav.scrolled {
+  border-bottom-color: var(--border);
+}
+
+/* ── 8. Hero Glow ────────────────────────────────────────── */
+.hero-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 40%, rgba(59, 130, 246, 0.12) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-glow > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── 9. Buttons ──────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 14px 28px;
+  background: var(--blue);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: var(--radius-btn);
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-fast), box-shadow var(--transition-fast);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: var(--blue-dark);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 14px 28px;
+  background: transparent;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: var(--radius-btn);
+  border: 1.5px solid var(--blue);
+  cursor: pointer;
+  transition: background var(--transition-fast), box-shadow var(--transition-fast);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: rgba(59, 130, 246, 0.08);
+}
+
+/* ── 10. Service Card ────────────────────────────────────── */
+.service-card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  transition: border-color var(--transition-std), box-shadow var(--transition-std);
+}
+
+.service-card:hover {
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 24px rgba(59, 130, 246, 0.15);
+}
+
+/* ── 11. Stat Blocks ─────────────────────────────────────── */
+.stat-number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(56px, 6vw, 72px);
+  color: var(--amber);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.stat-border-left {
+  border-left: 3px solid var(--amber);
+  padding-left: 20px;
+}
+
+/* ── 12. Process Steps ───────────────────────────────────── */
+.process-step {
+  position: relative;
+  padding-left: 0;
+}
+
+.process-step__number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 1;
+  color: rgba(59, 130, 246, 0.08);
+  position: absolute;
+  top: -16px;
+  left: -8px;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.process-step__content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── 13. Integration Logos ───────────────────────────────── */
+.integration-logo {
+  opacity: 0.5;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity var(--transition-fast);
+  cursor: default;
+}
+
+.integration-logo:hover {
+  opacity: 1;
+}
+
+/* ── 14. CTA Section ─────────────────────────────────────── */
+.cta-section {
+  background: linear-gradient(180deg, #0D0D0D 0%, #1A1A2E 100%);
+}
+
+/* ── 15. FAQ Accordion ───────────────────────────────────── */
+.faq-item {
+  border: 1px solid var(--border);
+  background: var(--surface-1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.faq-item:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.faq-item.open {
+  border-left: 3px solid var(--blue);
+}
+
+.faq-answer {
+  overflow: hidden;
+  transition: max-height 200ms ease-out;
+}
+
+/* ── 16. Outcome Tags ────────────────────────────────────── */
+.outcome-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-body);
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 100px;
+  padding: 4px 10px;
+}
+
+.outcome-tag::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--emerald);
+  flex-shrink: 0;
+}
+
+/* ── 17. Pain Bar Items ──────────────────────────────────── */
+.pain-bar-item {
+  border-left: 2px solid var(--border);
+  padding-left: 20px;
+  transition: border-color var(--transition-fast);
+}
+
+.pain-bar-item:hover {
+  border-left-color: var(--blue);
+}
+
+/* ── 18. Form Elements ───────────────────────────────────── */
+.form-input {
+  width: 100%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-input::placeholder {
+  color: var(--text-muted);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.form-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-body);
+  margin-bottom: 6px;
+}
+
+select.form-input {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B6B8D' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 44px;
+  cursor: pointer;
+}
+
+select.form-input option {
+  background: var(--surface-2);
+  color: var(--text-primary);
+}
+
+/* ── 19. Label / Badge Styles ────────────────────────────── */
+.label-tag {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--emerald);
+}
+
+.service-number-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ── 20. Divider ─────────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+/* ── 21. Comparison Table ────────────────────────────────── */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 14px 20px;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.compare-table th {
+  background: var(--surface-2);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.compare-table td:first-child {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.compare-table td.highlight {
+  color: var(--emerald);
+  font-weight: 500;
+}
+
+/* ── 22. Callout Box ─────────────────────────────────────── */
+.callout-box {
+  background: rgba(59, 130, 246, 0.06);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+/* ── 23. Industry Tag ────────────────────────────────────── */
+.industry-tag {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-body);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 5px 14px;
+}
+
+/* ── 24. Tech Badge ──────────────────────────────────────── */
+.tech-badge {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--blue);
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 8px;
+  padding: 4px 10px;
+}
+
+/* ── 25. What-happens-next Steps ─────────────────────────── */
+.next-step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.next-step__number {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: var(--blue);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── 26. Testimonial Card ────────────────────────────────── */
+.testimonial-card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '\201C';
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 80px;
+  color: rgba(59, 130, 246, 0.15);
+  position: absolute;
+  top: 8px;
+  left: 24px;
+  line-height: 1;
+}
+
+/* ── 27. Use Case Card ───────────────────────────────────── */
+.use-case-card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 28px;
+  transition: border-color var(--transition-std), box-shadow var(--transition-std);
+}
+
+.use-case-card:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+/* ── 28. Differentiator Item ─────────────────────────────── */
+.diff-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 24px;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: border-color var(--transition-std);
+}
+
+.diff-item:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.diff-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── 29. Footer ──────────────────────────────────────────── */
+.footer {
+  background: var(--surface-1);
+  border-top: 1px solid var(--border);
+}
+
+/* ── 30. Utility Classes ─────────────────────────────────── */
+.text-primary { color: var(--text-primary); }
+.text-body    { color: var(--text-body); }
+.text-muted   { color: var(--text-muted); }
+.text-blue    { color: var(--blue); }
+.text-amber   { color: var(--amber); }
+.text-emerald { color: var(--emerald); }
+
+.font-space { font-family: 'Space Grotesk', sans-serif; }
+.font-inter { font-family: 'Inter', sans-serif; }
+.font-mono  { font-family: 'JetBrains Mono', monospace; }
+
+.bg-surface-1 { background: var(--surface-1); }
+.bg-surface-2 { background: var(--surface-2); }
+.border-token { border-color: var(--border); }
+
+/* ── 31. Microcopy ───────────────────────────────────────── */
+.microcopy {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+/* ── 32. BAB (Before-After-Bridge) Cards ─────────────────── */
+.bab-card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  transition: border-color var(--transition-std);
+}
+
+.bab-card:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.bab-before {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(239, 68, 68, 0.04);
+}
+
+.bab-after {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(16, 185, 129, 0.04);
+}
+
+.bab-result {
+  padding: 16px 24px;
+  background: rgba(59, 130, 246, 0.05);
+}
+
+/* ── 33. Capability / Feature Item ──────────────────────── */
+.capability-item {
+  padding: 24px;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: border-color var(--transition-fast);
+}
+
+.capability-item:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* ── 34. Guarantee List Item ─────────────────────────────── */
+.guarantee-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(61, 61, 92, 0.5);
+}
+
+.guarantee-item:last-child {
+  border-bottom: none;
+}
+
+.guarantee-check {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: var(--emerald);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* ── 35. Engagement Model Card ───────────────────────────── */
+.engagement-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 28px;
+  transition: border-color var(--transition-std), box-shadow var(--transition-std);
+}
+
+.engagement-card:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+/* ── 36. Profile Card ────────────────────────────────────── */
+.profile-card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  border-radius: 12px;
+  padding: 24px;
+}

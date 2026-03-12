@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentic AI Solutions: AI Agents for Business | OpenTechiz</title>
+  <meta name="description" content="We build and deploy AI agents that operate inside your CRM, support desk, and APIs — taking action 24/7 without human involvement. Scope your first agent free.">
+  <link rel="canonical" href="https://opentechiz.ai/services/agentic-ai-solutions.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://opentechiz.ai/services/agentic-ai-solutions.html">
+  <meta property="og:title" content="Agentic AI Solutions: AI Agents for Business | OpenTechiz">
+  <meta property="og:description" content="We build and deploy AI agents that operate inside your CRM, support desk, and APIs — taking action 24/7 without human involvement. Scope your first agent free.">
+  <meta property="og:site_name" content="OpenTechiz AI">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bg-base': '#0D0D0D',
+            'surface-1': '#1A1A2E',
+            'surface-2': '#252542',
+            'border-color': '#3D3D5C',
+            'text-body': '#B8B8D0',
+            'text-muted': '#6B6B8D',
+            'blue': '#3B82F6',
+            'blue-dark': '#2563EB',
+            'amber': '#F59E0B',
+            'emerald': '#10B981',
+          },
+          fontFamily: {
+            'space': ['Space Grotesk', 'sans-serif'],
+            'inter': ['Inter', 'sans-serif'],
+            'mono': ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="../css/main.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Agentic AI Solutions",
+        "provider": { "@type": "Organization", "name": "OpenTechiz", "url": "https://opentechiz.ai" },
+        "description": "AI agents that operate inside your CRM, support desk, and APIs — taking action 24/7 without human involvement.",
+        "url": "https://opentechiz.ai/services/agentic-ai-solutions.html"
+      },
+      {
+        "@type": "Offer",
+        "name": "Free Agent Scoping Call",
+        "description": "30-minute scoping call to define your first AI agent.",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Are AI agents safe to deploy in production systems?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, when built correctly. We define the operational scope upfront — agents can only act within approved boundaries. Every action is logged. Human escalation is a design requirement." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-bg-base text-text-body">
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <nav class="nav" x-data="nav" :class="{ 'scrolled': scrolled }">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+      <a href="/" class="font-space font-700 text-white text-xl tracking-tight flex items-center gap-2">
+        <span class="text-blue">Open</span>Techiz <span class="text-text-muted font-mono text-sm ml-1">AI</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <div class="relative" @mouseenter="servicesOpen=true" @mouseleave="servicesOpen=false">
+          <button class="flex items-center gap-1 text-white font-medium text-sm">
+            Services
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div x-show="servicesOpen" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0"
+            class="absolute top-full left-0 mt-2 w-64 bg-surface-1 border border-border-color rounded-xl shadow-2xl overflow-hidden z-50" style="display:none;">
+            <a href="ai-automation-workflow.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Automation Workflow</a>
+            <a href="agentic-ai-solutions.html" class="block px-5 py-3 text-sm text-white bg-surface-2">Agentic AI Solutions</a>
+            <a href="ai-engineering-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Engineering Solutions</a>
+          </div>
+        </div>
+        <a href="/use-cases/" class="text-text-body hover:text-white transition-colors text-sm font-medium">Use Cases</a>
+        <a href="/process.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Process</a>
+        <a href="/about.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">About</a>
+        <a href="../contact.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Contact</a>
+      </div>
+      <div class="hidden md:flex">
+        <a href="../contact.html" class="btn-primary text-sm" style="height:44px; padding: 10px 20px;">Book a Free Audit</a>
+      </div>
+      <button class="md:hidden text-text-body hover:text-white" @click="navOpen = !navOpen" aria-label="Toggle menu">
+        <svg x-show="!navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        <svg x-show="navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div x-show="navOpen" x-transition class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-4" style="display:none;">
+      <div class="space-y-2">
+        <p class="text-text-muted text-xs uppercase tracking-wider font-semibold mb-2">Services</p>
+        <a href="ai-automation-workflow.html" class="block text-text-body hover:text-white text-sm py-1">AI Automation Workflow</a>
+        <a href="agentic-ai-solutions.html" class="block text-white text-sm py-1">Agentic AI Solutions</a>
+        <a href="ai-engineering-solutions.html" class="block text-text-body hover:text-white text-sm py-1">AI Engineering Solutions</a>
+      </div>
+      <hr class="divider">
+      <a href="../contact.html" class="btn-primary w-full justify-center mt-2">Book a Free Audit</a>
+    </div>
+  </nav>
+
+  <!-- ── Hero ─────────────────────────────────────────────── -->
+  <section class="hero-glow section pt-32 pb-20 md:pt-40 md:pb-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-4xl">
+        <p class="label-tag mb-4">Agentic AI Solutions</p>
+        <h1 class="page-h1 mb-6">AI Agents That Take Action Inside Your Business — Not Just Answer Questions.</h1>
+        <p class="text-text-body text-lg leading-relaxed mb-10 max-w-3xl" style="font-family: 'Inter', sans-serif;">We build AI agents that operate autonomously inside your systems — reading your data, making decisions within defined boundaries, and executing actions end to end. No human in the middle for routine workflows.</p>
+        <a href="../contact.html" class="btn-primary inline-flex">Scope Your First Agent</a>
+        <p class="microcopy mt-3">30-minute scoping call. We focus on one concrete workflow. No commitment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Chatbot vs Agent ──────────────────────────────────── -->
+  <section class="section border-t border-border-color" style="background: var(--surface-1);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <h2 class="section-h2 mb-4">Most 'AI' Generates Text. Agents Take Action.</h2>
+      </div>
+
+      <div class="overflow-x-auto mb-10">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th style="width: 200px;"></th>
+              <th>Chatbot</th>
+              <th class="text-emerald">AI Agent</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Input</td>
+              <td>A question</td>
+              <td class="highlight">A trigger (event, schedule, condition)</td>
+            </tr>
+            <tr>
+              <td>Output</td>
+              <td>Text response</td>
+              <td class="highlight">Executed action in real system</td>
+            </tr>
+            <tr>
+              <td>Requires human to act?</td>
+              <td>Yes</td>
+              <td class="highlight">No</td>
+            </tr>
+            <tr>
+              <td>Operates after hours?</td>
+              <td>Passive</td>
+              <td class="highlight">Active — initiates and executes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout-box max-w-3xl">
+        <p class="text-text-body text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">A chatbot tells your customer their order status. An agent checks the order system, identifies the delay, updates the record, notifies the fulfillment team, and sends the customer a resolution — in under 60 seconds, at 2am.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Problem Section ──────────────────────────────────── -->
+  <section class="section border-t border-border-color">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <h2 class="section-h2 mb-4">The Cost of Workflows Still Needing a Human in the Middle</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Slow first-touch on inbound leads</h3>
+          <p class="text-text-body text-sm leading-relaxed">Leads that don't hear back in under 5 minutes convert at a fraction of the rate of those who do. After hours, the gap is worse.</p>
+        </div>
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Support backlog from repetitive tier-1 tickets</h3>
+          <p class="text-text-body text-sm leading-relaxed">80% of support volume is the same 20 questions. Your team is qualified to do more than copy-paste answers.</p>
+        </div>
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Operational tasks that stall when someone's unavailable</h3>
+          <p class="text-text-body text-sm leading-relaxed">If a process requires a human to notice, decide, and act — it doesn't run while they're asleep, on leave, or overwhelmed.</p>
+        </div>
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Manual decisions at scale</h3>
+          <p class="text-text-body text-sm leading-relaxed">100 orders per day is manageable. 1,000 isn't — not if each one requires a human check.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── What We Build ─────────────────────────────────────── -->
+  <section class="section border-t border-border-color" style="background: var(--surface-1);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <h2 class="section-h2 mb-4">What We Build: Agents for Specific Operational Roles</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="service-card">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Customer Support Agent</h3>
+          <p class="text-text-body text-sm leading-relaxed">Reads incoming tickets, classifies by type and urgency, resolves tier-1 autonomously, routes tier-2+ with full context summary to the right human. Integrated into Zendesk, Freshdesk, or Intercom.</p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Lead Qualification Agent</h3>
+          <p class="text-text-body text-sm leading-relaxed">Activates on new lead entry, enriches the CRM record, scores against your ICP, sends a personalized first-touch in under 60 seconds, and routes qualified leads to the right rep with a brief.</p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Internal Operations Agent</h3>
+          <p class="text-text-body text-sm leading-relaxed">Routes tasks, answers team questions from your actual data, triggers actions based on defined conditions. Available in Slack or Teams, connected to your real systems.</p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Data Retrieval Agent</h3>
+          <p class="text-text-body text-sm leading-relaxed">Answers questions from your actual databases, documents, and systems. Returns sourced answers — not hallucinations. Integrated into your team's existing communication channels.</p>
+        </div>
+
+        <div class="service-card md:col-span-2 lg:col-span-1">
+          <h3 class="text-white font-semibold text-base mb-3" style="font-family: 'Space Grotesk', sans-serif;">Custom Workflow Agent</h3>
+          <p class="text-text-body text-sm leading-relaxed">Scoped to your specific process. We define the trigger, the decision logic, the actions, and the escalation paths — then build and deploy the agent to your environment.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Technical Capabilities ────────────────────────────── -->
+  <section class="section border-t border-border-color">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <h2 class="section-h2 mb-4">What Makes Our Agents Work in Real Business Systems</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Tool Use &amp; System Integration</h3>
+          <p class="text-text-body text-sm leading-relaxed">Agents connect to your actual systems — not simulated environments. Real API calls. Real data. Real actions.</p>
+        </div>
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Memory &amp; Context</h3>
+          <p class="text-text-body text-sm leading-relaxed">Agents maintain context across a session or across multiple interactions. They know the history.</p>
+        </div>
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Multi-Step Reasoning</h3>
+          <p class="text-text-body text-sm leading-relaxed">A single trigger can initiate a sequence of decisions and actions — across multiple systems, in the right order.</p>
+        </div>
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Multi-Agent Orchestration</h3>
+          <p class="text-text-body text-sm leading-relaxed">Complex workflows can involve multiple specialized agents working in coordination — each with a defined role.</p>
+        </div>
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Guardrails &amp; Operational Boundaries</h3>
+          <p class="text-text-body text-sm leading-relaxed">Every agent operates within a defined scope. Actions outside approved boundaries trigger escalation, not errors.</p>
+        </div>
+
+        <div class="capability-item">
+          <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Full Audit Trail</h3>
+          <p class="text-text-body text-sm leading-relaxed">Every action logged. Every decision traceable. You can see exactly what the agent did, when, and why.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Reliability ───────────────────────────────────────── -->
+  <section class="section border-t border-border-color" style="background: var(--surface-1);">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="mb-10">
+        <h2 class="section-h2 mb-4">How We Make Sure Agents Do the Right Thing</h2>
+      </div>
+      <div class="space-y-0">
+        <div class="guarantee-item">
+          <span class="guarantee-check flex-shrink-0">✓</span>
+          <p class="text-text-body text-sm leading-relaxed">Defined operational scope — agents cannot act outside approved boundaries</p>
+        </div>
+        <div class="guarantee-item">
+          <span class="guarantee-check flex-shrink-0">✓</span>
+          <p class="text-text-body text-sm leading-relaxed">Human escalation is a design requirement, not a fallback</p>
+        </div>
+        <div class="guarantee-item">
+          <span class="guarantee-check flex-shrink-0">✓</span>
+          <p class="text-text-body text-sm leading-relaxed">Staged rollout — limited scope before full deployment</p>
+        </div>
+        <div class="guarantee-item">
+          <span class="guarantee-check flex-shrink-0">✓</span>
+          <p class="text-text-body text-sm leading-relaxed">Complete audit trail on every action taken by the agent</p>
+        </div>
+        <div class="guarantee-item">
+          <span class="guarantee-check flex-shrink-0">✓</span>
+          <p class="text-text-body text-sm leading-relaxed">Performance monitoring and drift detection in production</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Integrations ──────────────────────────────────────── -->
+  <section class="section border-t border-border-color">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-10">
+        <h2 class="section-h2 mb-4">Agents That Live Inside Your Systems</h2>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.7;">Zendesk</span>
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.7;">Freshdesk</span>
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.7;">Intercom</span>
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.7;">HubSpot Service Hub</span>
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.7;">Salesforce</span>
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.7;">Slack</span>
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.7;">Microsoft Teams</span>
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.7;">PostgreSQL</span>
+        <span class="integration-logo px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family: 'Inter', sans-serif; height: auto; opacity: 0.7;">Custom APIs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Process ───────────────────────────────────────────── -->
+  <section class="section border-t border-border-color" style="background: var(--surface-1);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <h2 class="section-h2 mb-4">Let's Define Your First Agent</h2>
+      </div>
+      <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+        <div class="process-step">
+          <div class="process-step__number">01</div>
+          <div class="process-step__content">
+            <p class="text-text-muted text-xs font-mono mb-2">30 min</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Agent Scoping Call</h3>
+            <p class="text-text-body text-xs leading-relaxed">We define the trigger, the workflow, and the integration points.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step__number">02</div>
+          <div class="process-step__content">
+            <p class="text-text-muted text-xs font-mono mb-2">Week 1</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Agent Architecture Design</h3>
+            <p class="text-text-body text-xs leading-relaxed">Decision logic, escalation paths, integration map.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step__number">03</div>
+          <div class="process-step__content">
+            <p class="text-text-muted text-xs font-mono mb-2">Weeks 2–4</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Build &amp; Integration</h3>
+            <p class="text-text-body text-xs leading-relaxed">Agent built and connected to your live systems.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step__number">04</div>
+          <div class="process-step__content">
+            <p class="text-text-muted text-xs font-mono mb-2">Week 5</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Controlled Rollout</h3>
+            <p class="text-text-body text-xs leading-relaxed">Limited scope deployment with monitoring.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step__number">05</div>
+          <div class="process-step__content">
+            <p class="text-text-muted text-xs font-mono mb-2">Week 6–8</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Full Deployment</h3>
+            <p class="text-text-body text-xs leading-relaxed">Full deployment with complete documentation.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BAB Scenarios ─────────────────────────────────────── -->
+  <section class="section border-t border-border-color">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12">
+        <h2 class="section-h2 mb-4">What This Looks Like in Practice</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="bab-card">
+          <div class="bab-before">
+            <p class="text-xs text-text-muted font-semibold uppercase tracking-wider mb-1" style="font-family: 'Inter', sans-serif;">Before · Support Team</p>
+            <p class="text-text-body text-sm">150 support tickets per day. 80% are tier-1. Team spends 8+ hours on repetitive resolutions.</p>
+          </div>
+          <div class="bab-after">
+            <p class="text-xs text-text-muted font-semibold uppercase tracking-wider mb-1" style="font-family: 'Inter', sans-serif;">After</p>
+            <p class="text-text-body text-sm">AI agent handles 80% automatically. Complex cases routed with context.</p>
+          </div>
+          <div class="bab-result">
+            <p class="text-emerald text-sm font-medium">Team capacity freed for complex cases and proactive work.</p>
+          </div>
+        </div>
+
+        <div class="bab-card">
+          <div class="bab-before">
+            <p class="text-xs text-text-muted font-semibold uppercase tracking-wider mb-1" style="font-family: 'Inter', sans-serif;">Before · Sales Team</p>
+            <p class="text-text-body text-sm">Inbound leads sit for 3–6 hours. After-hours leads wait until morning.</p>
+          </div>
+          <div class="bab-after">
+            <p class="text-xs text-text-muted font-semibold uppercase tracking-wider mb-1" style="font-family: 'Inter', sans-serif;">After</p>
+            <p class="text-text-body text-sm">Agent qualifies and contacts every lead in under 60 seconds.</p>
+          </div>
+          <div class="bab-result">
+            <p class="text-emerald text-sm font-medium">100% lead coverage. Zero missed after-hours opportunities.</p>
+          </div>
+        </div>
+
+        <div class="bab-card">
+          <div class="bab-before">
+            <p class="text-xs text-text-muted font-semibold uppercase tracking-wider mb-1" style="font-family: 'Inter', sans-serif;">Before · Operations Team</p>
+            <p class="text-text-body text-sm">Order status checks require manual review across 2 systems.</p>
+          </div>
+          <div class="bab-after">
+            <p class="text-xs text-text-muted font-semibold uppercase tracking-wider mb-1" style="font-family: 'Inter', sans-serif;">After</p>
+            <p class="text-text-body text-sm">Agent handles all status queries, updates records, and notifies stakeholders automatically.</p>
+          </div>
+          <div class="bab-result">
+            <p class="text-emerald text-sm font-medium">3–5× order volume handled with same team size.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ──────────────────────────────────────────────── -->
+  <section class="section border-t border-border-color" style="background: var(--surface-1);">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="mb-10 text-center">
+        <h2 class="section-h2">Common Questions About AI Agents</h2>
+      </div>
+
+      <div x-data="faq" class="space-y-4">
+
+        <div class="faq-item" :class="{ 'open': openItem === 1 }">
+          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(1)">
+            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">Are AI agents safe to deploy in production systems?</span>
+            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 1 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-5" x-show="openItem === 1" x-collapse style="display:none;">
+            <p class="text-text-body text-sm leading-relaxed">Yes, when built correctly. We define the operational scope upfront — agents can only act within approved boundaries. Every action is logged. Human escalation is a design requirement.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" :class="{ 'open': openItem === 2 }">
+          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(2)">
+            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">How long does it take to deploy an agent?</span>
+            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 2 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-5" x-show="openItem === 2" x-collapse style="display:none;">
+            <p class="text-text-body text-sm leading-relaxed">Most agent deployments go from scoping to live production in 4–8 weeks. Simpler, well-defined workflows can be faster.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" :class="{ 'open': openItem === 3 }">
+          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(3)">
+            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">What systems can agents connect to?</span>
+            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 3 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-5" x-show="openItem === 3" x-collapse style="display:none;">
+            <p class="text-text-body text-sm leading-relaxed">Any system with an API. Common integrations include Zendesk, HubSpot, Salesforce, Slack, Teams, and custom databases.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" :class="{ 'open': openItem === 4 }">
+          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(4)">
+            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">What's the difference between an AI agent and workflow automation?</span>
+            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 4 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer px-6 pb-5" x-show="openItem === 4" x-collapse style="display:none;">
+            <p class="text-text-body text-sm leading-relaxed">Workflow automation follows a fixed, predefined path. An AI agent reads the situation, makes a decision, and selects the right action — handling variability that automation can't.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-14 text-center">
+        <a href="../contact.html" class="btn-primary inline-flex">Scope Your First Agent</a>
+        <p class="microcopy mt-3">30-minute scoping call. We focus on one concrete workflow. No commitment.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer class="footer py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <a href="/" class="font-space font-700 text-white text-xl tracking-tight flex items-center gap-2 mb-3">
+            <span class="text-blue">Open</span>Techiz <span class="text-text-muted font-mono text-sm ml-1">AI</span>
+          </a>
+          <p class="text-text-muted text-sm italic mb-6" style="font-family: 'Inter', sans-serif;">"AI That Works. Not Just Promises."</p>
+          <a href="mailto:hello@opentechiz.ai" class="text-text-body hover:text-blue text-sm transition-colors" style="font-family: 'Inter', sans-serif;">hello@opentechiz.ai</a>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Services</p>
+          <div class="space-y-3">
+            <a href="ai-automation-workflow.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">AI Automation Workflow</a>
+            <a href="agentic-ai-solutions.html" class="block text-white text-sm" style="font-family: 'Inter', sans-serif;">Agentic AI Solutions</a>
+            <a href="ai-engineering-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">AI Engineering Solutions</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Company</p>
+          <div class="space-y-3">
+            <a href="/use-cases/" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Use Cases</a>
+            <a href="/process.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Process</a>
+            <a href="/about.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">About</a>
+            <a href="../contact.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Contact</a>
+          </div>
+        </div>
+      </div>
+      <hr class="divider mb-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-text-muted text-xs" style="font-family: 'Inter', sans-serif;">
+        <p>© 2026 OpenTechiz. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="/terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
