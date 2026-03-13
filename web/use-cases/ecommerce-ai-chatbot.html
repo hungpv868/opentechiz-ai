@@ -8,6 +8,7 @@
   <meta name="description"
     content="AI chatbot for e-commerce that handles FAQs, order tracking, returns, warranty, and shopping recommendations via Support Chat and WhatsApp.">
   <link rel="canonical" href="https://opentechiz.com/use-cases/ecommerce-ai-chatbot.html">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://opentechiz.com/use-cases/ecommerce-ai-chatbot.html">
@@ -57,7 +58,8 @@
   <nav x-data="nav" class="nav" :class="{ 'scrolled': scrolled }">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between h-16">
       <a href="../index.html" class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2">
-        <span style="color: var(--brand);">OpenTechiz</span><span class="text-text-muted font-mono text-sm ml-1">AI</span>
+        <span style="color: var(--brand);">OpenTechiz</span><span
+          class="text-text-muted font-mono text-sm ml-1">AI</span>
       </a>
       <div class="hidden md:flex items-center gap-8">
         <div class="relative" @mouseenter="servicesOpen=true" @mouseleave="servicesOpen=false">
@@ -86,7 +88,8 @@
                 <span class="nav-service-icon flex-shrink-0">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2">
                     <circle cx="12" cy="12" r="3" />
-                    <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+                    <path
+                      d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
                   </svg>
                 </span>
                 <span>Agentic AI Solutions</span>
@@ -102,35 +105,35 @@
                 <span>AI Engineering Solutions</span>
               </a>
             </div>
-          </div
+          </div>
+        </div>
         <a href="index.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Use Cases</a>
-        <a href="../process.html"
-          class="text-text-body hover:text-white transition-colors text-sm font-medium">Process</a>
+        <a href="../process.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Process</a>
         <a href="../about.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">About</a>
-        <a href="../contact.html"
-          class="text-text-body hover:text-white transition-colors text-sm font-medium">Contact</a>
+        <a href="../contact.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Contact</a>
+        <a href="../contact.html" class="hidden md:inline-flex btn-primary text-sm">Get in Touch</a>
+        <button @click="navOpen=!navOpen" class="md:hidden text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
-      <a href="../contact.html" class="hidden md:inline-flex btn-primary text-sm">Get in Touch</a>
-      <button @click="navOpen=!navOpen" class="md:hidden text-white">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-    <div x-show="navOpen" class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-3"
-      style="display:none;">
-      <a href="../services/ai-automation-workflow.html" class="block text-text-body hover:text-white py-2 text-sm">AI
-        Automation Workflow</a>
-      <a href="../services/agentic-ai-solutions.html" class="block text-text-body hover:text-white py-2 text-sm">Agentic
-        AI Solutions</a>
-      <a href="../services/ai-engineering-solutions.html" class="block text-text-body hover:text-white py-2 text-sm">AI
-        Engineering Solutions</a>
-      <a href="index.html" class="block text-text-body hover:text-white py-2 text-sm">Use Cases</a>
-      <a href="../process.html" class="block text-text-body hover:text-white py-2 text-sm">Process</a>
-      <a href="../about.html" class="block text-text-body hover:text-white py-2 text-sm">About</a>
-      <a href="../contact.html" class="block text-text-body hover:text-white py-2 text-sm">Contact</a>
-      <a href="../contact.html" class="btn-primary block text-center mt-4">Get in Touch</a>
-    </div>
+      <div x-show="navOpen" class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-3"
+        style="display:none;">
+        <a href="../services/ai-automation-workflow.html" class="block text-text-body hover:text-white py-2 text-sm">AI
+          Automation Workflow</a>
+        <a href="../services/agentic-ai-solutions.html"
+          class="block text-text-body hover:text-white py-2 text-sm">Agentic
+          AI Solutions</a>
+        <a href="../services/ai-engineering-solutions.html"
+          class="block text-text-body hover:text-white py-2 text-sm">AI
+          Engineering Solutions</a>
+        <a href="index.html" class="block text-text-body hover:text-white py-2 text-sm">Use Cases</a>
+        <a href="../process.html" class="block text-text-body hover:text-white py-2 text-sm">Process</a>
+        <a href="../about.html" class="block text-text-body hover:text-white py-2 text-sm">About</a>
+        <a href="../contact.html" class="block text-text-body hover:text-white py-2 text-sm">Contact</a>
+        <a href="../contact.html" class="btn-primary block text-center mt-4">Get in Touch</a>
+      </div>
   </nav>
 
   <!-- ── Hero ─────────────────────────────────────────────── -->
@@ -230,7 +233,8 @@
         <div class="md:col-span-2">
           <a href="../index.html"
             class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2 mb-3">
-            <span style="color: var(--brand);">OpenTechiz</span><span class="text-text-muted font-mono text-sm ml-1">AI</span>
+            <span style="color: var(--brand);">OpenTechiz</span><span
+              class="text-text-muted font-mono text-sm ml-1">AI</span>
           </a>
           <p class="text-text-muted text-sm italic mb-6" style="font-family:'Inter',sans-serif;">"AI That Works. Not
             Just Promises."</p>

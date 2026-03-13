@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Profile Recommendation Service | OpenTechiz</title>
-  <meta name="description" content="AI recommender system that generates ranked profile matches using candidate generation, feature engineering, and an AI matching algorithm — returning ordered results automatically.">
+  <meta name="description"
+    content="AI recommender system that generates ranked profile matches using candidate generation, feature engineering, and an AI matching algorithm — returning ordered results automatically.">
   <link rel="canonical" href="https://opentechiz.com/use-cases/ai-profile-recommendation.html">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://opentechiz.com/use-cases/ai-profile-recommendation.html">
   <meta property="og:title" content="AI Profile Recommendation Service | OpenTechiz">
-  <meta property="og:description" content="AI recommender system that generates ranked profile matches using candidate generation, feature engineering, and an AI matching algorithm — returning ordered results automatically.">
+  <meta property="og:description"
+    content="AI recommender system that generates ranked profile matches using candidate generation, feature engineering, and an AI matching algorithm — returning ordered results automatically.">
   <meta property="og:site_name" content="OpenTechiz AI">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -27,7 +33,7 @@
             'border-color': '#1E3558', 'text-body': '#C5D0E8', 'text-muted': '#6B82A8',
             'blue': '#3B82F6', 'blue-dark': '#2563EB', 'amber': '#F59E0B', 'emerald': '#10B981',
           },
-          fontFamily: { 'space': ['Space Grotesk','sans-serif'], 'inter': ['Inter','sans-serif'], 'mono': ['JetBrains Mono','monospace'] }
+          fontFamily: { 'space': ['Space Grotesk', 'sans-serif'], 'inter': ['Inter', 'sans-serif'], 'mono': ['JetBrains Mono', 'monospace'] }
         }
       }
     }
@@ -45,17 +51,23 @@
   }
   </script>
 </head>
+
 <body class="bg-bg-base text-text-body">
 
   <!-- ── Navigation ──────────────────────────────────────── -->
   <nav x-data="nav" class="nav" :class="{ 'scrolled': scrolled }">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between h-16">
       <a href="../index.html" class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2">
-        <span style="color: var(--brand);">OpenTechiz</span><span class="text-text-muted font-mono text-sm ml-1">AI</span>
+        <span style="color: var(--brand);">OpenTechiz</span><span
+          class="text-text-muted font-mono text-sm ml-1">AI</span>
       </a>
       <div class="hidden md:flex items-center gap-8">
         <div class="relative" @mouseenter="servicesOpen=true" @mouseleave="servicesOpen=false">
-          <button class="text-text-body hover:text-white transition-colors flex items-center gap-1 text-sm font-medium">Services <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+          <button
+            class="text-text-body hover:text-white transition-colors flex items-center gap-1 text-sm font-medium">Services
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg></button>
           <div x-show="servicesOpen" x-transition:enter="transition ease-out duration-150"
             x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0"
             x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100"
@@ -76,7 +88,8 @@
                 <span class="nav-service-icon flex-shrink-0">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2">
                     <circle cx="12" cy="12" r="3" />
-                    <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+                    <path
+                      d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
                   </svg>
                 </span>
                 <span>Agentic AI Solutions</span>
@@ -92,41 +105,55 @@
                 <span>AI Engineering Solutions</span>
               </a>
             </div>
-          </div
+          </div>
+        </div>
         <a href="index.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Use Cases</a>
         <a href="../process.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Process</a>
         <a href="../about.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">About</a>
         <a href="../contact.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Contact</a>
+        <a href="../contact.html" class="hidden md:inline-flex btn-primary text-sm">Get in Touch</a>
+        <button @click="navOpen=!navOpen" class="md:hidden text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
-      <a href="../contact.html" class="hidden md:inline-flex btn-primary text-sm">Get in Touch</a>
-      <button @click="navOpen=!navOpen" class="md:hidden text-white">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-    </div>
-    <div x-show="navOpen" class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-3" style="display:none;">
-      <a href="../services/ai-automation-workflow.html" class="block text-text-body hover:text-white py-2 text-sm">AI Automation Workflow</a>
-      <a href="../services/agentic-ai-solutions.html" class="block text-text-body hover:text-white py-2 text-sm">Agentic AI Solutions</a>
-      <a href="../services/ai-engineering-solutions.html" class="block text-text-body hover:text-white py-2 text-sm">AI Engineering Solutions</a>
-      <a href="index.html" class="block text-text-body hover:text-white py-2 text-sm">Use Cases</a>
-      <a href="../process.html" class="block text-text-body hover:text-white py-2 text-sm">Process</a>
-      <a href="../about.html" class="block text-text-body hover:text-white py-2 text-sm">About</a>
-      <a href="../contact.html" class="block text-text-body hover:text-white py-2 text-sm">Contact</a>
-      <a href="../contact.html" class="btn-primary block text-center mt-4">Get in Touch</a>
-    </div>
+      <div x-show="navOpen" class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-3"
+        style="display:none;">
+        <a href="../services/ai-automation-workflow.html" class="block text-text-body hover:text-white py-2 text-sm">AI
+          Automation Workflow</a>
+        <a href="../services/agentic-ai-solutions.html"
+          class="block text-text-body hover:text-white py-2 text-sm">Agentic AI Solutions</a>
+        <a href="../services/ai-engineering-solutions.html"
+          class="block text-text-body hover:text-white py-2 text-sm">AI Engineering Solutions</a>
+        <a href="index.html" class="block text-text-body hover:text-white py-2 text-sm">Use Cases</a>
+        <a href="../process.html" class="block text-text-body hover:text-white py-2 text-sm">Process</a>
+        <a href="../about.html" class="block text-text-body hover:text-white py-2 text-sm">About</a>
+        <a href="../contact.html" class="block text-text-body hover:text-white py-2 text-sm">Contact</a>
+        <a href="../contact.html" class="btn-primary block text-center mt-4">Get in Touch</a>
+      </div>
   </nav>
 
   <!-- ── Hero ─────────────────────────────────────────────── -->
   <section class="section pt-32 pb-16 md:pt-40 md:pb-20" style="position:relative;overflow:hidden;">
-    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%, rgba(245,158,11,0.08) 0%, transparent 65%);pointer-events:none;z-index:0;"></div>
+    <div
+      style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%, rgba(245,158,11,0.08) 0%, transparent 65%);pointer-events:none;z-index:0;">
+    </div>
     <div class="max-w-7xl mx-auto px-6" style="position:relative;z-index:1;">
       <div class="max-w-4xl">
         <div class="flex items-center gap-3 mb-4">
-          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(245,158,11,0.12);color:#F59E0B;border:1px solid rgba(245,158,11,0.3);font-family:'Inter',sans-serif;">AI Recommendations</span>
-          <span class="text-text-muted text-xs" style="font-family:'JetBrains Mono',monospace;">AI Engineering Solutions</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold"
+            style="background:rgba(245,158,11,0.12);color:#F59E0B;border:1px solid rgba(245,158,11,0.3);font-family:'Inter',sans-serif;">AI
+            Recommendations</span>
+          <span class="text-text-muted text-xs" style="font-family:'JetBrains Mono',monospace;">AI Engineering
+            Solutions</span>
         </div>
         <h1 class="page-h1 mb-6">AI Profile Recommendation Service: Match the Right Candidates Automatically</h1>
-        <p class="text-text-body text-lg leading-relaxed mb-10 max-w-3xl" style="font-family:'Inter',sans-serif;">A four-stage pipeline — Candidate Generation, Feature Engineering, AI Matching Algorithm, and Ranked Output — that surfaces the most relevant profiles from your database automatically, in order of match quality.</p>
-        <a href="../contact.html" class="btn-primary inline-flex" style="background:#F59E0B;color:#070D1A;">Build This for My Platform</a>
+        <p class="text-text-body text-lg leading-relaxed mb-10 max-w-3xl" style="font-family:'Inter',sans-serif;">A
+          four-stage pipeline — Candidate Generation, Feature Engineering, AI Matching Algorithm, and Ranked Output —
+          that surfaces the most relevant profiles from your database automatically, in order of match quality.</p>
+        <a href="../contact.html" class="btn-primary inline-flex" style="background:#F59E0B;color:#070D1A;">Build This
+          for My Platform</a>
         <p class="microcopy mt-3">Tell us your profile database size. We'll scope the recommender.</p>
       </div>
     </div>
@@ -137,39 +164,60 @@
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="section-h2 mb-10">How the Recommendation Pipeline Works</h2>
       <div class="space-y-4">
-        <div class="flex gap-4 items-start p-5 rounded-xl" style="background:var(--surface-2);border:1px solid var(--border-color);">
-          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0" style="background:rgba(245,158,11,0.15);border:1px solid #F59E0B;color:#F59E0B;">1</span>
+        <div class="flex gap-4 items-start p-5 rounded-xl"
+          style="background:var(--surface-2);border:1px solid var(--border-color);">
+          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0"
+            style="background:rgba(245,158,11,0.15);border:1px solid #F59E0B;color:#F59E0B;">1</span>
           <div>
             <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">Input</p>
-            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">One or more input profiles — or a search query — are submitted to the AI Recommender System</p>
+            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">One or more input
+              profiles — or a search query — are submitted to the AI Recommender System</p>
           </div>
         </div>
-        <div class="flex gap-4 items-start p-5 rounded-xl" style="background:var(--surface-2);border:1px solid var(--border-color);">
-          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0" style="background:rgba(245,158,11,0.15);border:1px solid #F59E0B;color:#F59E0B;">2</span>
+        <div class="flex gap-4 items-start p-5 rounded-xl"
+          style="background:var(--surface-2);border:1px solid var(--border-color);">
+          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0"
+            style="background:rgba(245,158,11,0.15);border:1px solid #F59E0B;color:#F59E0B;">2</span>
           <div>
-            <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">Candidate Generation — Profile Retrieval &amp; Filtering</p>
-            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">The system queries the profile database and applies filters to narrow the full pool down to a manageable candidate set</p>
+            <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">Candidate
+              Generation — Profile Retrieval &amp; Filtering</p>
+            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">The system queries
+              the profile database and applies filters to narrow the full pool down to a manageable candidate set</p>
           </div>
         </div>
-        <div class="flex gap-4 items-start p-5 rounded-xl" style="background:var(--surface-2);border:1px solid var(--border-color);">
-          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0" style="background:rgba(245,158,11,0.15);border:1px solid #F59E0B;color:#F59E0B;">3</span>
+        <div class="flex gap-4 items-start p-5 rounded-xl"
+          style="background:var(--surface-2);border:1px solid var(--border-color);">
+          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0"
+            style="background:rgba(245,158,11,0.15);border:1px solid #F59E0B;color:#F59E0B;">3</span>
           <div>
-            <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">Feature Engineering — Data Transformation &amp; Scoring</p>
-            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">Candidate profiles are transformed into numerical feature vectors — encoding attributes, history, and contextual signals into a comparable format</p>
+            <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">Feature
+              Engineering — Data Transformation &amp; Scoring</p>
+            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">Candidate profiles
+              are transformed into numerical feature vectors — encoding attributes, history, and contextual signals into
+              a comparable format</p>
           </div>
         </div>
-        <div class="flex gap-4 items-start p-5 rounded-xl" style="background:var(--surface-2);border:1px solid var(--border-color);">
-          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0" style="background:rgba(245,158,11,0.15);border:1px solid #F59E0B;color:#F59E0B;">4</span>
+        <div class="flex gap-4 items-start p-5 rounded-xl"
+          style="background:var(--surface-2);border:1px solid var(--border-color);">
+          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0"
+            style="background:rgba(245,158,11,0.15);border:1px solid #F59E0B;color:#F59E0B;">4</span>
           <div>
-            <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">Recommendation — AI Matching Algorithm</p>
-            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">The AI Matching Algorithm scores each candidate against the input and ranks them by computed match quality</p>
+            <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">
+              Recommendation — AI Matching Algorithm</p>
+            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">The AI Matching
+              Algorithm scores each candidate against the input and ranks them by computed match quality</p>
           </div>
         </div>
-        <div class="flex gap-4 items-start p-5 rounded-xl" style="background:var(--surface-2);border:1px solid var(--border-color);">
-          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0" style="background:rgba(245,158,11,0.15);border:1px solid #F59E0B;color:#F59E0B;">5</span>
+        <div class="flex gap-4 items-start p-5 rounded-xl"
+          style="background:var(--surface-2);border:1px solid var(--border-color);">
+          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0"
+            style="background:rgba(245,158,11,0.15);border:1px solid #F59E0B;color:#F59E0B;">5</span>
           <div>
-            <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">Output — Ranked Profile Recommendations</p>
-            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">The system returns an ordered list of the best-matching profiles — ranked from most to least relevant — ready to present or act on</p>
+            <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">Output —
+              Ranked Profile Recommendations</p>
+            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">The system returns
+              an ordered list of the best-matching profiles — ranked from most to least relevant — ready to present or
+              act on</p>
           </div>
         </div>
       </div>
@@ -180,8 +228,11 @@
   <section class="section border-t border-border-color cta-section">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <h2 class="section-h2 mb-6">Build This for My Platform</h2>
-      <p class="text-text-body text-base leading-relaxed mb-8" style="font-family:'Inter',sans-serif;">Tell us your profile database structure and matching criteria. We'll scope the recommender pipeline and give you a clear timeline before any contract is signed.</p>
-      <a href="../contact.html" class="btn-primary inline-flex" style="background:#F59E0B;color:#070D1A;">Build This for My Platform</a>
+      <p class="text-text-body text-base leading-relaxed mb-8" style="font-family:'Inter',sans-serif;">Tell us your
+        profile database structure and matching criteria. We'll scope the recommender pipeline and give you a clear
+        timeline before any contract is signed.</p>
+      <a href="../contact.html" class="btn-primary inline-flex" style="background:#F59E0B;color:#070D1A;">Build This for
+        My Platform</a>
       <p class="microcopy mt-4">No sales pitch. No commitment.</p>
     </div>
   </section>
@@ -191,32 +242,47 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-4 gap-10 mb-12">
         <div class="md:col-span-2">
-          <a href="../index.html" class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2 mb-3">
-            <span style="color: var(--brand);">OpenTechiz</span><span class="text-text-muted font-mono text-sm ml-1">AI</span>
+          <a href="../index.html"
+            class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2 mb-3">
+            <span style="color: var(--brand);">OpenTechiz</span><span
+              class="text-text-muted font-mono text-sm ml-1">AI</span>
           </a>
-          <p class="text-text-muted text-sm italic mb-6" style="font-family:'Inter',sans-serif;">"AI That Works. Not Just Promises."</p>
-          <a href="mailto:hoanv@opentechiz.com" class="text-text-body hover:text-blue text-sm transition-colors" style="font-family:'Inter',sans-serif;">hoanv@opentechiz.com</a>
+          <p class="text-text-muted text-sm italic mb-6" style="font-family:'Inter',sans-serif;">"AI That Works. Not
+            Just Promises."</p>
+          <a href="mailto:hoanv@opentechiz.com" class="text-text-body hover:text-blue text-sm transition-colors"
+            style="font-family:'Inter',sans-serif;">hoanv@opentechiz.com</a>
         </div>
         <div>
           <p class="text-white font-semibold text-sm mb-4" style="font-family:'Space Grotesk',sans-serif;">Services</p>
           <div class="space-y-3">
-            <a href="../services/ai-automation-workflow.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">AI Automation Workflow</a>
-            <a href="../services/agentic-ai-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">Agentic AI Solutions</a>
-            <a href="../services/ai-engineering-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">AI Engineering Solutions</a>
+            <a href="../services/ai-automation-workflow.html"
+              class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">AI Automation Workflow</a>
+            <a href="../services/agentic-ai-solutions.html"
+              class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">Agentic AI Solutions</a>
+            <a href="../services/ai-engineering-solutions.html"
+              class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">AI Engineering Solutions</a>
           </div>
         </div>
         <div>
           <p class="text-white font-semibold text-sm mb-4" style="font-family:'Space Grotesk',sans-serif;">Company</p>
           <div class="space-y-3">
-            <a href="index.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">Use Cases</a>
-            <a href="../process.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">Process</a>
-            <a href="../about.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">About</a>
-            <a href="../contact.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">Contact</a>
+            <a href="index.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">Use Cases</a>
+            <a href="../process.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">Process</a>
+            <a href="../about.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">About</a>
+            <a href="../contact.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">Contact</a>
           </div>
         </div>
       </div>
       <hr class="divider mb-8">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-text-muted text-xs" style="font-family:'Inter',sans-serif;">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-text-muted text-xs"
+        style="font-family:'Inter',sans-serif;">
         <p>© 2026 OpenTechiz. All rights reserved.</p>
         <div class="flex gap-6">
           <a href="../privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
@@ -228,4 +294,5 @@
 
   <script src="../js/main.js"></script>
 </body>
+
 </html>

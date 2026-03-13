@@ -5,33 +5,33 @@
 
 /* ── 1. CSS Custom Properties ─────────────────────────────── */
 :root {
-  --bg-base:      #070D1A;
-  --surface-1:    #0D1830;
-  --surface-2:    #162040;
-  --border:       #1E3558;
+  --bg-base: #070D1A;
+  --surface-1: #0D1830;
+  --surface-2: #162040;
+  --border: #1E3558;
   --text-primary: #FFFFFF;
-  --text-body:    #C5D0E8;
-  --text-muted:   #6B82A8;
+  --text-body: #C5D0E8;
+  --text-muted: #6B82A8;
 
   /* Brand — primary action color */
-  --brand:        #96c73c;
-  --brand-dark:   #7aad2a;
-  --brand-light:  rgba(150, 199, 60, 0.12);
+  --brand: #96c73c;
+  --brand-dark: #7aad2a;
+  --brand-light: rgba(150, 199, 60, 0.12);
 
   /* Supporting palette */
-  --blue:         #3B82F6;
-  --blue-dark:    #2563EB;
-  --blue-bright:  #60A5FA;
-  --amber:        #F59E0B;
-  --emerald:      #10B981;
+  --blue: #3B82F6;
+  --blue-dark: #2563EB;
+  --blue-bright: #60A5FA;
+  --amber: #F59E0B;
+  --emerald: #10B981;
 
-  --radius-card:  16px;
-  --radius-btn:   12px;
+  --radius-card: 16px;
+  --radius-btn: 12px;
   --transition-fast: 200ms ease-out;
-  --transition-std:  250ms ease;
+  --transition-std: 250ms ease;
 
   --section-padding-desktop: 80px 0;
-  --section-padding-mobile:  56px 0;
+  --section-padding-mobile: 56px 0;
 }
 
 /* ── 2. Base Resets ──────────────────────────────────────── */
@@ -58,7 +58,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-img, svg {
+img,
+svg {
   display: block;
   max-width: 100%;
 }
@@ -68,7 +69,10 @@ a {
   text-decoration: none;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font: inherit;
 }
 
@@ -77,13 +81,16 @@ button, input, select, textarea {
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-base);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--border);
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
 }
@@ -168,8 +175,17 @@ h3.sub-h3 {
 }
 
 @keyframes pill-dot-pulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(150, 199, 60, 0.4); }
-  50%       { opacity: 0.7; box-shadow: 0 0 0 4px rgba(150, 199, 60, 0); }
+
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(150, 199, 60, 0.4);
+  }
+
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 0 4px rgba(150, 199, 60, 0);
+  }
 }
 
 /* ── 6. Section Padding System ───────────────────────────── */
@@ -198,7 +214,7 @@ h3.sub-h3 {
 }
 
 /* Standardize nav inner container height across all pages */
-.nav > div:first-child {
+.nav>div:first-child {
   height: 72px !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -224,7 +240,7 @@ h3.sub-h3 {
   z-index: 0;
 }
 
-.hero-glow > * {
+.hero-glow>* {
   position: relative;
   z-index: 1;
 }
@@ -383,7 +399,7 @@ h3.sub-h3 {
   z-index: 0;
 }
 
-.cta-section > * {
+.cta-section>* {
   position: relative;
   z-index: 1;
 }
@@ -666,21 +682,57 @@ h3.sub-h3 {
 }
 
 /* ── 30. Utility Classes ─────────────────────────────────── */
-.text-primary { color: var(--text-primary); }
-.text-body    { color: var(--text-body); }
-.text-muted   { color: var(--text-muted); }
-.text-blue    { color: var(--blue); }
-.text-amber   { color: var(--amber); }
-.text-emerald { color: var(--emerald); }
-.text-brand   { color: var(--brand); }
+.text-primary {
+  color: var(--text-primary);
+}
 
-.font-space { font-family: 'Space Grotesk', sans-serif; }
-.font-inter { font-family: 'Inter', sans-serif; }
-.font-mono  { font-family: 'JetBrains Mono', monospace; }
+.text-body {
+  color: var(--text-body);
+}
 
-.bg-surface-1 { background: var(--surface-1); }
-.bg-surface-2 { background: var(--surface-2); }
-.border-token { border-color: var(--border); }
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-blue {
+  color: var(--blue);
+}
+
+.text-amber {
+  color: var(--amber);
+}
+
+.text-emerald {
+  color: var(--emerald);
+}
+
+.text-brand {
+  color: var(--brand);
+}
+
+.font-space {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.bg-surface-1 {
+  background: var(--surface-1);
+}
+
+.bg-surface-2 {
+  background: var(--surface-2);
+}
+
+.border-token {
+  border-color: var(--border);
+}
 
 /* ── 31. Microcopy ───────────────────────────────────────── */
 .microcopy {
@@ -796,46 +848,112 @@ h3.sub-h3 {
   border-radius: 6px;
   margin-bottom: 16px;
 }
-.page-identity-badge.automation { background: rgba(150,199,60,0.12); color: var(--brand); border: 1px solid rgba(150,199,60,0.3); }
-.page-identity-badge.agentic    { background: rgba(16,185,129,0.12); color: #10B981; border: 1px solid rgba(16,185,129,0.3); }
-.page-identity-badge.engineering{ background: rgba(245,158,11,0.12); color: #F59E0B; border: 1px solid rgba(245,158,11,0.3); }
 
-.page-top-bar-brand   { border-top: 3px solid var(--brand); }
-.page-top-bar-emerald { border-top: 3px solid #10B981; }
-.page-top-bar-amber   { border-top: 3px solid #F59E0B; }
+.page-identity-badge.automation {
+  background: rgba(150, 199, 60, 0.12);
+  color: var(--brand);
+  border: 1px solid rgba(150, 199, 60, 0.3);
+}
+
+.page-identity-badge.agentic {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10B981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.page-identity-badge.engineering {
+  background: rgba(245, 158, 11, 0.12);
+  color: #F59E0B;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.page-top-bar-brand {
+  border-top: 3px solid var(--brand);
+}
 
 /* ── 38. Animations & Keyframes ─────────────────────────── */
 
 @keyframes hero-pulse {
-  0%, 100% { opacity: 0.12; transform: scale(1) translate(0, 0); }
-  33%       { opacity: 0.20; transform: scale(1.06) translate(-1.5%, 1%); }
-  66%       { opacity: 0.15; transform: scale(1.03) translate(1.5%, -1%); }
+
+  0%,
+  100% {
+    opacity: 0.12;
+    transform: scale(1) translate(0, 0);
+  }
+
+  33% {
+    opacity: 0.20;
+    transform: scale(1.06) translate(-1.5%, 1%);
+  }
+
+  66% {
+    opacity: 0.15;
+    transform: scale(1.03) translate(1.5%, -1%);
+  }
 }
 
 @keyframes hero-pulse-2 {
-  0%, 100% { opacity: 0.06; transform: scale(1) translate(0, 0); }
-  50%       { opacity: 0.11; transform: scale(1.10) translate(-2%, 2%); }
+
+  0%,
+  100% {
+    opacity: 0.06;
+    transform: scale(1) translate(0, 0);
+  }
+
+  50% {
+    opacity: 0.11;
+    transform: scale(1.10) translate(-2%, 2%);
+  }
 }
 
 @keyframes grid-drift {
-  0%   { background-position: 0 0; }
-  100% { background-position: 40px 40px; }
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 40px 40px;
+  }
 }
 
 @keyframes stat-shimmer {
-  0%, 100% { opacity: 0.85; }
-  50%       { opacity: 1; }
+
+  0%,
+  100% {
+    opacity: 0.85;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 @keyframes cta-glow-pulse {
-  0%, 100% { opacity: 0.06; }
-  50%       { opacity: 0.15; }
+
+  0%,
+  100% {
+    opacity: 0.06;
+  }
+
+  50% {
+    opacity: 0.15;
+  }
 }
 
 @keyframes float-slow {
-  0%, 100% { transform: translateY(0) translateX(0); }
-  25%       { transform: translateY(-12px) translateX(6px); }
-  75%       { transform: translateY(6px) translateX(-6px); }
+
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+
+  25% {
+    transform: translateY(-12px) translateX(6px);
+  }
+
+  75% {
+    transform: translateY(6px) translateX(-6px);
+  }
 }
 
 /* ── 39. Animated Hero ───────────────────────────────────── */
@@ -869,7 +987,7 @@ h3.sub-h3 {
   z-index: 0;
 }
 
-.bg-grid > * {
+.bg-grid>* {
   position: relative;
   z-index: 1;
 }
@@ -975,7 +1093,7 @@ h3.sub-h3 {
   border: 1px solid rgba(150, 199, 60, 0.25);
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5), 0 0 60px rgba(150, 199, 60, 0.1), inset 0 1px 0 rgba(255,255,255,0.04);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5), 0 0 60px rgba(150, 199, 60, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.04);
   position: relative;
 }
 
