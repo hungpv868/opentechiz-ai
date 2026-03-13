@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Automation &amp; Agentic AI Solutions for Business | OpenTechiz</title>
-  <meta name="description" content="We build AI automation workflows, agentic AI agents, and production AI systems integrated into your CRM, ERP, and operations stack. Free AI audit.">
+  <meta name="description"
+    content="We build AI automation workflows, agentic AI agents, and production AI systems integrated into your CRM, ERP, and operations stack. Free AI audit.">
   <link rel="canonical" href="https://opentechiz.com/">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://opentechiz.com/">
   <meta property="og:title" content="AI Automation &amp; Agentic AI Solutions for Business | OpenTechiz">
-  <meta property="og:description" content="We build AI automation workflows, agentic AI agents, and production AI systems integrated into your CRM, ERP, and operations stack. Free AI audit.">
+  <meta property="og:description"
+    content="We build AI automation workflows, agentic AI agents, and production AI systems integrated into your CRM, ERP, and operations stack. Free AI audit.">
   <meta property="og:site_name" content="OpenTechiz AI">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -78,6 +83,7 @@
   }
   </script>
 </head>
+
 <body class="bg-bg-base text-text-body">
 
   <!-- ── Navigation ──────────────────────────────────────── -->
@@ -86,7 +92,8 @@
 
       <!-- Logo -->
       <a href="index.html" class="font-space font-bold text-xl tracking-tight flex items-center gap-2">
-        <span style="color: var(--brand);">OpenTechiz</span><span class="text-text-muted font-mono text-sm ml-1">AI</span>
+        <span style="color: var(--brand);">OpenTechiz</span><span
+          class="text-text-muted font-mono text-sm ml-1">AI</span>
       </a>
 
       <!-- Desktop Links -->
@@ -94,36 +101,48 @@
 
         <!-- Services Dropdown -->
         <div class="relative" @mouseenter="servicesOpen=true" @mouseleave="servicesOpen=false">
-          <button class="flex items-center gap-1 text-text-body hover:text-white transition-colors text-sm font-medium py-2">
+          <button
+            class="flex items-center gap-1 text-text-body hover:text-white transition-colors text-sm font-medium py-2">
             Services
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-200" :class="{'rotate-180': servicesOpen}"><path d="M6 9l6 6 6-6"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              class="transition-transform duration-200" :class="{'rotate-180': servicesOpen}">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
           </button>
           <!-- Dropdown: padding-top bridges the gap so mouseleave doesn't fire prematurely -->
-          <div x-show="servicesOpen"
-            x-transition:enter="transition ease-out duration-150"
-            x-transition:enter-start="opacity-0 translate-y-1"
-            x-transition:enter-end="opacity-100 translate-y-0"
-            x-transition:leave="transition ease-in duration-100"
-            x-transition:leave-start="opacity-100"
-            x-transition:leave-end="opacity-0"
-            class="absolute top-full left-0 z-50"
+          <div x-show="servicesOpen" x-transition:enter="transition ease-out duration-150"
+            x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0" class="absolute top-full left-0 z-50"
             style="display:none; padding-top: 8px; width: 280px;">
             <div class="bg-surface-1 border border-border-color rounded-xl shadow-2xl overflow-hidden">
-              <a href="services/ai-automation-workflow.html" class="flex items-center gap-3 px-4 py-3.5 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors group">
+              <a href="services/ai-automation-workflow.html"
+                class="flex items-center gap-3 px-4 py-3.5 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors group">
                 <span class="nav-service-icon flex-shrink-0">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                  </svg>
                 </span>
                 <span>AI Automation Workflow</span>
               </a>
-              <a href="services/agentic-ai-solutions.html" class="flex items-center gap-3 px-4 py-3.5 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors group">
+              <a href="services/agentic-ai-solutions.html"
+                class="flex items-center gap-3 px-4 py-3.5 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors group">
                 <span class="nav-service-icon flex-shrink-0">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2">
+                    <circle cx="12" cy="12" r="3" />
+                    <path
+                      d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+                  </svg>
                 </span>
                 <span>Agentic AI Solutions</span>
               </a>
-              <a href="services/ai-engineering-solutions.html" class="flex items-center gap-3 px-4 py-3.5 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors group">
+              <a href="services/ai-engineering-solutions.html"
+                class="flex items-center gap-3 px-4 py-3.5 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors group">
                 <span class="nav-service-icon flex-shrink-0">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
                 </span>
                 <span>AI Engineering Solutions</span>
               </a>
@@ -131,7 +150,8 @@
           </div>
         </div>
 
-        <a href="use-cases/index.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Use Cases</a>
+        <a href="use-cases/index.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Use
+          Cases</a>
         <a href="process.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Process</a>
         <a href="about.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">About</a>
         <a href="contact.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Contact</a>
@@ -144,18 +164,28 @@
 
       <!-- Mobile menu button -->
       <button class="md:hidden text-text-body hover:text-white" @click="navOpen = !navOpen" aria-label="Toggle menu">
-        <svg x-show="!navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-        <svg x-show="navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        <svg x-show="!navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+        <svg x-show="navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" style="display:none;">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
       </button>
     </div>
 
     <!-- Mobile Menu -->
-    <div x-show="navOpen" x-transition class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-4" style="display:none;">
+    <div x-show="navOpen" x-transition class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-4"
+      style="display:none;">
       <div class="space-y-2">
         <p class="text-text-muted text-xs uppercase tracking-wider font-semibold mb-2">Services</p>
-        <a href="services/ai-automation-workflow.html" class="block text-text-body hover:text-white text-sm py-1.5">AI Automation Workflow</a>
-        <a href="services/agentic-ai-solutions.html" class="block text-text-body hover:text-white text-sm py-1.5">Agentic AI Solutions</a>
-        <a href="services/ai-engineering-solutions.html" class="block text-text-body hover:text-white text-sm py-1.5">AI Engineering Solutions</a>
+        <a href="services/ai-automation-workflow.html" class="block text-text-body hover:text-white text-sm py-1.5">AI
+          Automation Workflow</a>
+        <a href="services/agentic-ai-solutions.html"
+          class="block text-text-body hover:text-white text-sm py-1.5">Agentic AI Solutions</a>
+        <a href="services/ai-engineering-solutions.html" class="block text-text-body hover:text-white text-sm py-1.5">AI
+          Engineering Solutions</a>
       </div>
       <hr class="divider">
       <a href="use-cases/index.html" class="block text-text-body hover:text-white text-sm py-1.5">Use Cases</a>
@@ -167,43 +197,59 @@
   </nav>
 
   <!-- ── Hero Section ─────────────────────────────────────── -->
-  <section class="hero-glow min-h-screen flex items-center pt-[72px]" style="padding-top: 72px;">
-    <div class="orb-float orb-float-brand" style="width:500px;height:500px;top:-100px;right:-150px;z-index:0;"></div>
-    <div class="orb-float orb-float-brand-2" style="width:280px;height:280px;bottom:60px;left:-100px;z-index:0;"></div>
-    <div class="max-w-7xl mx-auto px-6 py-20 md:py-28 w-full">
+  <section class="hero-glow min-h-screen flex items-center" style="padding-top: 72px;">
+    <div class="orb-float orb-float-brand" style="width:600px;height:600px;top:-120px;right:-180px;z-index:0;"></div>
+    <div class="orb-float orb-float-brand-2" style="width:320px;height:320px;bottom:40px;left:-120px;z-index:0;"></div>
+    <div class="max-w-7xl mx-auto px-6 py-24 md:py-32 w-full">
       <div class="grid lg:grid-cols-2 gap-16 items-center">
 
         <!-- Left: Copy -->
         <div>
-          <p class="label-tag mb-5">AI Implementation for Operations-Driven Businesses</p>
+          <div class="hero-label-pill">
+            <span class="pill-dot"></span>
+            AI Implementation for Operations-Driven Businesses
+          </div>
 
-          <h1 class="hero-h1 mb-6">
-            Cut Operational Cost.<br>Deploy AI That <span style="color: var(--brand);">Actually Runs.</span>
+          <h1 class="hero-h1 mb-7">
+            Cut Operational Cost.<br>Deploy AI That<br>Actually Runs.
           </h1>
 
-          <p class="text-text-body text-lg leading-relaxed mb-10 max-w-xl" style="font-family: 'Inter', sans-serif;">
-            We design and deploy AI automation, agentic AI systems, and production-grade AI engineering — integrated directly into your CRM, ERP, and internal tools.
+          <p class="text-text-body leading-relaxed mb-10 max-w-xl"
+            style="font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.7;">
+            We design and deploy AI automation, agentic AI systems, and production-grade AI engineering — integrated
+            directly into your CRM, ERP, and internal tools.
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-4 mb-6">
-            <a href="contact.html" class="btn-primary">Get in Touch</a>
-            <button onclick="scrollToSection('how-it-works')" class="btn-secondary">See How It Works</button>
+          <div class="flex flex-col sm:flex-row gap-4 mb-5">
+            <a href="contact.html" class="btn-primary"
+              style="height: 56px; padding: 16px 32px; font-size: 17px; box-shadow: 0 0 24px rgba(150,199,60,0.3);">Get
+              in Touch</a>
           </div>
 
           <p class="microcopy mb-10">Email us directly. No forms, no funnels. Reply within 24 hours.</p>
 
           <!-- Trust Badges -->
-          <div class="flex flex-wrap gap-5">
-            <div class="flex items-center gap-2 text-text-muted text-sm">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div class="flex flex-wrap gap-x-6 gap-y-3">
+            <div class="flex items-center gap-2 text-sm" style="color: var(--text-body);">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
               Production-grade delivery
             </div>
-            <div class="flex items-center gap-2 text-text-muted text-sm">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div class="flex items-center gap-2 text-sm" style="color: var(--text-body);">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
               4–8 week deployment
             </div>
-            <div class="flex items-center gap-2 text-text-muted text-sm">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            <div class="flex items-center gap-2 text-sm" style="color: var(--text-body);">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                <path d="M16 3.13a4 4 0 010 7.75" />
+              </svg>
               You own everything
             </div>
           </div>
@@ -275,12 +321,19 @@
 
           <!-- Small floating stat below card -->
           <div class="mt-4 flex justify-center gap-4 max-w-sm ml-auto">
-            <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-1 border border-border-color text-xs text-text-muted">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <div
+              class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-1 border border-border-color text-xs text-text-muted">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
               Zero manual work
             </div>
-            <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-1 border border-border-color text-xs text-text-muted">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div
+              class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-1 border border-border-color text-xs text-text-muted">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
               Runs 24/7
             </div>
           </div>
@@ -321,189 +374,84 @@
       <div class="max-w-2xl mb-14">
         <span class="section-accent-line"></span>
         <h2 class="section-h2 mb-4">Three Ways We Put AI to Work in Your Business</h2>
-        <p class="text-text-body text-lg" style="font-family: 'Inter', sans-serif;">Each service targets a specific operational problem. Most clients combine two or more.</p>
+        <p class="text-text-body text-lg" style="font-family: 'Inter', sans-serif;">Each service targets a specific
+          operational problem. Most clients combine two or more.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
 
         <!-- Card 1 -->
         <div class="service-card flex flex-col">
-          <div class="service-icon-wrap" style="background: rgba(150,199,60,0.1); border: 1px solid rgba(150,199,60,0.2);">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <div class="service-icon-wrap"
+            style="background: rgba(150,199,60,0.1); border: 1px solid rgba(150,199,60,0.2);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
           </div>
           <p class="service-number-tag mb-2">Service 01 · AI Automation Workflow</p>
           <h3 class="sub-h3 mb-4">Replace Manual Processes With Reliable Pipelines.</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-6 flex-1">Map your highest-volume tasks and build automation pipelines that connect your existing systems — running every process the same way, every time, without human involvement.</p>
+          <p class="text-text-body text-sm leading-relaxed mb-6 flex-1">Map your highest-volume tasks and build
+            automation pipelines that connect your existing systems — running every process the same way, every time,
+            without human involvement.</p>
           <div class="flex flex-wrap gap-2 mb-6">
             <span class="outcome-tag">40–70% task time reduction</span>
             <span class="outcome-tag">Near-zero errors</span>
             <span class="outcome-tag">24/7 execution</span>
           </div>
-          <a href="services/ai-automation-workflow.html" class="text-brand hover:text-brand-dark text-sm font-semibold transition-colors flex items-center gap-1" style="color: var(--brand);">Explore this service <span>→</span></a>
+          <a href="services/ai-automation-workflow.html"
+            class="text-brand hover:text-brand-dark text-sm font-semibold transition-colors flex items-center gap-1"
+            style="color: var(--brand);">Explore this service <span>→</span></a>
         </div>
 
         <!-- Card 2 -->
         <div class="service-card flex flex-col">
-          <div class="service-icon-wrap" style="background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2);">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          <div class="service-icon-wrap"
+            style="background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+            </svg>
           </div>
           <p class="service-number-tag mb-2">Service 02 · Agentic AI Solutions</p>
           <h3 class="sub-h3 mb-4">AI Agents That Take Action — Not Just Answer Questions.</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-6 flex-1">Agents that read your CRM, classify the situation, make a decision within defined boundaries, and execute the task — end to end, at any hour.</p>
+          <p class="text-text-body text-sm leading-relaxed mb-6 flex-1">Agents that read your CRM, classify the
+            situation, make a decision within defined boundaries, and execute the task — end to end, at any hour.</p>
           <div class="flex flex-wrap gap-2 mb-6">
             <span class="outcome-tag">24/7 autonomous execution</span>
             <span class="outcome-tag">Sub-60s response times</span>
             <span class="outcome-tag">Scales without headcount</span>
           </div>
-          <a href="services/agentic-ai-solutions.html" class="text-sm font-semibold transition-colors flex items-center gap-1" style="color: var(--brand);">Explore this service <span>→</span></a>
+          <a href="services/agentic-ai-solutions.html"
+            class="text-sm font-semibold transition-colors flex items-center gap-1" style="color: var(--brand);">Explore
+            this service <span>→</span></a>
         </div>
 
         <!-- Card 3 -->
         <div class="service-card flex flex-col">
-          <div class="service-icon-wrap" style="background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2);">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <div class="service-icon-wrap"
+            style="background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
           </div>
           <p class="service-number-tag mb-2">Service 03 · AI Engineering Solutions</p>
           <h3 class="sub-h3 mb-4">Production AI. Not Prototypes.</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-6 flex-1">Integration layers, observability, error handling, and documentation. Not a proof of concept — a live system your team can depend on, built to run at production scale.</p>
+          <p class="text-text-body text-sm leading-relaxed mb-6 flex-1">Integration layers, observability, error
+            handling, and documentation. Not a proof of concept — a live system your team can depend on, built to run at
+            production scale.</p>
           <div class="flex flex-wrap gap-2 mb-6">
             <span class="outcome-tag">Live in 4–8 weeks</span>
             <span class="outcome-tag">Full architecture ownership</span>
             <span class="outcome-tag">Model-agnostic build</span>
           </div>
-          <a href="services/ai-engineering-solutions.html" class="text-sm font-semibold transition-colors flex items-center gap-1" style="color: var(--brand);">Explore this service <span>→</span></a>
+          <a href="services/ai-engineering-solutions.html"
+            class="text-sm font-semibold transition-colors flex items-center gap-1" style="color: var(--brand);">Explore
+            this service <span>→</span></a>
         </div>
 
       </div>
-    </div>
-  </section>
-
-  <!-- ── How It Works ──────────────────────────────────────── -->
-  <section class="section border-t border-border-color" id="how-it-works" style="background: var(--surface-1);">
-    <div class="max-w-7xl mx-auto px-6">
-
-      <div class="max-w-2xl mb-14">
-        <span class="section-accent-line"></span>
-        <h2 class="section-h2 mb-4">From Discovery to Live System in 4–8 Weeks</h2>
-        <p class="text-text-body text-lg" style="font-family: 'Inter', sans-serif;">Scope is clear before any contract is signed. Every phase has a defined deliverable.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8 mb-12">
-
-        <div class="process-step">
-          <div class="process-step__number">01</div>
-          <div class="process-step__content">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm font-space flex-shrink-0" style="background: rgba(150,199,60,0.12); border: 1.5px solid rgba(150,199,60,0.4); color: var(--brand);">1</span>
-              <div>
-                <p class="text-white font-semibold" style="font-family: 'Space Grotesk', sans-serif;">AI Audit</p>
-                <p class="text-text-muted text-xs">Week 1 · Free</p>
-              </div>
-            </div>
-            <p class="text-text-body text-sm leading-relaxed mb-4">30-minute structured call. We review your workflows, identify highest-ROI targets, and produce a written automation plan. No commitment required.</p>
-            <div class="flex items-center gap-2 text-sm" style="color: var(--emerald);">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Prioritized automation plan
-            </div>
-          </div>
-        </div>
-
-        <div class="process-step">
-          <div class="process-step__number">02</div>
-          <div class="process-step__content">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm font-space flex-shrink-0" style="background: rgba(150,199,60,0.12); border: 1.5px solid rgba(150,199,60,0.4); color: var(--brand);">2</span>
-              <div>
-                <p class="text-white font-semibold" style="font-family: 'Space Grotesk', sans-serif;">Design &amp; Build</p>
-                <p class="text-text-muted text-xs">Weeks 2–6</p>
-              </div>
-            </div>
-            <p class="text-text-body text-sm leading-relaxed mb-4">We architect and build the solution — connected to your live systems, tested against your real data, reviewed at every milestone.</p>
-            <div class="flex items-center gap-2 text-sm" style="color: var(--emerald);">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Running system in staging
-            </div>
-          </div>
-        </div>
-
-        <div class="process-step">
-          <div class="process-step__number">03</div>
-          <div class="process-step__content">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm font-space flex-shrink-0" style="background: rgba(150,199,60,0.12); border: 1.5px solid rgba(150,199,60,0.4); color: var(--brand);">3</span>
-              <div>
-                <p class="text-white font-semibold" style="font-family: 'Space Grotesk', sans-serif;">Deploy &amp; Hand Over</p>
-                <p class="text-text-muted text-xs">Week 6–8</p>
-              </div>
-            </div>
-            <p class="text-text-body text-sm leading-relaxed mb-4">Production deployment, verified integrations, full documentation, and a team walkthrough. You own everything we build.</p>
-            <div class="flex items-center gap-2 text-sm" style="color: var(--emerald);">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Live system + full docs
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="flex flex-col sm:flex-row items-center gap-4">
-        <a href="contact.html" class="btn-primary">Get in Touch</a>
-        <a href="process.html" class="text-text-body hover:text-white text-sm font-medium transition-colors">See full process details →</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ── Use Cases ─────────────────────────────────────────── -->
-  <section class="section border-t border-border-color bg-grid">
-    <div class="max-w-7xl mx-auto px-6">
-
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-        <div class="max-w-xl">
-          <span class="section-accent-line"></span>
-          <h2 class="section-h2 mb-3">Problems We've Automated</h2>
-          <p class="text-text-body text-lg" style="font-family: 'Inter', sans-serif;">Specific operational scenarios — not hypotheticals.</p>
-        </div>
-        <a href="use-cases/index.html" class="text-sm font-semibold transition-colors flex items-center gap-1 flex-shrink-0 mb-2" style="color: var(--brand);">View all use cases →</a>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6">
-
-        <div class="use-case-card">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-            </div>
-            <span class="px-2.5 py-1 text-xs font-semibold rounded-full" style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.2);">Agentic AI</span>
-          </div>
-          <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">Cut Tier-1 Support Volume by 80%</h3>
-          <p class="text-text-body text-sm leading-relaxed">AI agent monitors your support inbox, classifies tickets, resolves standard inquiries autonomously, and routes complex cases with full context.</p>
-        </div>
-
-        <div class="use-case-card">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(150,199,60,0.1); border: 1px solid rgba(150,199,60,0.2);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-            </div>
-            <span class="px-2.5 py-1 text-xs font-semibold rounded-full" style="background:rgba(150,199,60,0.12);color:#96c73c;border:1px solid rgba(150,199,60,0.2);">AI Automation</span>
-          </div>
-          <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">Zero Manual CRM Entry. 100% Follow-Up Rate.</h3>
-          <p class="text-text-body text-sm leading-relaxed">Lead data captured across every channel — automatically enriched, scored, and routed. No rep involvement required.</p>
-        </div>
-
-        <div class="use-case-card">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
-            </div>
-            <span class="px-2.5 py-1 text-xs font-semibold rounded-full" style="background:rgba(245,158,11,0.12);color:#F59E0B;border:1px solid rgba(245,158,11,0.2);">AI Automation</span>
-          </div>
-          <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">6-Hour Reports → 20-Minute Automated Run</h3>
-          <p class="text-text-body text-sm leading-relaxed">Weekly reports generated automatically from multiple data sources — accurate, formatted, and delivered on schedule.</p>
-        </div>
-
-      </div>
-
     </div>
   </section>
 
@@ -514,55 +462,74 @@
       <div class="max-w-2xl mb-12">
         <span class="section-accent-line"></span>
         <h2 class="section-h2 mb-4">Why Businesses Choose OpenTechiz</h2>
-        <p class="text-text-body text-lg" style="font-family: 'Inter', sans-serif;">Over consultants, SaaS tools, and generic agencies.</p>
+        <p class="text-text-body text-lg" style="font-family: 'Inter', sans-serif;">Over consultants, SaaS tools, and
+          generic agencies.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-5">
 
         <div class="diff-item">
           <div class="diff-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
           </div>
           <div>
-            <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">We Build. We Don't Just Advise.</h3>
-            <p class="text-text-body text-sm leading-relaxed">Consulting firms give you a strategy deck. We give you a running system connected to your real tools.</p>
+            <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">We
+              Build. We Don't Just Advise.</h3>
+            <p class="text-text-body text-sm leading-relaxed">Consulting firms give you a strategy deck. We give you a
+              running system connected to your real tools.</p>
           </div>
         </div>
 
         <div class="diff-item">
           <div class="diff-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2">
+              <path d="M12 20V10" />
+              <path d="M18 20V4" />
+              <path d="M6 20v-4" />
+            </svg>
           </div>
           <div>
-            <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">We Measure in Business Outcomes.</h3>
-            <p class="text-text-body text-sm leading-relaxed">Hours saved. Error rate. Operational cost. Not model accuracy or API response time.</p>
+            <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">We
+              Measure in Business Outcomes.</h3>
+            <p class="text-text-body text-sm leading-relaxed">Hours saved. Error rate. Operational cost. Not model
+              accuracy or API response time.</p>
           </div>
         </div>
 
         <div class="diff-item">
           <div class="diff-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
           </div>
           <div>
-            <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">We Work With What You Have.</h3>
-            <p class="text-text-body text-sm leading-relaxed">No rip-and-replace. AI built to operate inside your existing CRM, ERP, and workflow stack.</p>
+            <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">We
+              Work With What You Have.</h3>
+            <p class="text-text-body text-sm leading-relaxed">No rip-and-replace. AI built to operate inside your
+              existing CRM, ERP, and workflow stack.</p>
           </div>
         </div>
 
         <div class="diff-item">
           <div class="diff-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" />
+              <path d="M7 11V7a5 5 0 0110 0v4" />
+            </svg>
           </div>
           <div>
-            <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">You Own Everything We Build.</h3>
-            <p class="text-text-body text-sm leading-relaxed">Code, architecture, documentation, runbook. All of it. There is no lock-in.</p>
+            <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">You
+              Own Everything We Build.</h3>
+            <p class="text-text-body text-sm leading-relaxed">Code, architecture, documentation, runbook. All of it.
+              There is no lock-in.</p>
           </div>
         </div>
 
       </div>
     </div>
   </section>
-
   <!-- ── Industries + Integrations ─────────────────────────── -->
   <section class="section border-t border-border-color">
     <div class="max-w-7xl mx-auto px-6">
@@ -572,7 +539,8 @@
         <div>
           <span class="section-accent-line"></span>
           <h2 class="section-h2 mb-4">Industries We Work In</h2>
-          <p class="text-text-body text-base mb-8" style="font-family: 'Inter', sans-serif;">Operations-heavy businesses where manual work creates the most cost.</p>
+          <p class="text-text-body text-base mb-8" style="font-family: 'Inter', sans-serif;">Operations-heavy businesses
+            where manual work creates the most cost.</p>
           <div class="flex flex-wrap gap-2.5">
             <span class="industry-tag">E-commerce</span>
             <span class="industry-tag">Logistics</span>
@@ -589,96 +557,46 @@
         <div>
           <span class="section-accent-line"></span>
           <h2 class="section-h2 mb-4">Integrates With Your Stack</h2>
-          <p class="text-text-body text-base mb-8" style="font-family: 'Inter', sans-serif;">Your CRM stays. Your ERP stays. We make AI work inside them.</p>
+          <p class="text-text-body text-base mb-8" style="font-family: 'Inter', sans-serif;">Your CRM stays. Your ERP
+            stays. We make AI work inside them.</p>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">Salesforce</span>
-            <span class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">HubSpot</span>
-            <span class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">SAP</span>
-            <span class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">Notion</span>
-            <span class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">Slack</span>
-            <span class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">WhatsApp</span>
-            <span class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">Google Workspace</span>
-            <span class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">Airtable</span>
-            <span class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">PostgreSQL</span>
-            <span class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">REST APIs</span>
+            <span
+              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">Salesforce</span>
+            <span
+              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">HubSpot</span>
+            <span
+              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">SAP</span>
+            <span
+              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">Notion</span>
+            <span
+              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">Slack</span>
+            <span
+              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">WhatsApp</span>
+            <span
+              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">Google
+              Workspace</span>
+            <span
+              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">Airtable</span>
+            <span
+              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">PostgreSQL</span>
+            <span
+              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">REST
+              APIs</span>
           </div>
-          <p class="text-text-muted text-xs mt-4" style="font-family: 'Inter', sans-serif;">If it has an API, we can build to it.</p>
+          <p class="text-text-muted text-xs mt-4" style="font-family: 'Inter', sans-serif;">If it has an API, we can
+            build to it.</p>
         </div>
 
       </div>
     </div>
   </section>
-
-  <!-- ── FAQ ──────────────────────────────────────────────── -->
-  <section class="section border-t border-border-color" style="background: var(--surface-1);">
-    <div class="max-w-4xl mx-auto px-6">
-
-      <div class="mb-12 text-center">
-        <span class="section-accent-line mx-auto"></span>
-        <h2 class="section-h2 mb-4">Common Questions</h2>
-      </div>
-
-      <div x-data="faq" class="space-y-3">
-
-        <div class="faq-item" :class="{ 'open': openItem === 1 }">
-          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(1)">
-            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">Will AI replace my team?</span>
-            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 1 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B82A8" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer px-6 pb-5" x-show="openItem === 1" x-collapse style="display:none;">
-            <p class="text-text-body text-sm leading-relaxed">No. We automate rule-based, repetitive tasks — the work your team shouldn't be spending time on. Your team focuses on judgment-heavy work that moves the business forward.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" :class="{ 'open': openItem === 2 }">
-          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(2)">
-            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">How long does a project take?</span>
-            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 2 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B82A8" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer px-6 pb-5" x-show="openItem === 2" x-collapse style="display:none;">
-            <p class="text-text-body text-sm leading-relaxed">Most clients go from discovery call to live system in 4–8 weeks. The free AI audit gives you an exact timeline before any contract is signed.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" :class="{ 'open': openItem === 3 }">
-          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(3)">
-            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">Do we need to change our existing tools?</span>
-            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 3 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B82A8" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer px-6 pb-5" x-show="openItem === 3" x-collapse style="display:none;">
-            <p class="text-text-body text-sm leading-relaxed">No. We build around your current stack — CRM, ERP, databases, communication tools, APIs. Nothing gets replaced unless you want it to.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" :class="{ 'open': openItem === 4 }">
-          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(4)">
-            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">What if we have no in-house technical team?</span>
-            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 4 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B82A8" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer px-6 pb-5" x-show="openItem === 4" x-collapse style="display:none;">
-            <p class="text-text-body text-sm leading-relaxed">We handle the entire build — architecture, integration, testing, deployment, and documentation. You don't need a technical team.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" :class="{ 'open': openItem === 5 }">
-          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(5)">
-            <span class="text-white font-semibold text-base" style="font-family: 'Space Grotesk', sans-serif;">What exactly is the free AI audit?</span>
-            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 5 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B82A8" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer px-6 pb-5" x-show="openItem === 5" x-collapse style="display:none;">
-            <p class="text-text-body text-sm leading-relaxed">A 30-minute structured conversation about your workflows. You get a written document: prioritized automation opportunities, realistic scope, and a clear answer on what's buildable — no cost, no commitment.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- ── Final CTA Block ───────────────────────────────────── -->
   <section class="section border-t border-border-color cta-section">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <h2 class="section-h2 mb-6">Ready to Stop Running Operations on Manual?</h2>
-      <p class="text-text-body text-base leading-relaxed mb-8 max-w-xl mx-auto" style="font-family: 'Inter', sans-serif;">Send us an email. Tell us what you're trying to automate. We'll give you a straight answer on what's buildable — no sales scripts, no commitment.</p>
+      <p class="text-text-body text-base leading-relaxed mb-8 max-w-xl mx-auto"
+        style="font-family: 'Inter', sans-serif;">Send us an email. Tell us what you're trying to automate. We'll give
+        you a straight answer on what's buildable — no sales scripts, no commitment.</p>
       <a href="mailto:hoanv@opentechiz.com" class="btn-primary inline-flex">Email Us Directly</a>
       <p class="microcopy mt-4">hoanv@opentechiz.com · We respond within 24 business hours.</p>
     </div>
@@ -692,19 +610,29 @@
         <!-- Brand -->
         <div class="md:col-span-2">
           <a href="index.html" class="font-space font-bold text-xl tracking-tight flex items-center gap-2 mb-3">
-            <span style="color: var(--brand);">OpenTechiz</span> <span class="text-text-muted font-mono text-sm ml-1">AI</span>
+            <span style="color: var(--brand);">OpenTechiz</span> <span
+              class="text-text-muted font-mono text-sm ml-1">AI</span>
           </a>
-          <p class="text-text-muted text-sm italic mb-5" style="font-family: 'Inter', sans-serif;">"AI That Works. Not Just Promises."</p>
-          <a href="mailto:hoanv@opentechiz.com" class="text-text-body hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">hoanv@opentechiz.com</a>
+          <p class="text-text-muted text-sm italic mb-5" style="font-family: 'Inter', sans-serif;">"AI That Works. Not
+            Just Promises."</p>
+          <a href="mailto:hoanv@opentechiz.com" class="text-text-body hover:text-white text-sm transition-colors"
+            style="font-family: 'Inter', sans-serif;">hoanv@opentechiz.com</a>
         </div>
 
         <!-- Services -->
         <div>
-          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Services</p>
+          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Services
+          </p>
           <div class="space-y-3">
-            <a href="services/ai-automation-workflow.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">AI Automation Workflow</a>
-            <a href="services/agentic-ai-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Agentic AI Solutions</a>
-            <a href="services/ai-engineering-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">AI Engineering Solutions</a>
+            <a href="services/ai-automation-workflow.html"
+              class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">AI Automation Workflow</a>
+            <a href="services/agentic-ai-solutions.html"
+              class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">Agentic AI Solutions</a>
+            <a href="services/ai-engineering-solutions.html"
+              class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">AI Engineering Solutions</a>
           </div>
         </div>
 
@@ -712,10 +640,14 @@
         <div>
           <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Company</p>
           <div class="space-y-3">
-            <a href="use-cases/index.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Use Cases</a>
-            <a href="process.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Process</a>
-            <a href="about.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">About</a>
-            <a href="contact.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Contact</a>
+            <a href="use-cases/index.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">Use Cases</a>
+            <a href="process.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">Process</a>
+            <a href="about.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">About</a>
+            <a href="contact.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">Contact</a>
           </div>
         </div>
 
@@ -723,7 +655,8 @@
 
       <hr class="divider mb-8">
 
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-text-muted text-xs" style="font-family: 'Inter', sans-serif;">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-text-muted text-xs"
+        style="font-family: 'Inter', sans-serif;">
         <p>© 2026 OpenTechiz. All rights reserved.</p>
         <div class="flex gap-6">
           <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
@@ -738,4 +671,5 @@
   <script src="js/main.js"></script>
 
 </body>
+
 </html>

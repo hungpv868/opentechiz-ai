@@ -51,7 +51,7 @@
   <nav x-data="nav" class="nav" :class="{ 'scrolled': scrolled }">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between h-16">
       <a href="../index.html" class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2">
-        <span class="text-blue">Open</span>Techiz <span class="text-text-muted font-mono text-sm ml-1">AI</span>
+        <span style="color: var(--brand);">OpenTechiz</span><span class="text-text-muted font-mono text-sm ml-1">AI</span>
       </a>
       <div class="hidden md:flex items-center gap-8">
         <div class="relative" @mouseenter="servicesOpen=true" @mouseleave="servicesOpen=false">
@@ -97,27 +97,6 @@
         <p class="text-text-body text-lg leading-relaxed mb-10 max-w-3xl" style="font-family:'Inter',sans-serif;">Combines collaborative filtering, content-based signals, and ensemble learning into a single hybrid engine — serving personalised product listings with a continuous feedback loop and real-time A/B testing.</p>
         <a href="../contact.html" class="btn-primary inline-flex">Build This for My Business</a>
         <p class="microcopy mt-3">Tell us your product catalogue size. We'll scope the pipeline.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Business Context ──────────────────────────────────── -->
-  <section class="section border-t border-border-color" style="background:var(--surface-1);">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="section-h2 mb-8">The Recommendation Problem</h2>
-      <p class="text-text-body text-base leading-relaxed" style="font-family:'Inter',sans-serif;">Basic recommendation engines rely on a single signal — either what the customer bought before, or what's similar to the current product. Both approaches miss a large share of relevant items. A hybrid engine combines user behaviour, collaborative patterns, and item content to produce a ranked list that's both personalised and contextually relevant, then keeps improving itself through every click and conversion.</p>
-    </div>
-  </section>
-
-  <!-- ── Before State ───────────────────────────────────────── -->
-  <section class="section border-t border-border-color">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="section-h2 mb-10">Before the Hybrid Pipeline</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bab-card"><div class="bab-before"><p class="text-text-body text-sm" style="font-family:'Inter',sans-serif;">Single-signal recommendations miss items that don't fit the narrow filter</p></div></div>
-        <div class="bab-card"><div class="bab-before"><p class="text-text-body text-sm" style="font-family:'Inter',sans-serif;">New users get generic or popularity-only recommendations — no personalisation</p></div></div>
-        <div class="bab-card"><div class="bab-before"><p class="text-text-body text-sm" style="font-family:'Inter',sans-serif;">No feedback loop — click and conversion data isn't fed back to improve future results</p></div></div>
-        <div class="bab-card"><div class="bab-before"><p class="text-text-body text-sm" style="font-family:'Inter',sans-serif;">No A/B testing infrastructure — impossible to measure which recommendation strategy converts better</p></div></div>
       </div>
     </div>
   </section>
@@ -173,103 +152,6 @@
     </div>
   </section>
 
-  <!-- ── Technical Stack ───────────────────────────────────── -->
-  <section class="section border-t border-border-color">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="section-h2 mb-8">Technical Stack</h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="p-5 rounded-xl" style="background:var(--surface-1);border:1px solid var(--border-color);">
-          <p class="text-white font-semibold text-sm mb-1" style="font-family:'Space Grotesk',sans-serif;">Matrix Factorization &amp; Nearest Neighbours</p>
-          <p class="text-text-muted text-xs" style="font-family:'Inter',sans-serif;">Collaborative filtering models that identify patterns across user behaviour</p>
-        </div>
-        <div class="p-5 rounded-xl" style="background:var(--surface-1);border:1px solid var(--border-color);">
-          <p class="text-white font-semibold text-sm mb-1" style="font-family:'Space Grotesk',sans-serif;">Product Embeddings</p>
-          <p class="text-text-muted text-xs" style="font-family:'Inter',sans-serif;">Encodes item features, metadata, and semantic relationships into vector space</p>
-        </div>
-        <div class="p-5 rounded-xl" style="background:var(--surface-1);border:1px solid var(--border-color);">
-          <p class="text-white font-semibold text-sm mb-1" style="font-family:'Space Grotesk',sans-serif;">Ensemble Learning</p>
-          <p class="text-text-muted text-xs" style="font-family:'Inter',sans-serif;">Combines multiple model signals into a single, stronger ranking output</p>
-        </div>
-        <div class="p-5 rounded-xl" style="background:var(--surface-1);border:1px solid var(--border-color);">
-          <p class="text-white font-semibold text-sm mb-1" style="font-family:'Space Grotesk',sans-serif;">Real-time A/B Testing</p>
-          <p class="text-text-muted text-xs" style="font-family:'Inter',sans-serif;">Continuously measures which recommendation strategy drives higher conversions</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Outcomes ───────────────────────────────────────────── -->
-  <section class="section border-t border-border-color" style="background:var(--surface-1);">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="section-h2 mb-12">What Changes</h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="stat-border-left pl-5" style="border-left-color:#3B82F6;">
-          <p class="stat-number" style="color:#3B82F6;">Hybrid</p>
-          <p class="stat-label">Three signal types combined — collaborative, content, and behavioural</p>
-        </div>
-        <div class="stat-border-left pl-5" style="border-left-color:#3B82F6;">
-          <p class="stat-number" style="color:#3B82F6;">Real-time</p>
-          <p class="stat-label">Recommendations served live with A/B testing running continuously</p>
-        </div>
-        <div class="stat-border-left pl-5" style="border-left-color:#3B82F6;">
-          <p class="stat-number" style="color:#3B82F6;">Self-improving</p>
-          <p class="stat-label">Feedback loop feeds every click and conversion back into the model</p>
-        </div>
-        <div class="stat-border-left pl-5" style="border-left-color:#3B82F6;">
-          <p class="stat-number" style="color:#3B82F6;">Personalised</p>
-          <p class="stat-label">Each shopper receives a ranked list specific to their behaviour and preferences</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Integrations ──────────────────────────────────────── -->
-  <section class="section border-t border-border-color">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="section-h2 mb-8">Systems This Connects To</h2>
-      <div class="flex flex-wrap gap-3">
-        <span class="px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family:'Inter',sans-serif;opacity:0.75;">E-commerce Platform (Shopify, Magento, custom)</span>
-        <span class="px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family:'Inter',sans-serif;opacity:0.75;">User Behaviour Tracking (clickstream)</span>
-        <span class="px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family:'Inter',sans-serif;opacity:0.75;">Product Catalogue / Inventory</span>
-        <span class="px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family:'Inter',sans-serif;opacity:0.75;">Vector Database (embeddings store)</span>
-        <span class="px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family:'Inter',sans-serif;opacity:0.75;">A/B Testing Layer</span>
-        <span class="px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family:'Inter',sans-serif;opacity:0.75;">Analytics / Conversion Tracking</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Service Link ───────────────────────────────────────── -->
-  <section class="section border-t border-border-color" style="background:var(--surface-1);">
-    <div class="max-w-7xl mx-auto px-6">
-      <p class="text-text-body text-base" style="font-family:'Inter',sans-serif;">
-        This use case is built under our
-        <a href="../services/ai-engineering-solutions.html" class="text-blue hover:text-blue-dark font-semibold transition-colors">AI Engineering Solutions →</a>
-        service.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── Related Use Cases ─────────────────────────────────── -->
-  <section class="section border-t border-border-color">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="section-h2 mb-10">Related Use Cases</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="use-case-card">
-          <span class="px-3 py-1 rounded-full text-xs font-semibold mb-4 inline-block" style="background:rgba(245,158,11,0.12);color:#F59E0B;border:1px solid rgba(245,158,11,0.25);font-family:'Inter',sans-serif;">AI Recommendations</span>
-          <h3 class="text-white font-space font-semibold text-base mb-2">AI Profile Recommendation Service</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4" style="font-family:'Inter',sans-serif;">Ranks and matches candidate profiles using AI matching algorithms and feature engineering.</p>
-          <a href="ai-profile-recommendation.html" class="text-blue hover:text-blue-dark text-sm font-semibold transition-colors" style="font-family:'Inter',sans-serif;">See Use Case →</a>
-        </div>
-        <div class="use-case-card">
-          <span class="px-3 py-1 rounded-full text-xs font-semibold mb-4 inline-block" style="background:rgba(59,130,246,0.12);color:#3B82F6;border:1px solid rgba(59,130,246,0.25);font-family:'Inter',sans-serif;">Voice AI</span>
-          <h3 class="text-white font-space font-semibold text-base mb-2">Airport Assistance AI Voice Chatbot</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4" style="font-family:'Inter',sans-serif;">Voice and text chatbot for airports — real-time flight, gate, and transport info via ASR + TTS pipeline.</p>
-          <a href="airport-voice-chatbot.html" class="text-blue hover:text-blue-dark text-sm font-semibold transition-colors" style="font-family:'Inter',sans-serif;">See Use Case →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ── Bottom CTA ────────────────────────────────────────── -->
   <section class="section border-t border-border-color cta-section">
     <div class="max-w-3xl mx-auto px-6 text-center">
@@ -286,18 +168,10 @@
       <div class="grid md:grid-cols-4 gap-10 mb-12">
         <div class="md:col-span-2">
           <a href="../index.html" class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2 mb-3">
-            <span class="text-blue">Open</span>Techiz <span class="text-text-muted font-mono text-sm ml-1">AI</span>
+            <span style="color: var(--brand);">OpenTechiz</span><span class="text-text-muted font-mono text-sm ml-1">AI</span>
           </a>
           <p class="text-text-muted text-sm italic mb-6" style="font-family:'Inter',sans-serif;">"AI That Works. Not Just Promises."</p>
           <a href="mailto:hoanv@opentechiz.com" class="text-text-body hover:text-blue text-sm transition-colors" style="font-family:'Inter',sans-serif;">hoanv@opentechiz.com</a>
-          <div class="flex gap-3 mt-5">
-            <a href="https://www.linkedin.com/company/opentechiz" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-            <a href="https://github.com/opentechiz" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-            </a>
-          </div>
         </div>
         <div>
           <p class="text-white font-semibold text-sm mb-4" style="font-family:'Space Grotesk',sans-serif;">Services</p>

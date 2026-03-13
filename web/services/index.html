@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Implementation Services for Business | OpenTechiz</title>
-  <meta name="description" content="Three AI implementation services — workflow automation, agentic AI, and AI engineering — built for businesses that want production systems, not demos.">
+  <meta name="description"
+    content="Three AI implementation services — workflow automation, agentic AI, and AI engineering — built for businesses that want production systems, not demos.">
   <link rel="canonical" href="https://opentechiz.com/services/">
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://opentechiz.com/services/">
   <meta property="og:title" content="AI Implementation Services for Business | OpenTechiz">
-  <meta property="og:description" content="Three AI implementation services — workflow automation, agentic AI, and AI engineering — built for businesses that want production systems, not demos.">
+  <meta property="og:description"
+    content="Three AI implementation services — workflow automation, agentic AI, and AI engineering — built for businesses that want production systems, not demos.">
   <meta property="og:site_name" content="OpenTechiz AI">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -65,47 +70,72 @@
   }
   </script>
 </head>
+
 <body class="bg-bg-base text-text-body">
 
   <!-- ── Navigation ──────────────────────────────────────── -->
   <nav class="nav" x-data="nav" :class="{ 'scrolled': scrolled }">
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-      <a href="../index.html" class="font-space font-700 text-white text-xl tracking-tight flex items-center gap-2">
-        <span style="color: var(--brand);">OpenTechiz</span><span class="text-text-muted font-mono text-sm ml-1">AI</span>
+      <a href="../index.html" class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2">
+        <span style="color: var(--brand);">OpenTechiz</span><span
+          class="text-text-muted font-mono text-sm ml-1">AI</span>
       </a>
       <div class="hidden md:flex items-center gap-8">
         <div class="relative" @mouseenter="servicesOpen=true" @mouseleave="servicesOpen=false">
           <button class="flex items-center gap-1 text-white font-medium text-sm">
             Services
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
           </button>
-          <div x-show="servicesOpen" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" class="absolute top-full left-0 z-50" style="display:none; padding-top: 8px; width: 280px;">
+          <div x-show="servicesOpen" x-transition:enter="transition ease-out duration-150"
+            x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0"
+            class="absolute top-full left-0 z-50" style="display:none; padding-top: 8px; width: 280px;">
             <div class="bg-surface-1 border border-border-color rounded-xl shadow-2xl overflow-hidden">
-              <a href="ai-automation-workflow.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Automation Workflow</a>
-              <a href="agentic-ai-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">Agentic AI Solutions</a>
-              <a href="ai-engineering-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Engineering Solutions</a>
+              <a href="ai-automation-workflow.html"
+                class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI
+                Automation Workflow</a>
+              <a href="agentic-ai-solutions.html"
+                class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">Agentic
+                AI Solutions</a>
+              <a href="ai-engineering-solutions.html"
+                class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI
+                Engineering Solutions</a>
             </div>
           </div>
         </div>
-        <a href="../use-cases/index.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Use Cases</a>
-        <a href="../process.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Process</a>
+        <a href="../use-cases/index.html"
+          class="text-text-body hover:text-white transition-colors text-sm font-medium">Use Cases</a>
+        <a href="../process.html"
+          class="text-text-body hover:text-white transition-colors text-sm font-medium">Process</a>
         <a href="../about.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">About</a>
-        <a href="../contact.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Contact</a>
+        <a href="../contact.html"
+          class="text-text-body hover:text-white transition-colors text-sm font-medium">Contact</a>
       </div>
       <div class="hidden md:flex">
         <a href="../contact.html" class="btn-primary text-sm" style="height:44px; padding: 10px 20px;">Get in Touch</a>
       </div>
       <button class="md:hidden text-text-body hover:text-white" @click="navOpen = !navOpen" aria-label="Toggle menu">
-        <svg x-show="!navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-        <svg x-show="navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        <svg x-show="!navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+        <svg x-show="navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" style="display:none;">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
       </button>
     </div>
-    <div x-show="navOpen" x-transition class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-4" style="display:none;">
+    <div x-show="navOpen" x-transition class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-4"
+      style="display:none;">
       <div class="space-y-2">
         <p class="text-text-muted text-xs uppercase tracking-wider font-semibold mb-2">Services</p>
-        <a href="ai-automation-workflow.html" class="block text-text-body hover:text-white text-sm py-1">AI Automation Workflow</a>
-        <a href="agentic-ai-solutions.html" class="block text-text-body hover:text-white text-sm py-1">Agentic AI Solutions</a>
-        <a href="ai-engineering-solutions.html" class="block text-text-body hover:text-white text-sm py-1">AI Engineering Solutions</a>
+        <a href="ai-automation-workflow.html" class="block text-text-body hover:text-white text-sm py-1">AI Automation
+          Workflow</a>
+        <a href="agentic-ai-solutions.html" class="block text-text-body hover:text-white text-sm py-1">Agentic AI
+          Solutions</a>
+        <a href="ai-engineering-solutions.html" class="block text-text-body hover:text-white text-sm py-1">AI
+          Engineering Solutions</a>
       </div>
       <hr class="divider">
       <a href="../contact.html" class="btn-primary w-full justify-center mt-2">Get in Touch</a>
@@ -118,7 +148,8 @@
       <div class="max-w-3xl">
         <p class="label-tag mb-4">Services</p>
         <h1 class="page-h1 mb-6">AI Implementation Services for Operations-Driven Businesses</h1>
-        <p class="text-text-body text-lg leading-relaxed" style="font-family: 'Inter', sans-serif;">Three service lines, each targeting a different operational problem. Most clients combine two or more.</p>
+        <p class="text-text-body text-lg leading-relaxed" style="font-family: 'Inter', sans-serif;">Three service lines,
+          each targeting a different operational problem. Most clients combine two or more.</p>
       </div>
     </div>
   </section>
@@ -131,15 +162,23 @@
         <div>
           <p class="service-number-tag mb-3">Service 01</p>
           <h2 class="section-h2 mb-5">AI Automation Workflow</h2>
-          <p class="text-text-body text-base leading-relaxed mb-6" style="font-family: 'Inter', sans-serif;">We map your highest-volume repetitive tasks and build automation pipelines that connect your existing systems — running every process the same way, every time, without human involvement.</p>
+          <p class="text-text-body text-base leading-relaxed mb-6" style="font-family: 'Inter', sans-serif;">We map your
+            highest-volume repetitive tasks and build automation pipelines that connect your existing systems — running
+            every process the same way, every time, without human involvement.</p>
 
-          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">What we build:</p>
+          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">What we
+            build:</p>
           <ul class="space-y-2 mb-8">
-            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span class="text-blue mt-1 flex-shrink-0">→</span>Event-triggered workflow pipelines</li>
-            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span class="text-blue mt-1 flex-shrink-0">→</span>Scheduled operational automations</li>
-            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span class="text-blue mt-1 flex-shrink-0">→</span>Cross-system data pipelines</li>
-            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span class="text-blue mt-1 flex-shrink-0">→</span>Document and output generation</li>
-            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span class="text-blue mt-1 flex-shrink-0">→</span>Approval and escalation workflows</li>
+            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span
+                class="text-blue mt-1 flex-shrink-0">→</span>Event-triggered workflow pipelines</li>
+            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span
+                class="text-blue mt-1 flex-shrink-0">→</span>Scheduled operational automations</li>
+            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span
+                class="text-blue mt-1 flex-shrink-0">→</span>Cross-system data pipelines</li>
+            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span
+                class="text-blue mt-1 flex-shrink-0">→</span>Document and output generation</li>
+            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span
+                class="text-blue mt-1 flex-shrink-0">→</span>Approval and escalation workflows</li>
           </ul>
 
           <div class="flex flex-wrap gap-2 mb-8">
@@ -155,18 +194,24 @@
         <div class="space-y-4">
           <div class="service-card">
             <p class="text-text-muted text-xs font-mono mb-2">Use Case</p>
-            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">CRM Data Entry Automation</h3>
-            <p class="text-text-body text-xs leading-relaxed">90 minutes per rep per day of manual CRM updates → fully automated capture, deduplication, enrichment, and logging.</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">CRM Data
+              Entry Automation</h3>
+            <p class="text-text-body text-xs leading-relaxed">90 minutes per rep per day of manual CRM updates → fully
+              automated capture, deduplication, enrichment, and logging.</p>
           </div>
           <div class="service-card">
             <p class="text-text-muted text-xs font-mono mb-2">Use Case</p>
-            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Weekly Reporting Automation</h3>
-            <p class="text-text-body text-xs leading-relaxed">6-hour manual weekly reporting process across 4 data sources → 20-minute automated run.</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Weekly
+              Reporting Automation</h3>
+            <p class="text-text-body text-xs leading-relaxed">6-hour manual weekly reporting process across 4 data
+              sources → 20-minute automated run.</p>
           </div>
           <div class="service-card">
             <p class="text-text-muted text-xs font-mono mb-2">Use Case</p>
-            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Client Onboarding Automation</h3>
-            <p class="text-text-body text-xs leading-relaxed">45 minutes of manual work per new client → full onboarding sequence triggered automatically on signup.</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Client
+              Onboarding Automation</h3>
+            <p class="text-text-body text-xs leading-relaxed">45 minutes of manual work per new client → full onboarding
+              sequence triggered automatically on signup.</p>
           </div>
         </div>
 
@@ -182,15 +227,24 @@
         <div class="lg:order-2">
           <p class="service-number-tag mb-3">Service 02</p>
           <h2 class="section-h2 mb-5">Agentic AI Solutions</h2>
-          <p class="text-text-body text-base leading-relaxed mb-6" style="font-family: 'Inter', sans-serif;">Our agents don't generate text and wait for a human to act on it. They read your CRM, classify the situation, make a decision within defined boundaries, and execute the task — end to end, at any hour.</p>
+          <p class="text-text-body text-base leading-relaxed mb-6" style="font-family: 'Inter', sans-serif;">Our agents
+            don't generate text and wait for a human to act on it. They read your CRM, classify the situation, make a
+            decision within defined boundaries, and execute the task — end to end, at any hour.</p>
 
-          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Agent types we deploy:</p>
+          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Agent types
+            we deploy:</p>
           <ul class="space-y-2 mb-8">
-            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span class="text-emerald mt-1 flex-shrink-0">→</span>Customer Support Agent (Zendesk, Freshdesk, Intercom)</li>
-            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span class="text-emerald mt-1 flex-shrink-0">→</span>Lead Qualification Agent (CRM-integrated)</li>
-            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span class="text-emerald mt-1 flex-shrink-0">→</span>Internal Operations Agent (Slack / Teams)</li>
-            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span class="text-emerald mt-1 flex-shrink-0">→</span>Data Retrieval Agent (RAG over your systems)</li>
-            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span class="text-emerald mt-1 flex-shrink-0">→</span>Custom Workflow Agent (scoped to your process)</li>
+            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span
+                class="text-emerald mt-1 flex-shrink-0">→</span>Customer Support Agent (Zendesk, Freshdesk, Intercom)
+            </li>
+            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span
+                class="text-emerald mt-1 flex-shrink-0">→</span>Lead Qualification Agent (CRM-integrated)</li>
+            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span
+                class="text-emerald mt-1 flex-shrink-0">→</span>Internal Operations Agent (Slack / Teams)</li>
+            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span
+                class="text-emerald mt-1 flex-shrink-0">→</span>Data Retrieval Agent (RAG over your systems)</li>
+            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span
+                class="text-emerald mt-1 flex-shrink-0">→</span>Custom Workflow Agent (scoped to your process)</li>
           </ul>
 
           <div class="flex flex-wrap gap-2 mb-8">
@@ -206,18 +260,24 @@
         <div class="lg:order-1 space-y-4">
           <div class="service-card">
             <p class="text-text-muted text-xs font-mono mb-2">Scenario · Support Team</p>
-            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">80% Tier-1 Resolution, Autonomous</h3>
-            <p class="text-text-body text-xs leading-relaxed">150 daily support tickets, 80% handled automatically. Team focuses on complex cases and proactive work.</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">80%
+              Tier-1 Resolution, Autonomous</h3>
+            <p class="text-text-body text-xs leading-relaxed">150 daily support tickets, 80% handled automatically. Team
+              focuses on complex cases and proactive work.</p>
           </div>
           <div class="service-card">
             <p class="text-text-muted text-xs font-mono mb-2">Scenario · Sales Team</p>
-            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">100% Lead Coverage, Zero Missed After-Hours</h3>
-            <p class="text-text-body text-xs leading-relaxed">Every inbound lead qualified and contacted in under 60 seconds — day or night.</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">100%
+              Lead Coverage, Zero Missed After-Hours</h3>
+            <p class="text-text-body text-xs leading-relaxed">Every inbound lead qualified and contacted in under 60
+              seconds — day or night.</p>
           </div>
           <div class="service-card">
             <p class="text-text-muted text-xs font-mono mb-2">Scenario · Operations Team</p>
-            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">3–5× Order Volume, Same Team Size</h3>
-            <p class="text-text-body text-xs leading-relaxed">Order status queries handled automatically. Records updated. Stakeholders notified. No manual review.</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">3–5×
+              Order Volume, Same Team Size</h3>
+            <p class="text-text-body text-xs leading-relaxed">Order status queries handled automatically. Records
+              updated. Stakeholders notified. No manual review.</p>
           </div>
         </div>
 
@@ -233,15 +293,25 @@
         <div>
           <p class="service-number-tag mb-3">Service 03</p>
           <h2 class="section-h2 mb-5">AI Engineering Solutions</h2>
-          <p class="text-text-body text-base leading-relaxed mb-6" style="font-family: 'Inter', sans-serif;">We build the engineering infrastructure your AI needs to run reliably in production — integration layers, observability, error handling, and documentation. Not a proof of concept. A live system your team can depend on.</p>
+          <p class="text-text-body text-base leading-relaxed mb-6" style="font-family: 'Inter', sans-serif;">We build
+            the engineering infrastructure your AI needs to run reliably in production — integration layers,
+            observability, error handling, and documentation. Not a proof of concept. A live system your team can depend
+            on.</p>
 
-          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Engineering components we deliver:</p>
+          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Engineering
+            components we deliver:</p>
           <ul class="space-y-2 mb-8">
-            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span class="text-amber mt-1 flex-shrink-0">→</span>RAG pipelines (embedding, retrieval, generation)</li>
-            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span class="text-amber mt-1 flex-shrink-0">→</span>Production API integration layer</li>
-            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span class="text-amber mt-1 flex-shrink-0">→</span>AI operations infrastructure (observability, cost tracking)</li>
-            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span class="text-amber mt-1 flex-shrink-0">→</span>Multi-model architectures (model-agnostic routing)</li>
-            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span class="text-amber mt-1 flex-shrink-0">→</span>AI system reliability engineering</li>
+            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span
+                class="text-amber mt-1 flex-shrink-0">→</span>RAG pipelines (embedding, retrieval, generation)</li>
+            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span
+                class="text-amber mt-1 flex-shrink-0">→</span>Production API integration layer</li>
+            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span
+                class="text-amber mt-1 flex-shrink-0">→</span>AI operations infrastructure (observability, cost
+              tracking)</li>
+            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span
+                class="text-amber mt-1 flex-shrink-0">→</span>Multi-model architectures (model-agnostic routing)</li>
+            <li class="flex items-start gap-3 text-text-body text-sm" style="font-family: 'Inter', sans-serif;"><span
+                class="text-amber mt-1 flex-shrink-0">→</span>AI system reliability engineering</li>
           </ul>
 
           <div class="flex flex-wrap gap-2 mb-8">
@@ -257,18 +327,24 @@
         <div class="space-y-4">
           <div class="service-card">
             <p class="text-text-muted text-xs font-mono mb-2">Right for you if...</p>
-            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Your prototype is stuck in staging</h3>
-            <p class="text-text-body text-xs leading-relaxed">The model works. Moving to production requires engineering work that wasn't scoped. We handle it.</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Your
+              prototype is stuck in staging</h3>
+            <p class="text-text-body text-xs leading-relaxed">The model works. Moving to production requires engineering
+              work that wasn't scoped. We handle it.</p>
           </div>
           <div class="service-card">
             <p class="text-text-muted text-xs font-mono mb-2">Right for you if...</p>
-            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Your AI integration keeps failing in production</h3>
-            <p class="text-text-body text-xs leading-relaxed">No retry logic, no error handling, no observability. We rebuild the integration layer to production standards.</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">Your AI
+              integration keeps failing in production</h3>
+            <p class="text-text-body text-xs leading-relaxed">No retry logic, no error handling, no observability. We
+              rebuild the integration layer to production standards.</p>
           </div>
           <div class="service-card">
             <p class="text-text-muted text-xs font-mono mb-2">Right for you if...</p>
-            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">You need AI in production without a full AI team</h3>
-            <p class="text-text-body text-xs leading-relaxed">We function as your AI engineering capacity — architecture, build, deploy, document, and hand over.</p>
+            <h3 class="text-white font-semibold text-sm mb-2" style="font-family: 'Space Grotesk', sans-serif;">You need
+              AI in production without a full AI team</h3>
+            <p class="text-text-body text-xs leading-relaxed">We function as your AI engineering capacity —
+              architecture, build, deploy, document, and hand over.</p>
           </div>
         </div>
 
@@ -280,7 +356,10 @@
   <section class="section border-t border-border-color cta-section">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <h2 class="section-h2 mb-6">Not Sure Which Service Fits?</h2>
-      <p class="text-text-body text-base leading-relaxed mb-8 max-w-xl mx-auto" style="font-family: 'Inter', sans-serif;">The free AI audit maps your workflows and tells you exactly which service — or combination of services — creates the most value for your specific operations. No commitment, no guesswork.</p>
+      <p class="text-text-body text-base leading-relaxed mb-8 max-w-xl mx-auto"
+        style="font-family: 'Inter', sans-serif;">The free AI audit maps your workflows and tells you exactly which
+        service — or combination of services — creates the most value for your specific operations. No commitment, no
+        guesswork.</p>
       <a href="../contact.html" class="btn-primary inline-flex">Book a Free AI Audit</a>
       <p class="microcopy mt-4">30 minutes. Written output. No obligation.</p>
     </div>
@@ -291,40 +370,47 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-4 gap-10 mb-12">
         <div class="md:col-span-2">
-          <a href="../index.html" class="font-space font-700 text-white text-xl tracking-tight flex items-center gap-2 mb-3">
-            <span style="color: var(--brand);">OpenTechiz</span><span class="text-text-muted font-mono text-sm ml-1">AI</span>
+          <a href="../index.html"
+            class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2 mb-3">
+            <span style="color: var(--brand);">OpenTechiz</span><span
+              class="text-text-muted font-mono text-sm ml-1">AI</span>
           </a>
-          <p class="text-text-muted text-sm italic mb-6" style="font-family: 'Inter', sans-serif;">"AI That Works. Not Just Promises."</p>
-          <a href="mailto:hoanv@opentechiz.com" class="text-text-body hover:text-blue text-sm transition-colors" style="font-family: 'Inter', sans-serif;">hoanv@opentechiz.com</a>
-          <div class="flex gap-3 mt-5">
-            <a href="https://www.linkedin.com/company/opentechiz" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-            <a href="https://github.com/opentechiz" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-            </a>
-          </div>
+          <p class="text-text-muted text-sm italic mb-6" style="font-family: 'Inter', sans-serif;">"AI That Works. Not
+            Just Promises."</p>
+          <a href="mailto:hoanv@opentechiz.com" class="text-text-body hover:text-blue text-sm transition-colors"
+            style="font-family: 'Inter', sans-serif;">hoanv@opentechiz.com</a>
         </div>
         <div>
-          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Services</p>
+          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Services
+          </p>
           <div class="space-y-3">
-            <a href="ai-automation-workflow.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">AI Automation Workflow</a>
-            <a href="agentic-ai-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Agentic AI Solutions</a>
-            <a href="ai-engineering-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">AI Engineering Solutions</a>
+            <a href="ai-automation-workflow.html"
+              class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">AI Automation Workflow</a>
+            <a href="agentic-ai-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">Agentic AI Solutions</a>
+            <a href="ai-engineering-solutions.html"
+              class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">AI Engineering Solutions</a>
           </div>
         </div>
         <div>
           <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Company</p>
           <div class="space-y-3">
-            <a href="../use-cases/index.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Use Cases</a>
-            <a href="../process.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Process</a>
-            <a href="../about.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">About</a>
-            <a href="../contact.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Contact</a>
+            <a href="../use-cases/index.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">Use Cases</a>
+            <a href="../process.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">Process</a>
+            <a href="../about.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">About</a>
+            <a href="../contact.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">Contact</a>
           </div>
         </div>
       </div>
       <hr class="divider mb-8">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-text-muted text-xs" style="font-family: 'Inter', sans-serif;">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-text-muted text-xs"
+        style="font-family: 'Inter', sans-serif;">
         <p>© 2026 OpenTechiz. All rights reserved.</p>
         <div class="flex gap-6">
           <a href="../privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
@@ -336,4 +422,5 @@
 
   <script src="../js/main.js"></script>
 </body>
+
 </html>

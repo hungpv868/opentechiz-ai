@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How We Work: AI Implementation Process, 4–8 Weeks | OpenTechiz</title>
-  <meta name="description" content="See exactly how OpenTechiz takes an AI project from discovery to live system in 4–8 weeks — phases, deliverables, and what you receive at each step.">
+  <meta name="description"
+    content="See exactly how OpenTechiz takes an AI project from discovery to live system in 4–8 weeks — phases, deliverables, and what you receive at each step.">
   <link rel="canonical" href="https://opentechiz.com/process.html">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://opentechiz.com/process.html">
   <meta property="og:title" content="How We Work: AI Implementation Process, 4–8 Weeks | OpenTechiz">
-  <meta property="og:description" content="See exactly how OpenTechiz takes an AI project from discovery to live system in 4–8 weeks — phases, deliverables, and what you receive at each step.">
+  <meta property="og:description"
+    content="See exactly how OpenTechiz takes an AI project from discovery to live system in 4–8 weeks — phases, deliverables, and what you receive at each step.">
   <meta property="og:site_name" content="OpenTechiz AI">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -105,27 +110,41 @@
   }
   </script>
 </head>
+
 <body class="bg-bg-base text-text-body">
 
   <!-- ── Navigation ──────────────────────────────────────── -->
   <nav x-data="nav" class="nav" :class="{ 'scrolled': scrolled }">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between h-16">
       <a href="index.html" class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2">
-        <span style="color: var(--brand);">OpenTechiz</span><span class="text-text-muted font-mono text-sm ml-1">AI</span>
+        <span style="color: var(--brand);">OpenTechiz</span><span
+          class="text-text-muted font-mono text-sm ml-1">AI</span>
       </a>
       <!-- Desktop nav -->
       <div class="hidden md:flex items-center gap-8">
         <div class="relative" @mouseenter="servicesOpen=true" @mouseleave="servicesOpen=false">
-          <button class="text-text-body hover:text-white transition-colors flex items-center gap-1 text-sm font-medium">Services <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-          <div x-show="servicesOpen" class="absolute top-full left-0 z-50" style="display:none; padding-top: 8px; width: 280px;">
+          <button
+            class="text-text-body hover:text-white transition-colors flex items-center gap-1 text-sm font-medium">Services
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg></button>
+          <div x-show="servicesOpen" class="absolute top-full left-0 z-50"
+            style="display:none; padding-top: 8px; width: 280px;">
             <div class="bg-surface-1 border border-border-color rounded-xl shadow-2xl overflow-hidden">
-              <a href="services/ai-automation-workflow.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Automation Workflow</a>
-              <a href="services/agentic-ai-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">Agentic AI Solutions</a>
-              <a href="services/ai-engineering-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Engineering Solutions</a>
+              <a href="services/ai-automation-workflow.html"
+                class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI
+                Automation Workflow</a>
+              <a href="services/agentic-ai-solutions.html"
+                class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">Agentic
+                AI Solutions</a>
+              <a href="services/ai-engineering-solutions.html"
+                class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI
+                Engineering Solutions</a>
             </div>
           </div>
         </div>
-        <a href="use-cases/index.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Use Cases</a>
+        <a href="use-cases/index.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Use
+          Cases</a>
         <a href="process.html" class="text-white transition-colors text-sm font-medium">Process</a>
         <a href="about.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">About</a>
         <a href="contact.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Contact</a>
@@ -133,14 +152,20 @@
       <a href="contact.html" class="hidden md:inline-flex btn-primary text-sm">Get in Touch</a>
       <!-- Mobile hamburger -->
       <button @click="navOpen=!navOpen" class="md:hidden text-white">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
       </button>
     </div>
     <!-- Mobile menu -->
-    <div x-show="navOpen" class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-3" style="display:none;">
-      <a href="services/ai-automation-workflow.html" class="block text-text-body hover:text-white py-2 text-sm">AI Automation Workflow</a>
-      <a href="services/agentic-ai-solutions.html" class="block text-text-body hover:text-white py-2 text-sm">Agentic AI Solutions</a>
-      <a href="services/ai-engineering-solutions.html" class="block text-text-body hover:text-white py-2 text-sm">AI Engineering Solutions</a>
+    <div x-show="navOpen" class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-3"
+      style="display:none;">
+      <a href="services/ai-automation-workflow.html" class="block text-text-body hover:text-white py-2 text-sm">AI
+        Automation Workflow</a>
+      <a href="services/agentic-ai-solutions.html" class="block text-text-body hover:text-white py-2 text-sm">Agentic AI
+        Solutions</a>
+      <a href="services/ai-engineering-solutions.html" class="block text-text-body hover:text-white py-2 text-sm">AI
+        Engineering Solutions</a>
       <a href="use-cases/index.html" class="block text-text-body hover:text-white py-2 text-sm">Use Cases</a>
       <a href="process.html" class="block text-white py-2 text-sm">Process</a>
       <a href="about.html" class="block text-text-body hover:text-white py-2 text-sm">About</a>
@@ -151,15 +176,22 @@
 
   <!-- ── Hero ─────────────────────────────────────────────── -->
   <section class="section pt-32 pb-16 md:pt-40 md:pb-20" style="position:relative;overflow:hidden;">
-    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%, rgba(16,185,129,0.10) 0%, transparent 65%);pointer-events:none;z-index:0;"></div>
+    <div
+      style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%, rgba(16,185,129,0.10) 0%, transparent 65%);pointer-events:none;z-index:0;">
+    </div>
     <div class="max-w-7xl mx-auto px-6" style="position:relative;z-index:1;">
       <div class="max-w-3xl">
         <p class="label-tag mb-4" style="color:#10B981;">Our Process</p>
         <h1 class="page-h1 mb-6">From Discovery Call to Live System in 4–8 Weeks</h1>
-        <p class="text-text-body text-lg leading-relaxed mb-10 max-w-2xl" style="font-family:'Inter',sans-serif;">Every project follows the same five-phase process. Each phase has a defined output. Scope is locked before we build. No surprises, no scope creep without your sign-off.</p>
+        <p class="text-text-body text-lg leading-relaxed mb-10 max-w-2xl" style="font-family:'Inter',sans-serif;">Every
+          project follows the same five-phase process. Each phase has a defined output. Scope is locked before we build.
+          No surprises, no scope creep without your sign-off.</p>
         <!-- Emerald accent bar -->
-        <div style="height:3px;width:80px;background:linear-gradient(90deg,#10B981,rgba(16,185,129,0.2));border-radius:2px;margin-bottom:32px;"></div>
-        <a href="mailto:hoanv@opentechiz.com" class="btn-primary inline-flex" style="background:#10B981;">Email Us to Get Started</a>
+        <div
+          style="height:3px;width:80px;background:linear-gradient(90deg,#10B981,rgba(16,185,129,0.2));border-radius:2px;margin-bottom:32px;">
+        </div>
+        <a href="mailto:hoanv@opentechiz.com" class="btn-primary inline-flex" style="background:#10B981;">Email Us to
+          Get Started</a>
         <p class="microcopy mt-3">hoanv@opentechiz.com · We respond within 24 business hours.</p>
       </div>
     </div>
@@ -172,100 +204,146 @@
 
       <!-- Phase 1 -->
       <div id="phase-1" class="relative pl-16 pb-16 border-l-2 border-emerald/30 ml-8">
-        <div class="absolute left-0 top-0 -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center font-space font-bold text-lg" style="background:rgba(16,185,129,0.15);border:2px solid #10B981;color:#10B981;">1</div>
+        <div
+          class="absolute left-0 top-0 -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center font-space font-bold text-lg"
+          style="background:rgba(16,185,129,0.15);border:2px solid #10B981;color:#10B981;">1</div>
         <div class="mb-3 flex items-center gap-3">
           <h3 class="text-white font-space font-semibold text-xl">Discovery &amp; AI Audit</h3>
-          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.3);">Week 1</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold"
+            style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.3);">Week 1</span>
         </div>
-        <p class="text-text-body text-sm leading-relaxed mb-6" style="font-family:'Inter',sans-serif;">We run a structured 30-minute call focused on your highest-volume workflows. We ask about your current tools, your team's manual tasks, your integration points, and your objectives.</p>
+        <p class="text-text-body text-sm leading-relaxed mb-6" style="font-family:'Inter',sans-serif;">We run a
+          structured 30-minute call focused on your highest-volume workflows. We ask about your current tools, your
+          team's manual tasks, your integration points, and your objectives.</p>
         <div class="grid md:grid-cols-2 gap-4">
           <div class="callout-box">
-            <p class="text-xs text-text-muted mb-2 font-semibold uppercase tracking-wider" style="font-family:'Inter',sans-serif;">Client does</p>
-            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">30-minute call, access to basic workflow documentation</p>
+            <p class="text-xs text-text-muted mb-2 font-semibold uppercase tracking-wider"
+              style="font-family:'Inter',sans-serif;">Client does</p>
+            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">30-minute call, access to basic
+              workflow documentation</p>
           </div>
           <div class="callout-box" style="border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.06);">
-            <p class="text-xs mb-2 font-semibold uppercase tracking-wider" style="color:#10B981;font-family:'Inter',sans-serif;">You receive</p>
-            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">Written AI audit document — prioritized automation opportunities, realistic scope, and what's buildable. No commitment required to receive this.</p>
+            <p class="text-xs mb-2 font-semibold uppercase tracking-wider"
+              style="color:#10B981;font-family:'Inter',sans-serif;">You receive</p>
+            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">Written AI audit document —
+              prioritized automation opportunities, realistic scope, and what's buildable. No commitment required to
+              receive this.</p>
           </div>
         </div>
       </div>
 
       <!-- Phase 2 -->
       <div id="phase-2" class="relative pl-16 pb-16 border-l-2 border-emerald/30 ml-8">
-        <div class="absolute left-0 top-0 -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center font-space font-bold text-lg" style="background:rgba(16,185,129,0.15);border:2px solid #10B981;color:#10B981;">2</div>
+        <div
+          class="absolute left-0 top-0 -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center font-space font-bold text-lg"
+          style="background:rgba(16,185,129,0.15);border:2px solid #10B981;color:#10B981;">2</div>
         <div class="mb-3 flex items-center gap-3">
           <h3 class="text-white font-space font-semibold text-xl">Scope &amp; Architecture</h3>
-          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.3);">Week 2</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold"
+            style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.3);">Week 2</span>
         </div>
-        <p class="text-text-body text-sm leading-relaxed mb-6" style="font-family:'Inter',sans-serif;">We translate the audit into a technical architecture. Integration points, data flows, error handling approach, and delivery timeline — all defined before a line of code is written.</p>
+        <p class="text-text-body text-sm leading-relaxed mb-6" style="font-family:'Inter',sans-serif;">We translate the
+          audit into a technical architecture. Integration points, data flows, error handling approach, and delivery
+          timeline — all defined before a line of code is written.</p>
         <div class="grid md:grid-cols-2 gap-4">
           <div class="callout-box">
-            <p class="text-xs text-text-muted mb-2 font-semibold uppercase tracking-wider" style="font-family:'Inter',sans-serif;">Client does</p>
-            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">Review and approve the architecture document</p>
+            <p class="text-xs text-text-muted mb-2 font-semibold uppercase tracking-wider"
+              style="font-family:'Inter',sans-serif;">Client does</p>
+            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">Review and approve the
+              architecture document</p>
           </div>
           <div class="callout-box" style="border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.06);">
-            <p class="text-xs mb-2 font-semibold uppercase tracking-wider" style="color:#10B981;font-family:'Inter',sans-serif;">You receive</p>
-            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">Signed scope document + full architecture diagram. This is the contract. No surprises after this point.</p>
+            <p class="text-xs mb-2 font-semibold uppercase tracking-wider"
+              style="color:#10B981;font-family:'Inter',sans-serif;">You receive</p>
+            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">Signed scope document + full
+              architecture diagram. This is the contract. No surprises after this point.</p>
           </div>
         </div>
       </div>
 
       <!-- Phase 3 -->
       <div id="phase-3" class="relative pl-16 pb-16 border-l-2 border-emerald/30 ml-8">
-        <div class="absolute left-0 top-0 -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center font-space font-bold text-lg" style="background:rgba(16,185,129,0.15);border:2px solid #10B981;color:#10B981;">3</div>
+        <div
+          class="absolute left-0 top-0 -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center font-space font-bold text-lg"
+          style="background:rgba(16,185,129,0.15);border:2px solid #10B981;color:#10B981;">3</div>
         <div class="mb-3 flex items-center gap-3">
           <h3 class="text-white font-space font-semibold text-xl">Build &amp; Integrate</h3>
-          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.3);">Weeks 3–6</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold"
+            style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.3);">Weeks
+            3–6</span>
         </div>
-        <p class="text-text-body text-sm leading-relaxed mb-6" style="font-family:'Inter',sans-serif;">We build to the approved architecture. Connected to your live systems, tested against your real data, reviewed by your team at key milestones.</p>
+        <p class="text-text-body text-sm leading-relaxed mb-6" style="font-family:'Inter',sans-serif;">We build to the
+          approved architecture. Connected to your live systems, tested against your real data, reviewed by your team at
+          key milestones.</p>
         <div class="grid md:grid-cols-2 gap-4">
           <div class="callout-box">
-            <p class="text-xs text-text-muted mb-2 font-semibold uppercase tracking-wider" style="font-family:'Inter',sans-serif;">Client does</p>
-            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">Provide system access credentials, attend midpoint check-in</p>
+            <p class="text-xs text-text-muted mb-2 font-semibold uppercase tracking-wider"
+              style="font-family:'Inter',sans-serif;">Client does</p>
+            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">Provide system access credentials,
+              attend midpoint check-in</p>
           </div>
           <div class="callout-box" style="border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.06);">
-            <p class="text-xs mb-2 font-semibold uppercase tracking-wider" style="color:#10B981;font-family:'Inter',sans-serif;">You receive</p>
-            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">Working system in a staging environment — connected to your real tools</p>
+            <p class="text-xs mb-2 font-semibold uppercase tracking-wider"
+              style="color:#10B981;font-family:'Inter',sans-serif;">You receive</p>
+            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">Working system in a staging
+              environment — connected to your real tools</p>
           </div>
         </div>
       </div>
 
       <!-- Phase 4 -->
       <div id="phase-4" class="relative pl-16 pb-16 border-l-2 border-emerald/30 ml-8">
-        <div class="absolute left-0 top-0 -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center font-space font-bold text-lg" style="background:rgba(16,185,129,0.15);border:2px solid #10B981;color:#10B981;">4</div>
+        <div
+          class="absolute left-0 top-0 -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center font-space font-bold text-lg"
+          style="background:rgba(16,185,129,0.15);border:2px solid #10B981;color:#10B981;">4</div>
         <div class="mb-3 flex items-center gap-3">
           <h3 class="text-white font-space font-semibold text-xl">QA &amp; Acceptance</h3>
-          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.3);">Week 7</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold"
+            style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.3);">Week 7</span>
         </div>
-        <p class="text-text-body text-sm leading-relaxed mb-6" style="font-family:'Inter',sans-serif;">We run the system through edge cases, load scenarios, and failure modes. You test against your acceptance criteria.</p>
+        <p class="text-text-body text-sm leading-relaxed mb-6" style="font-family:'Inter',sans-serif;">We run the system
+          through edge cases, load scenarios, and failure modes. You test against your acceptance criteria.</p>
         <div class="grid md:grid-cols-2 gap-4">
           <div class="callout-box">
-            <p class="text-xs text-text-muted mb-2 font-semibold uppercase tracking-wider" style="font-family:'Inter',sans-serif;">Client does</p>
-            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">Run acceptance tests, flag any issues</p>
+            <p class="text-xs text-text-muted mb-2 font-semibold uppercase tracking-wider"
+              style="font-family:'Inter',sans-serif;">Client does</p>
+            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">Run acceptance tests, flag any
+              issues</p>
           </div>
           <div class="callout-box" style="border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.06);">
-            <p class="text-xs mb-2 font-semibold uppercase tracking-wider" style="color:#10B981;font-family:'Inter',sans-serif;">You receive</p>
-            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">QA report + sign-off checklist. Issues resolved before production.</p>
+            <p class="text-xs mb-2 font-semibold uppercase tracking-wider"
+              style="color:#10B981;font-family:'Inter',sans-serif;">You receive</p>
+            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">QA report + sign-off checklist.
+              Issues resolved before production.</p>
           </div>
         </div>
       </div>
 
       <!-- Phase 5 -->
       <div id="phase-5" class="relative pl-16 pb-4 ml-8">
-        <div class="absolute left-0 top-0 -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center font-space font-bold text-lg" style="background:rgba(16,185,129,0.15);border:2px solid #10B981;color:#10B981;">5</div>
+        <div
+          class="absolute left-0 top-0 -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center font-space font-bold text-lg"
+          style="background:rgba(16,185,129,0.15);border:2px solid #10B981;color:#10B981;">5</div>
         <div class="mb-3 flex items-center gap-3">
           <h3 class="text-white font-space font-semibold text-xl">Deploy &amp; Handover</h3>
-          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.3);">Week 8</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold"
+            style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.3);">Week 8</span>
         </div>
-        <p class="text-text-body text-sm leading-relaxed mb-6" style="font-family:'Inter',sans-serif;">We deploy to production, verify all integrations are live, and run a team walkthrough covering operation and maintenance.</p>
+        <p class="text-text-body text-sm leading-relaxed mb-6" style="font-family:'Inter',sans-serif;">We deploy to
+          production, verify all integrations are live, and run a team walkthrough covering operation and maintenance.
+        </p>
         <div class="grid md:grid-cols-2 gap-4">
           <div class="callout-box">
-            <p class="text-xs text-text-muted mb-2 font-semibold uppercase tracking-wider" style="font-family:'Inter',sans-serif;">Client does</p>
-            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">Confirm production access, attend handover session</p>
+            <p class="text-xs text-text-muted mb-2 font-semibold uppercase tracking-wider"
+              style="font-family:'Inter',sans-serif;">Client does</p>
+            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">Confirm production access, attend
+              handover session</p>
           </div>
           <div class="callout-box" style="border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.06);">
-            <p class="text-xs mb-2 font-semibold uppercase tracking-wider" style="color:#10B981;font-family:'Inter',sans-serif;">You receive</p>
-            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">Live production system + full documentation + operational runbook</p>
+            <p class="text-xs mb-2 font-semibold uppercase tracking-wider"
+              style="color:#10B981;font-family:'Inter',sans-serif;">You receive</p>
+            <p class="text-sm text-text-body" style="font-family:'Inter',sans-serif;">Live production system + full
+              documentation + operational runbook</p>
           </div>
         </div>
       </div>
@@ -280,86 +358,54 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <div class="service-card" style="border-color:rgba(16,185,129,0.2);">
-          <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background:rgba(16,185,129,0.12);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
+            style="background:rgba(16,185,129,0.12);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
           </div>
           <h3 class="text-white font-space font-semibold text-base mb-3">No black box delivery</h3>
-          <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">You see every milestone. You approve the architecture before we build.</p>
+          <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">You see every
+            milestone. You approve the architecture before we build.</p>
         </div>
 
         <div class="service-card" style="border-color:rgba(16,185,129,0.2);">
-          <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background:rgba(16,185,129,0.12);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
+            style="background:rgba(16,185,129,0.12);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
           </div>
           <h3 class="text-white font-space font-semibold text-base mb-3">Scope locked before build</h3>
-          <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">Complexity identified and priced at architecture stage. No mid-project surprises.</p>
+          <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">Complexity
+            identified and priced at architecture stage. No mid-project surprises.</p>
         </div>
 
         <div class="service-card" style="border-color:rgba(16,185,129,0.2);">
-          <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background:rgba(16,185,129,0.12);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
+            style="background:rgba(16,185,129,0.12);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" />
+              <path d="M7 11V7a5 5 0 0110 0v4" />
+            </svg>
           </div>
           <h3 class="text-white font-space font-semibold text-base mb-3">You own everything</h3>
-          <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">Code, documentation, architecture diagrams, runbooks. All delivered at handover.</p>
+          <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">Code, documentation,
+            architecture diagrams, runbooks. All delivered at handover.</p>
         </div>
 
         <div class="service-card" style="border-color:rgba(16,185,129,0.2);">
-          <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background:rgba(16,185,129,0.12);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.59A2 2 0 012 .18h3a2 2 0 012 1.72"/></svg>
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
+            style="background:rgba(16,185,129,0.12);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.59A2 2 0 012 .18h3a2 2 0 012 1.72" />
+            </svg>
           </div>
           <h3 class="text-white font-space font-semibold text-base mb-3">Post-launch support</h3>
-          <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">We don't disappear at go-live. 30-day support period included on every project.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FAQ ──────────────────────────────────────────────── -->
-  <section class="section border-t border-border-color" style="background:var(--surface-1);">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="section-h2 mb-12 text-center">Common Questions About Our Process</h2>
-
-      <div x-data="faq" class="space-y-4">
-
-        <div class="faq-item" :class="{ 'open': openItem === 1 }" style="--faq-accent:#10B981;">
-          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(1)">
-            <span class="text-white font-semibold text-base" style="font-family:'Space Grotesk',sans-serif;">What if we want to start before the audit is complete?</span>
-            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 1 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer px-6 pb-5" x-show="openItem === 1" x-collapse style="display:none;">
-            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">We don't. The audit output is the scope foundation. Projects that skip this step have a much higher rate of scope creep and rework. The audit takes one week and protects everyone.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" :class="{ 'open': openItem === 2 }">
-          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(2)">
-            <span class="text-white font-semibold text-base" style="font-family:'Space Grotesk',sans-serif;">Can the timeline be compressed?</span>
-            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 2 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer px-6 pb-5" x-show="openItem === 2" x-collapse style="display:none;">
-            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">Sometimes. For well-defined, narrow-scope projects, we can move faster. The architecture phase tells us what's realistic. We won't compress in a way that compromises quality.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" :class="{ 'open': openItem === 3 }">
-          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(3)">
-            <span class="text-white font-semibold text-base" style="font-family:'Space Grotesk',sans-serif;">What access do you need to our systems?</span>
-            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 3 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer px-6 pb-5" x-show="openItem === 3" x-collapse style="display:none;">
-            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">Read/write API access to the specific systems in scope. We work with your IT team to set up scoped credentials. We never request admin-level access beyond what's required.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" :class="{ 'open': openItem === 4 }">
-          <button class="w-full flex items-center justify-between px-6 py-5 text-left" @click="toggle(4)">
-            <span class="text-white font-semibold text-base" style="font-family:'Space Grotesk',sans-serif;">What happens after the 30-day support period?</span>
-            <svg class="flex-shrink-0 ml-4 transition-transform duration-200" :class="{ 'rotate-180': openItem === 4 }" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B8D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-answer px-6 pb-5" x-show="openItem === 4" x-collapse style="display:none;">
-            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">We offer ongoing retainer options for clients who want continued engineering support. Most well-documented systems can be maintained by your internal team with the runbook we provide.</p>
-          </div>
+          <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">We don't disappear
+            at go-live. 30-day support period included on every project.</p>
         </div>
 
       </div>
@@ -370,8 +416,11 @@
   <section class="section border-t border-border-color cta-section">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <h2 class="section-h2 mb-6">Ready to Start the Process?</h2>
-      <p class="text-text-body text-base leading-relaxed mb-8" style="font-family:'Inter',sans-serif;">The process starts with a single call. We review your workflows, identify your best automation opportunities, and give you a written output — no commitment required.</p>
-      <a href="mailto:hoanv@opentechiz.com" class="btn-primary inline-flex" style="background:#10B981;">Email Us to Get Started</a>
+      <p class="text-text-body text-base leading-relaxed mb-8" style="font-family:'Inter',sans-serif;">The process
+        starts with a single call. We review your workflows, identify your best automation opportunities, and give you a
+        written output — no commitment required.</p>
+      <a href="mailto:hoanv@opentechiz.com" class="btn-primary inline-flex" style="background:#10B981;">Email Us to Get
+        Started</a>
       <p class="microcopy mt-4">hoanv@opentechiz.com · We respond within 24 business hours.</p>
     </div>
   </section>
@@ -381,40 +430,46 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-4 gap-10 mb-12">
         <div class="md:col-span-2">
-          <a href="index.html" class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2 mb-3">
-            <span style="color: var(--brand);">OpenTechiz</span><span class="text-text-muted font-mono text-sm ml-1">AI</span>
+          <a href="index.html"
+            class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2 mb-3">
+            <span style="color: var(--brand);">OpenTechiz</span><span
+              class="text-text-muted font-mono text-sm ml-1">AI</span>
           </a>
-          <p class="text-text-muted text-sm italic mb-6" style="font-family:'Inter',sans-serif;">"AI That Works. Not Just Promises."</p>
-          <a href="mailto:hoanv@opentechiz.com" class="text-text-body hover:text-blue text-sm transition-colors" style="font-family:'Inter',sans-serif;">hoanv@opentechiz.com</a>
-          <div class="flex gap-3 mt-5">
-            <a href="https://www.linkedin.com/company/opentechiz" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-            <a href="https://github.com/opentechiz" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-            </a>
-          </div>
+          <p class="text-text-muted text-sm italic mb-6" style="font-family:'Inter',sans-serif;">"AI That Works. Not
+            Just Promises."</p>
+          <a href="mailto:hoanv@opentechiz.com" class="text-text-body hover:text-blue text-sm transition-colors"
+            style="font-family:'Inter',sans-serif;">hoanv@opentechiz.com</a>
         </div>
         <div>
           <p class="text-white font-semibold text-sm mb-4" style="font-family:'Space Grotesk',sans-serif;">Services</p>
           <div class="space-y-3">
-            <a href="services/ai-automation-workflow.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">AI Automation Workflow</a>
-            <a href="services/agentic-ai-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">Agentic AI Solutions</a>
-            <a href="services/ai-engineering-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">AI Engineering Solutions</a>
+            <a href="services/ai-automation-workflow.html"
+              class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">AI Automation Workflow</a>
+            <a href="services/agentic-ai-solutions.html"
+              class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">Agentic AI Solutions</a>
+            <a href="services/ai-engineering-solutions.html"
+              class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">AI Engineering Solutions</a>
           </div>
         </div>
         <div>
           <p class="text-white font-semibold text-sm mb-4" style="font-family:'Space Grotesk',sans-serif;">Company</p>
           <div class="space-y-3">
-            <a href="use-cases/index.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">Use Cases</a>
+            <a href="use-cases/index.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">Use Cases</a>
             <a href="process.html" class="block text-white text-sm" style="font-family:'Inter',sans-serif;">Process</a>
-            <a href="about.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">About</a>
-            <a href="contact.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">Contact</a>
+            <a href="about.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">About</a>
+            <a href="contact.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">Contact</a>
           </div>
         </div>
       </div>
       <hr class="divider mb-8">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-text-muted text-xs" style="font-family:'Inter',sans-serif;">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-text-muted text-xs"
+        style="font-family:'Inter',sans-serif;">
         <p>© 2026 OpenTechiz. All rights reserved.</p>
         <div class="flex gap-6">
           <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
@@ -426,4 +481,5 @@
 
   <script src="js/main.js"></script>
 </body>
+
 </html>

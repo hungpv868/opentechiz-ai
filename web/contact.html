@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact OpenTechiz — Get in Touch</title>
-  <meta name="description" content="Reach OpenTechiz directly by email. No forms, no funnels — just a direct conversation about your AI automation needs. We respond within 24 business hours.">
+  <meta name="description"
+    content="Reach OpenTechiz directly by email. No forms, no funnels — just a direct conversation about your AI automation needs. We respond within 24 business hours.">
   <link rel="canonical" href="https://opentechiz.com/contact.html">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://opentechiz.com/contact.html">
   <meta property="og:title" content="Contact OpenTechiz — Get in Touch">
-  <meta property="og:description" content="Reach OpenTechiz directly by email. No forms, no funnels — just a direct conversation about your AI automation needs.">
+  <meta property="og:description"
+    content="Reach OpenTechiz directly by email. No forms, no funnels — just a direct conversation about your AI automation needs.">
   <meta property="og:site_name" content="OpenTechiz AI">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -73,31 +78,44 @@
   }
   </script>
 </head>
+
 <body class="bg-bg-base text-text-body">
 
   <!-- ── Navigation ──────────────────────────────────────── -->
   <nav class="nav" x-data="nav" :class="{ 'scrolled': scrolled }">
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
 
-      <a href="index.html" class="font-space font-700 text-white text-xl tracking-tight flex items-center gap-2">
-        <span style="color: var(--brand);">OpenTechiz</span><span class="text-text-muted font-mono text-sm ml-1">AI</span>
+      <a href="index.html" class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2">
+        <span style="color: var(--brand);">OpenTechiz</span><span
+          class="text-text-muted font-mono text-sm ml-1">AI</span>
       </a>
 
       <div class="hidden md:flex items-center gap-8">
         <div class="relative" @mouseenter="servicesOpen=true" @mouseleave="servicesOpen=false">
           <button class="flex items-center gap-1 text-text-body hover:text-white transition-colors text-sm font-medium">
             Services
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
           </button>
-          <div x-show="servicesOpen" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" class="absolute top-full left-0 z-50" style="display:none; padding-top: 8px; width: 280px;">
+          <div x-show="servicesOpen" x-transition:enter="transition ease-out duration-150"
+            x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0"
+            class="absolute top-full left-0 z-50" style="display:none; padding-top: 8px; width: 280px;">
             <div class="bg-surface-1 border border-border-color rounded-xl shadow-2xl overflow-hidden">
-              <a href="services/ai-automation-workflow.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Automation Workflow</a>
-              <a href="services/agentic-ai-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">Agentic AI Solutions</a>
-              <a href="services/ai-engineering-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Engineering Solutions</a>
+              <a href="services/ai-automation-workflow.html"
+                class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI
+                Automation Workflow</a>
+              <a href="services/agentic-ai-solutions.html"
+                class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">Agentic
+                AI Solutions</a>
+              <a href="services/ai-engineering-solutions.html"
+                class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI
+                Engineering Solutions</a>
             </div>
           </div>
         </div>
-        <a href="use-cases/index.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Use Cases</a>
+        <a href="use-cases/index.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Use
+          Cases</a>
         <a href="process.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Process</a>
         <a href="about.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">About</a>
         <a href="contact.html" class="text-white transition-colors text-sm font-medium">Contact</a>
@@ -108,17 +126,27 @@
       </div>
 
       <button class="md:hidden text-text-body hover:text-white" @click="navOpen = !navOpen" aria-label="Toggle menu">
-        <svg x-show="!navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-        <svg x-show="navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        <svg x-show="!navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+        <svg x-show="navOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" style="display:none;">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
       </button>
     </div>
 
-    <div x-show="navOpen" x-transition class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-4" style="display:none;">
+    <div x-show="navOpen" x-transition class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-4"
+      style="display:none;">
       <div class="space-y-2">
         <p class="text-text-muted text-xs uppercase tracking-wider font-semibold mb-2">Services</p>
-        <a href="services/ai-automation-workflow.html" class="block text-text-body hover:text-white text-sm py-1">AI Automation Workflow</a>
-        <a href="services/agentic-ai-solutions.html" class="block text-text-body hover:text-white text-sm py-1">Agentic AI Solutions</a>
-        <a href="services/ai-engineering-solutions.html" class="block text-text-body hover:text-white text-sm py-1">AI Engineering Solutions</a>
+        <a href="services/ai-automation-workflow.html" class="block text-text-body hover:text-white text-sm py-1">AI
+          Automation Workflow</a>
+        <a href="services/agentic-ai-solutions.html" class="block text-text-body hover:text-white text-sm py-1">Agentic
+          AI Solutions</a>
+        <a href="services/ai-engineering-solutions.html" class="block text-text-body hover:text-white text-sm py-1">AI
+          Engineering Solutions</a>
       </div>
       <hr class="divider">
       <a href="use-cases/index.html" class="block text-text-body hover:text-white text-sm py-1">Use Cases</a>
@@ -135,7 +163,9 @@
       <div class="max-w-2xl">
         <p class="label-tag mb-4">Direct Contact</p>
         <h1 class="page-h1 mb-5">Get in Touch</h1>
-        <p class="text-text-body text-lg leading-relaxed" style="font-family: 'Inter', sans-serif;">Ready to explore AI for your business? Reach us directly by email. No forms, no funnels — just tell us what you're working on and we'll take it from there.</p>
+        <p class="text-text-body text-lg leading-relaxed" style="font-family: 'Inter', sans-serif;">Ready to explore AI
+          for your business? Reach us directly by email. No forms, no funnels — just tell us what you're working on and
+          we'll take it from there.</p>
       </div>
     </div>
   </section>
@@ -146,9 +176,12 @@
 
       <!-- Email card -->
       <div class="callout-box text-center py-12 mb-10">
-        <p class="text-text-muted text-xs uppercase tracking-wider font-semibold mb-4" style="font-family: 'Space Grotesk', sans-serif;">Email</p>
-        <a href="mailto:hoanv@opentechiz.com" class="text-blue hover:text-blue-dark font-semibold transition-colors" style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; letter-spacing: -0.2px;">hoanv@opentechiz.com</a>
-        <p class="text-text-muted text-sm mt-5" style="font-family: 'Inter', sans-serif;">We respond within 24 business hours.</p>
+        <p class="text-text-muted text-xs uppercase tracking-wider font-semibold mb-4"
+          style="font-family: 'Space Grotesk', sans-serif;">Email</p>
+        <a href="mailto:hoanv@opentechiz.com" class="text-blue hover:text-blue-dark font-semibold transition-colors"
+          style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; letter-spacing: -0.2px;">hoanv@opentechiz.com</a>
+        <p class="text-text-muted text-sm mt-5" style="font-family: 'Inter', sans-serif;">We respond within 24 business
+          hours.</p>
       </div>
 
       <!-- Primary CTA -->
@@ -181,40 +214,49 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-4 gap-10 mb-12">
         <div class="md:col-span-2">
-          <a href="index.html" class="font-space font-700 text-white text-xl tracking-tight flex items-center gap-2 mb-3">
-            <span style="color: var(--brand);">OpenTechiz</span><span class="text-text-muted font-mono text-sm ml-1">AI</span>
+          <a href="index.html"
+            class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2 mb-3">
+            <span style="color: var(--brand);">OpenTechiz</span><span
+              class="text-text-muted font-mono text-sm ml-1">AI</span>
           </a>
-          <p class="text-text-muted text-sm italic mb-6" style="font-family: 'Inter', sans-serif;">"AI That Works. Not Just Promises."</p>
-          <a href="mailto:hoanv@opentechiz.com" class="text-text-body hover:text-blue text-sm transition-colors" style="font-family: 'Inter', sans-serif;"><span class="text-text-muted">Email: </span>hoanv@opentechiz.com</a>
-          <div class="flex gap-3 mt-5">
-            <a href="https://www.linkedin.com/company/opentechiz" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-            <a href="https://github.com/opentechiz" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-            </a>
-          </div>
+          <p class="text-text-muted text-sm italic mb-6" style="font-family: 'Inter', sans-serif;">"AI That Works. Not
+            Just Promises."</p>
+          <a href="mailto:hoanv@opentechiz.com" class="text-text-body hover:text-blue text-sm transition-colors"
+            style="font-family: 'Inter', sans-serif;"><span class="text-text-muted">Email:
+            </span>hoanv@opentechiz.com</a>
         </div>
         <div>
-          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Services</p>
+          <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Services
+          </p>
           <div class="space-y-3">
-            <a href="services/ai-automation-workflow.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">AI Automation Workflow</a>
-            <a href="services/agentic-ai-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Agentic AI Solutions</a>
-            <a href="services/ai-engineering-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">AI Engineering Solutions</a>
+            <a href="services/ai-automation-workflow.html"
+              class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">AI Automation Workflow</a>
+            <a href="services/agentic-ai-solutions.html"
+              class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">Agentic AI Solutions</a>
+            <a href="services/ai-engineering-solutions.html"
+              class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">AI Engineering Solutions</a>
           </div>
         </div>
         <div>
           <p class="text-white font-semibold text-sm mb-4" style="font-family: 'Space Grotesk', sans-serif;">Company</p>
           <div class="space-y-3">
-            <a href="use-cases/index.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Use Cases</a>
-            <a href="process.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Process</a>
-            <a href="about.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">About</a>
-            <a href="contact.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family: 'Inter', sans-serif;">Contact</a>
+            <a href="use-cases/index.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">Use Cases</a>
+            <a href="process.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">Process</a>
+            <a href="about.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">About</a>
+            <a href="contact.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family: 'Inter', sans-serif;">Contact</a>
           </div>
         </div>
       </div>
       <hr class="divider mb-8">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-text-muted text-xs" style="font-family: 'Inter', sans-serif;">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-text-muted text-xs"
+        style="font-family: 'Inter', sans-serif;">
         <p>© 2026 OpenTechiz. All rights reserved.</p>
         <div class="flex gap-6">
           <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
@@ -227,4 +269,5 @@
   <script src="js/main.js"></script>
 
 </body>
+
 </html>

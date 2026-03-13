@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Automated Support-to-Task Workflow | OpenTechiz</title>
-  <meta name="description" content="Automatically convert support tickets into structured task lists using GPT-4o mini, then create records in Infinity via N8N webhook — triggered in one click.">
+  <meta name="description"
+    content="Automatically convert support tickets into structured task lists using GPT-4o mini, then create records in Infinity via N8N webhook — triggered in one click.">
   <link rel="canonical" href="https://opentechiz.com/use-cases/support-to-task-workflow.html">
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://opentechiz.com/use-cases/support-to-task-workflow.html">
   <meta property="og:title" content="Automated Support-to-Task Workflow | OpenTechiz">
-  <meta property="og:description" content="Automatically convert support tickets into structured task lists using GPT-4o mini, then create records in Infinity via N8N webhook — triggered in one click.">
+  <meta property="og:description"
+    content="Automatically convert support tickets into structured task lists using GPT-4o mini, then create records in Infinity via N8N webhook — triggered in one click.">
   <meta property="og:site_name" content="OpenTechiz AI">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -27,7 +32,7 @@
             'border-color': '#1E3558', 'text-body': '#C5D0E8', 'text-muted': '#6B82A8',
             'blue': '#3B82F6', 'blue-dark': '#2563EB', 'amber': '#F59E0B', 'emerald': '#10B981',
           },
-          fontFamily: { 'space': ['Space Grotesk','sans-serif'], 'inter': ['Inter','sans-serif'], 'mono': ['JetBrains Mono','monospace'] }
+          fontFamily: { 'space': ['Space Grotesk', 'sans-serif'], 'inter': ['Inter', 'sans-serif'], 'mono': ['JetBrains Mono', 'monospace'] }
         }
       }
     }
@@ -45,37 +50,58 @@
   }
   </script>
 </head>
+
 <body class="bg-bg-base text-text-body">
 
   <!-- ── Navigation ──────────────────────────────────────── -->
   <nav x-data="nav" class="nav" :class="{ 'scrolled': scrolled }">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between h-16">
       <a href="../index.html" class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2">
-        <span class="text-blue">Open</span>Techiz <span class="text-text-muted font-mono text-sm ml-1">AI</span>
+        <span style="color: var(--brand);">OpenTechiz</span><span class="text-text-muted font-mono text-sm ml-1">AI</span>
       </a>
       <div class="hidden md:flex items-center gap-8">
         <div class="relative" @mouseenter="servicesOpen=true" @mouseleave="servicesOpen=false">
-          <button class="text-text-body hover:text-white transition-colors flex items-center gap-1 text-sm font-medium">Services <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-          <div x-show="servicesOpen" class="absolute top-full left-0 mt-2 w-64 bg-surface-1 border border-border-color rounded-xl shadow-2xl overflow-hidden z-50" style="display:none;">
-            <a href="../services/ai-automation-workflow.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Automation Workflow</a>
-            <a href="../services/agentic-ai-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">Agentic AI Solutions</a>
-            <a href="../services/ai-engineering-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Engineering Solutions</a>
+          <button
+            class="text-text-body hover:text-white transition-colors flex items-center gap-1 text-sm font-medium">Services
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg></button>
+          <div x-show="servicesOpen"
+            class="absolute top-full left-0 mt-2 w-64 bg-surface-1 border border-border-color rounded-xl shadow-2xl overflow-hidden z-50"
+            style="display:none;">
+            <a href="../services/ai-automation-workflow.html"
+              class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI
+              Automation Workflow</a>
+            <a href="../services/agentic-ai-solutions.html"
+              class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">Agentic
+              AI Solutions</a>
+            <a href="../services/ai-engineering-solutions.html"
+              class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI
+              Engineering Solutions</a>
           </div>
         </div>
         <a href="index.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Use Cases</a>
-        <a href="../process.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Process</a>
+        <a href="../process.html"
+          class="text-text-body hover:text-white transition-colors text-sm font-medium">Process</a>
         <a href="../about.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">About</a>
-        <a href="../contact.html" class="text-text-body hover:text-white transition-colors text-sm font-medium">Contact</a>
+        <a href="../contact.html"
+          class="text-text-body hover:text-white transition-colors text-sm font-medium">Contact</a>
       </div>
       <a href="../contact.html" class="hidden md:inline-flex btn-primary text-sm">Get in Touch</a>
       <button @click="navOpen=!navOpen" class="md:hidden text-white">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
       </button>
     </div>
-    <div x-show="navOpen" class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-3" style="display:none;">
-      <a href="../services/ai-automation-workflow.html" class="block text-text-body hover:text-white py-2 text-sm">AI Automation Workflow</a>
-      <a href="../services/agentic-ai-solutions.html" class="block text-text-body hover:text-white py-2 text-sm">Agentic AI Solutions</a>
-      <a href="../services/ai-engineering-solutions.html" class="block text-text-body hover:text-white py-2 text-sm">AI Engineering Solutions</a>
+    <div x-show="navOpen" class="md:hidden border-t border-border-color bg-surface-1 px-6 py-4 space-y-3"
+      style="display:none;">
+      <a href="../services/ai-automation-workflow.html" class="block text-text-body hover:text-white py-2 text-sm">AI
+        Automation Workflow</a>
+      <a href="../services/agentic-ai-solutions.html" class="block text-text-body hover:text-white py-2 text-sm">Agentic
+        AI Solutions</a>
+      <a href="../services/ai-engineering-solutions.html" class="block text-text-body hover:text-white py-2 text-sm">AI
+        Engineering Solutions</a>
       <a href="index.html" class="block text-text-body hover:text-white py-2 text-sm">Use Cases</a>
       <a href="../process.html" class="block text-text-body hover:text-white py-2 text-sm">Process</a>
       <a href="../about.html" class="block text-text-body hover:text-white py-2 text-sm">About</a>
@@ -86,38 +112,24 @@
 
   <!-- ── Hero ─────────────────────────────────────────────── -->
   <section class="section pt-32 pb-16 md:pt-40 md:pb-20" style="position:relative;overflow:hidden;">
-    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%, rgba(59,130,246,0.08) 0%, transparent 65%);pointer-events:none;z-index:0;"></div>
+    <div
+      style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%, rgba(59,130,246,0.08) 0%, transparent 65%);pointer-events:none;z-index:0;">
+    </div>
     <div class="max-w-7xl mx-auto px-6" style="position:relative;z-index:1;">
       <div class="max-w-4xl">
         <div class="flex items-center gap-3 mb-4">
-          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(59,130,246,0.12);color:#3B82F6;border:1px solid rgba(59,130,246,0.3);font-family:'Inter',sans-serif;">Workflow Automation</span>
-          <span class="text-text-muted text-xs" style="font-family:'JetBrains Mono',monospace;">AI Automation Workflow</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold"
+            style="background:rgba(59,130,246,0.12);color:#3B82F6;border:1px solid rgba(59,130,246,0.3);font-family:'Inter',sans-serif;">Workflow
+            Automation</span>
+          <span class="text-text-muted text-xs" style="font-family:'JetBrains Mono',monospace;">AI Automation
+            Workflow</span>
         </div>
         <h1 class="page-h1 mb-6">Automated Support-to-Task Workflow: From Ticket to Structured Tasks in Seconds</h1>
-        <p class="text-text-body text-lg leading-relaxed mb-10 max-w-3xl" style="font-family:'Inter',sans-serif;">Fetch ticket data, run it through GPT-4o mini to generate a structured Todo List, then push a record directly into Infinity via N8N — triggered by one click or automatically via Infinity Helper.</p>
+        <p class="text-text-body text-lg leading-relaxed mb-10 max-w-3xl" style="font-family:'Inter',sans-serif;">Fetch
+          ticket data, run it through GPT-4o mini to generate a structured Todo List, then push a record directly into
+          Infinity via N8N — triggered by one click or automatically via Infinity Helper.</p>
         <a href="../contact.html" class="btn-primary inline-flex">Build This for My Business</a>
         <p class="microcopy mt-3">Tell us your ticketing system. We'll scope the automation.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Business Context ──────────────────────────────────── -->
-  <section class="section border-t border-border-color" style="background:var(--surface-1);">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="section-h2 mb-8">The Ticket-to-Task Gap</h2>
-      <p class="text-text-body text-base leading-relaxed" style="font-family:'Inter',sans-serif;">Support tickets arrive as unstructured text. Turning each one into actionable tasks in a project management tool requires someone to read the ticket, decide what needs to happen, create the tasks manually, and keep the record updated. That gap between ticket and task is where work gets lost and teams lose time.</p>
-    </div>
-  </section>
-
-  <!-- ── Before State ───────────────────────────────────────── -->
-  <section class="section border-t border-border-color">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="section-h2 mb-10">Before Automation</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bab-card"><div class="bab-before"><p class="text-text-body text-sm" style="font-family:'Inter',sans-serif;">Agent reads the ticket and manually creates tasks in the project management tool</p></div></div>
-        <div class="bab-card"><div class="bab-before"><p class="text-text-body text-sm" style="font-family:'Inter',sans-serif;">Task creation is inconsistent — different agents structure tasks differently</p></div></div>
-        <div class="bab-card"><div class="bab-before"><p class="text-text-body text-sm" style="font-family:'Inter',sans-serif;">High-volume ticket periods lead to a backlog of unprocessed tasks</p></div></div>
-        <div class="bab-card"><div class="bab-before"><p class="text-text-body text-sm" style="font-family:'Inter',sans-serif;">No audit trail linking the original ticket to the tasks it generated</p></div></div>
       </div>
     </div>
   </section>
@@ -127,136 +139,61 @@
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="section-h2 mb-10">How the Workflow Runs</h2>
       <div class="space-y-4">
-        <div class="flex gap-4 items-start p-5 rounded-xl" style="background:var(--surface-2);border:1px solid var(--border-color);">
-          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0" style="background:rgba(59,130,246,0.15);border:1px solid #3B82F6;color:#3B82F6;">1</span>
+        <div class="flex gap-4 items-start p-5 rounded-xl"
+          style="background:var(--surface-2);border:1px solid var(--border-color);">
+          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0"
+            style="background:rgba(59,130,246,0.15);border:1px solid #3B82F6;color:#3B82F6;">1</span>
           <div>
             <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">Trigger</p>
-            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">User starts the "Infinity Helper" integration or presses the "Create Now" button to initiate the workflow</p>
+            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">User starts the
+              "Infinity Helper" integration or presses the "Create Now" button to initiate the workflow</p>
           </div>
         </div>
-        <div class="flex gap-4 items-start p-5 rounded-xl" style="background:var(--surface-2);border:1px solid var(--border-color);">
-          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0" style="background:rgba(59,130,246,0.15);border:1px solid #3B82F6;color:#3B82F6;">2</span>
+        <div class="flex gap-4 items-start p-5 rounded-xl"
+          style="background:var(--surface-2);border:1px solid var(--border-color);">
+          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0"
+            style="background:rgba(59,130,246,0.15);border:1px solid #3B82F6;color:#3B82F6;">2</span>
           <div>
-            <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">Fetch Ticket Data</p>
-            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">The workflow calls the ticket system API to retrieve the full ticket — subject, body, sender, metadata, and attachments</p>
+            <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">Fetch
+              Ticket Data</p>
+            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">The workflow calls
+              the ticket system API to retrieve the full ticket — subject, body, sender, metadata, and attachments</p>
           </div>
         </div>
-        <div class="flex gap-4 items-start p-5 rounded-xl" style="background:var(--surface-2);border:1px solid var(--border-color);">
-          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0" style="background:rgba(59,130,246,0.15);border:1px solid #3B82F6;color:#3B82F6;">3</span>
+        <div class="flex gap-4 items-start p-5 rounded-xl"
+          style="background:var(--surface-2);border:1px solid var(--border-color);">
+          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0"
+            style="background:rgba(59,130,246,0.15);border:1px solid #3B82F6;color:#3B82F6;">3</span>
           <div>
-            <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">LLM Process (GPT-4o mini)</p>
-            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">GPT-4o mini reads the ticket content and generates a structured Todo List — breaking the ticket into discrete, actionable tasks</p>
+            <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">LLM Process
+              (GPT-4o mini)</p>
+            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">GPT-4o mini reads
+              the ticket content and generates a structured Todo List — breaking the ticket into discrete, actionable
+              tasks</p>
           </div>
         </div>
-        <div class="flex gap-4 items-start p-5 rounded-xl" style="background:var(--surface-2);border:1px solid var(--border-color);">
-          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0" style="background:rgba(59,130,246,0.15);border:1px solid #3B82F6;color:#3B82F6;">4</span>
+        <div class="flex gap-4 items-start p-5 rounded-xl"
+          style="background:var(--surface-2);border:1px solid var(--border-color);">
+          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0"
+            style="background:rgba(59,130,246,0.15);border:1px solid #3B82F6;color:#3B82F6;">4</span>
           <div>
-            <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">Webhook to N8N</p>
-            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">The Todo List payload is sent to an N8N webhook, which triggers the record creation pipeline</p>
+            <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">Webhook to
+              N8N</p>
+            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">The Todo List
+              payload is sent to an N8N webhook, which triggers the record creation pipeline</p>
           </div>
         </div>
-        <div class="flex gap-4 items-start p-5 rounded-xl" style="background:var(--surface-2);border:1px solid var(--border-color);">
-          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0" style="background:rgba(59,130,246,0.15);border:1px solid #3B82F6;color:#3B82F6;">5</span>
+        <div class="flex gap-4 items-start p-5 rounded-xl"
+          style="background:var(--surface-2);border:1px solid var(--border-color);">
+          <span class="w-8 h-8 rounded-full flex items-center justify-center font-space font-bold text-sm flex-shrink-0"
+            style="background:rgba(59,130,246,0.15);border:1px solid #3B82F6;color:#3B82F6;">5</span>
           <div>
-            <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">Record Entry Created</p>
-            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">N8N creates the record in the Infinity Platform — the ticket is now a tracked, structured set of tasks ready for the team</p>
+            <p class="text-white text-sm font-semibold mb-1" style="font-family:'Space Grotesk',sans-serif;">Record
+              Entry Created</p>
+            <p class="text-text-body text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">N8N creates the
+              record in the Infinity Platform — the ticket is now a tracked, structured set of tasks ready for the team
+            </p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Technical Stack ───────────────────────────────────── -->
-  <section class="section border-t border-border-color">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="section-h2 mb-8">Technical Stack</h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="p-5 rounded-xl" style="background:var(--surface-1);border:1px solid var(--border-color);">
-          <p class="text-white font-semibold text-sm mb-1" style="font-family:'Space Grotesk',sans-serif;">GPT-4o mini</p>
-          <p class="text-text-muted text-xs" style="font-family:'Inter',sans-serif;">Reads unstructured ticket text and outputs a clean, structured Todo List</p>
-        </div>
-        <div class="p-5 rounded-xl" style="background:var(--surface-1);border:1px solid var(--border-color);">
-          <p class="text-white font-semibold text-sm mb-1" style="font-family:'Space Grotesk',sans-serif;">Ticket System API</p>
-          <p class="text-text-muted text-xs" style="font-family:'Inter',sans-serif;">Fetches full ticket data programmatically — no manual copy-paste</p>
-        </div>
-        <div class="p-5 rounded-xl" style="background:var(--surface-1);border:1px solid var(--border-color);">
-          <p class="text-white font-semibold text-sm mb-1" style="font-family:'Space Grotesk',sans-serif;">N8N Webhook</p>
-          <p class="text-text-muted text-xs" style="font-family:'Inter',sans-serif;">Receives the payload and orchestrates the record creation step</p>
-        </div>
-        <div class="p-5 rounded-xl" style="background:var(--surface-1);border:1px solid var(--border-color);">
-          <p class="text-white font-semibold text-sm mb-1" style="font-family:'Space Grotesk',sans-serif;">Infinity Platform</p>
-          <p class="text-text-muted text-xs" style="font-family:'Inter',sans-serif;">Stores the resulting task record — linked to the originating ticket</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Outcomes ───────────────────────────────────────────── -->
-  <section class="section border-t border-border-color" style="background:var(--surface-1);">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="section-h2 mb-12">What Changes</h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="stat-border-left pl-5">
-          <p class="stat-number">1 click</p>
-          <p class="stat-label">Converts any ticket into a structured task list — no manual reading or writing</p>
-        </div>
-        <div class="stat-border-left pl-5">
-          <p class="stat-number">Consistent</p>
-          <p class="stat-label">Every ticket produces a uniformly structured task list regardless of who triggers it</p>
-        </div>
-        <div class="stat-border-left pl-5">
-          <p class="stat-number">Traceable</p>
-          <p class="stat-label">Every Infinity record links back to the original ticket for full audit trail</p>
-        </div>
-        <div class="stat-border-left pl-5">
-          <p class="stat-number">Scalable</p>
-          <p class="stat-label">Handles volume spikes without adding headcount — runs as fast as the API responds</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Integrations ──────────────────────────────────────── -->
-  <section class="section border-t border-border-color">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="section-h2 mb-8">Systems This Connects To</h2>
-      <div class="flex flex-wrap gap-3">
-        <span class="px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family:'Inter',sans-serif;opacity:0.75;">Infinity Platform</span>
-        <span class="px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family:'Inter',sans-serif;opacity:0.75;">N8N</span>
-        <span class="px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family:'Inter',sans-serif;opacity:0.75;">GPT-4o mini (OpenAI API)</span>
-        <span class="px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family:'Inter',sans-serif;opacity:0.75;">Ticket System API</span>
-        <span class="px-4 py-2 bg-surface-2 border border-border-color rounded-lg text-sm font-medium" style="font-family:'Inter',sans-serif;opacity:0.75;">Webhook Endpoint</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Service Link ───────────────────────────────────────── -->
-  <section class="section border-t border-border-color" style="background:var(--surface-1);">
-    <div class="max-w-7xl mx-auto px-6">
-      <p class="text-text-body text-base" style="font-family:'Inter',sans-serif;">
-        This use case is built under our
-        <a href="../services/ai-automation-workflow.html" class="text-blue hover:text-blue-dark font-semibold transition-colors">AI Automation Workflow →</a>
-        service.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── Related Use Cases ─────────────────────────────────── -->
-  <section class="section border-t border-border-color">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="section-h2 mb-10">Related Use Cases</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="use-case-card">
-          <span class="px-3 py-1 rounded-full text-xs font-semibold mb-4 inline-block" style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.25);font-family:'Inter',sans-serif;">E-commerce</span>
-          <h3 class="text-white font-space font-semibold text-base mb-2">E-commerce AI Chatbot</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4" style="font-family:'Inter',sans-serif;">Handles FAQs, order tracking, returns, and shopping recommendations via Chat and WhatsApp.</p>
-          <a href="ecommerce-ai-chatbot.html" class="text-blue hover:text-blue-dark text-sm font-semibold transition-colors" style="font-family:'Inter',sans-serif;">See Use Case →</a>
-        </div>
-        <div class="use-case-card">
-          <span class="px-3 py-1 rounded-full text-xs font-semibold mb-4 inline-block" style="background:rgba(245,158,11,0.12);color:#F59E0B;border:1px solid rgba(245,158,11,0.25);font-family:'Inter',sans-serif;">AI Recommendations</span>
-          <h3 class="text-white font-space font-semibold text-base mb-2">AI Profile Recommendation Service</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4" style="font-family:'Inter',sans-serif;">Ranks and matches candidate profiles using AI matching algorithms and feature engineering.</p>
-          <a href="ai-profile-recommendation.html" class="text-blue hover:text-blue-dark text-sm font-semibold transition-colors" style="font-family:'Inter',sans-serif;">See Use Case →</a>
         </div>
       </div>
     </div>
@@ -266,7 +203,9 @@
   <section class="section border-t border-border-color cta-section">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <h2 class="section-h2 mb-6">Build This for My Business</h2>
-      <p class="text-text-body text-base leading-relaxed mb-8" style="font-family:'Inter',sans-serif;">Tell us your ticketing system and project management platform. We'll scope the automation and give you a clear picture before any contract is signed.</p>
+      <p class="text-text-body text-base leading-relaxed mb-8" style="font-family:'Inter',sans-serif;">Tell us your
+        ticketing system and project management platform. We'll scope the automation and give you a clear picture before
+        any contract is signed.</p>
       <a href="../contact.html" class="btn-primary inline-flex">Build This for My Business</a>
       <p class="microcopy mt-4">No sales pitch. No commitment.</p>
     </div>
@@ -277,40 +216,46 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-4 gap-10 mb-12">
         <div class="md:col-span-2">
-          <a href="../index.html" class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2 mb-3">
-            <span class="text-blue">Open</span>Techiz <span class="text-text-muted font-mono text-sm ml-1">AI</span>
+          <a href="../index.html"
+            class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2 mb-3">
+            <span style="color: var(--brand);">OpenTechiz</span><span class="text-text-muted font-mono text-sm ml-1">AI</span>
           </a>
-          <p class="text-text-muted text-sm italic mb-6" style="font-family:'Inter',sans-serif;">"AI That Works. Not Just Promises."</p>
-          <a href="mailto:hoanv@opentechiz.com" class="text-text-body hover:text-blue text-sm transition-colors" style="font-family:'Inter',sans-serif;">hoanv@opentechiz.com</a>
-          <div class="flex gap-3 mt-5">
-            <a href="https://www.linkedin.com/company/opentechiz" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-            <a href="https://github.com/opentechiz" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-            </a>
-          </div>
+          <p class="text-text-muted text-sm italic mb-6" style="font-family:'Inter',sans-serif;">"AI That Works. Not
+            Just Promises."</p>
+          <a href="mailto:hoanv@opentechiz.com" class="text-text-body hover:text-blue text-sm transition-colors"
+            style="font-family:'Inter',sans-serif;">hoanv@opentechiz.com</a>
         </div>
         <div>
           <p class="text-white font-semibold text-sm mb-4" style="font-family:'Space Grotesk',sans-serif;">Services</p>
           <div class="space-y-3">
-            <a href="../services/ai-automation-workflow.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">AI Automation Workflow</a>
-            <a href="../services/agentic-ai-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">Agentic AI Solutions</a>
-            <a href="../services/ai-engineering-solutions.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">AI Engineering Solutions</a>
+            <a href="../services/ai-automation-workflow.html"
+              class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">AI Automation Workflow</a>
+            <a href="../services/agentic-ai-solutions.html"
+              class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">Agentic AI Solutions</a>
+            <a href="../services/ai-engineering-solutions.html"
+              class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">AI Engineering Solutions</a>
           </div>
         </div>
         <div>
           <p class="text-white font-semibold text-sm mb-4" style="font-family:'Space Grotesk',sans-serif;">Company</p>
           <div class="space-y-3">
-            <a href="index.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">Use Cases</a>
-            <a href="../process.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">Process</a>
-            <a href="../about.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">About</a>
-            <a href="../contact.html" class="block text-text-muted hover:text-white text-sm transition-colors" style="font-family:'Inter',sans-serif;">Contact</a>
+            <a href="index.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">Use Cases</a>
+            <a href="../process.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">Process</a>
+            <a href="../about.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">About</a>
+            <a href="../contact.html" class="block text-text-muted hover:text-white text-sm transition-colors"
+              style="font-family:'Inter',sans-serif;">Contact</a>
           </div>
         </div>
       </div>
       <hr class="divider mb-8">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-text-muted text-xs" style="font-family:'Inter',sans-serif;">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-text-muted text-xs"
+        style="font-family:'Inter',sans-serif;">
         <p>© 2026 OpenTechiz. All rights reserved.</p>
         <div class="flex gap-6">
           <a href="../privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
@@ -322,4 +267,5 @@
 
   <script src="../js/main.js"></script>
 </body>
+
 </html>
