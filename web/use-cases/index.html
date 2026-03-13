@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Use Cases for Business Operations | OpenTechiz</title>
-  <meta name="description" content="Browse 12 real AI implementation scenarios across customer support, CRM, operations, finance, and engineering.">
+  <meta name="description" content="Browse 5 real AI implementation scenarios: e-commerce chatbot, airport voice AI, product recommendations, profile matching, and support-to-task workflow automation.">
   <link rel="canonical" href="https://opentechiz.com/use-cases/">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://opentechiz.com/use-cases/">
   <meta property="og:title" content="AI Use Cases for Business Operations | OpenTechiz">
-  <meta property="og:description" content="Browse 12 real AI implementation scenarios across customer support, CRM, operations, finance, and engineering.">
+  <meta property="og:description" content="Browse 5 real AI implementation scenarios: e-commerce chatbot, airport voice AI, product recommendations, profile matching, and support-to-task workflow automation.">
   <meta property="og:site_name" content="OpenTechiz AI">
 
   <!-- Fonts -->
@@ -32,6 +33,8 @@
             'border-color': '#1E3558',
             'text-body': '#C5D0E8',
             'text-muted': '#6B82A8',
+            'brand': '#96c73c',
+            'brand-dark': '#7aad2a',
             'blue': '#3B82F6',
             'blue-dark': '#2563EB',
             'amber': '#F59E0B',
@@ -60,13 +63,14 @@
     "@type": "ItemList",
     "name": "AI Use Cases for Business Operations",
     "url": "https://opentechiz.com/use-cases/",
-    "description": "12 real AI implementation scenarios across customer support, CRM, operations, finance, and engineering.",
-    "numberOfItems": 12,
+    "description": "5 real AI implementation scenarios across e-commerce, voice AI, recommendations, and workflow automation.",
+    "numberOfItems": 5,
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Customer Support Automation", "url": "https://opentechiz.com/use-cases/customer-support-automation.html" },
-      { "@type": "ListItem", "position": 2, "name": "CRM Workflow Automation", "url": "https://opentechiz.com/use-cases/crm-workflow-automation.html" },
-      { "@type": "ListItem", "position": 3, "name": "Data Processing & Reporting", "url": "https://opentechiz.com/use-cases/data-processing-reporting.html" },
-      { "@type": "ListItem", "position": 4, "name": "Employee Onboarding Automation", "url": "https://opentechiz.com/use-cases/employee-onboarding-automation.html" }
+      { "@type": "ListItem", "position": 1, "name": "E-commerce AI Chatbot", "url": "https://opentechiz.com/use-cases/ecommerce-ai-chatbot.html" },
+      { "@type": "ListItem", "position": 2, "name": "Airport Assistance AI Voice Chatbot", "url": "https://opentechiz.com/use-cases/airport-voice-chatbot.html" },
+      { "@type": "ListItem", "position": 3, "name": "AI Profile Recommendation Service", "url": "https://opentechiz.com/use-cases/ai-profile-recommendation.html" },
+      { "@type": "ListItem", "position": 4, "name": "E-commerce Hybrid Product Recommendation Pipeline", "url": "https://opentechiz.com/use-cases/ecommerce-product-recommendation.html" },
+      { "@type": "ListItem", "position": 5, "name": "Automated Support-to-Task Workflow", "url": "https://opentechiz.com/use-cases/support-to-task-workflow.html" }
     ]
   }
   </script>
@@ -77,15 +81,17 @@
   <nav x-data="nav" class="nav" :class="{ 'scrolled': scrolled }">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between h-16">
       <a href="../index.html" class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2">
-        <span class="text-blue">Open</span>Techiz <span class="text-text-muted font-mono text-sm ml-1">AI</span>
+        <span style="color: var(--brand);">OpenTechiz</span><span class="text-text-muted font-mono text-sm ml-1">AI</span>
       </a>
       <div class="hidden md:flex items-center gap-8">
         <div class="relative" @mouseenter="servicesOpen=true" @mouseleave="servicesOpen=false">
           <button class="text-text-body hover:text-white transition-colors flex items-center gap-1 text-sm font-medium">Services <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-          <div x-show="servicesOpen" class="absolute top-full left-0 mt-2 w-64 bg-surface-1 border border-border-color rounded-xl shadow-2xl overflow-hidden z-50" style="display:none;">
-            <a href="../services/ai-automation-workflow.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Automation Workflow</a>
-            <a href="../services/agentic-ai-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">Agentic AI Solutions</a>
-            <a href="../services/ai-engineering-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Engineering Solutions</a>
+          <div x-show="servicesOpen" class="absolute top-full left-0 z-50" style="display:none; padding-top: 8px; width: 280px;">
+            <div class="bg-surface-1 border border-border-color rounded-xl shadow-2xl overflow-hidden">
+              <a href="../services/ai-automation-workflow.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Automation Workflow</a>
+              <a href="../services/agentic-ai-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">Agentic AI Solutions</a>
+              <a href="../services/ai-engineering-solutions.html" class="block px-5 py-3 text-sm text-text-body hover:text-white hover:bg-surface-2 transition-colors">AI Engineering Solutions</a>
+            </div>
           </div>
         </div>
         <a href="index.html" class="text-white transition-colors text-sm font-medium">Use Cases</a>
@@ -116,207 +122,83 @@
       <div class="max-w-3xl">
         <p class="label-tag mb-4">Use Cases</p>
         <h1 class="page-h1 mb-6">AI Applied to Real Business Problems — Not Hypotheticals</h1>
-        <p class="text-text-body text-lg leading-relaxed" style="font-family:'Inter',sans-serif;">Browse specific scenarios where AI automation, agentic systems, and production AI engineering have replaced manual work.</p>
+        <p class="text-text-body text-lg leading-relaxed" style="font-family:'Inter',sans-serif;">Browse specific scenarios where AI chatbots, voice assistants, recommendation engines, and workflow automation have replaced manual work.</p>
       </div>
     </div>
   </section>
 
-  <!-- ── Filter + Cards ─────────────────────────────────────── -->
+  <!-- ── Cards ──────────────────────────────────────────────── -->
   <section class="section border-t border-border-color" style="background:var(--surface-1);">
-    <div class="max-w-7xl mx-auto px-6" x-data="{
-      activeFilter: 'all',
-      setFilter(f) { this.activeFilter = f; }
-    }">
-
-      <!-- Filter Tabs -->
-      <div class="flex flex-wrap gap-2 mb-12">
-        <template x-for="tab in ['all','Customer Support','Sales & CRM','Operations','Finance & Admin','Internal Tools','Engineering & Product']" :key="tab">
-          <button
-            @click="setFilter(tab)"
-            :class="activeFilter === tab ? 'bg-blue text-white border-blue' : 'bg-surface-2 text-text-body border-border-color hover:border-blue/40'"
-            class="px-4 py-2 rounded-lg text-sm font-medium border transition-colors"
-            style="font-family:'Inter',sans-serif;"
-            x-text="tab === 'all' ? 'All' : tab">
-          </button>
-        </template>
-      </div>
-
-      <!-- Use Case Cards Grid -->
+    <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <!-- Card 1: Customer Support -->
-        <div x-show="activeFilter === 'all' || activeFilter === 'Customer Support'" class="use-case-card flex flex-col">
+        <!-- Card 1: E-commerce AI Chatbot -->
+        <div class="use-case-card flex flex-col">
           <div class="flex items-start justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.25);font-family:'Inter',sans-serif;">Customer Support</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.25);font-family:'Inter',sans-serif;">E-commerce</span>
             <span class="text-xs text-text-muted" style="font-family:'JetBrains Mono',monospace;">Agentic AI</span>
           </div>
-          <h3 class="text-white font-space font-semibold text-base mb-2">Customer Support Automation</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4 flex-1" style="font-family:'Inter',sans-serif;">80% of tier-1 tickets resolved autonomously, 24/7</p>
+          <h3 class="text-white font-space font-semibold text-base mb-2">E-commerce AI Chatbot</h3>
+          <p class="text-text-body text-sm leading-relaxed mb-4 flex-1" style="font-family:'Inter',sans-serif;">FAQs, order tracking, returns, and shopping recommendations via Chat and WhatsApp — powered by LLM and RAG</p>
           <div class="flex items-center justify-between">
-            <span class="text-emerald font-semibold text-sm" style="font-family:'JetBrains Mono',monospace;">80% auto-resolved</span>
-            <a href="customer-support-automation.html" class="text-blue hover:text-blue-dark text-sm font-semibold transition-colors" style="font-family:'Inter',sans-serif;">See Use Case →</a>
+            <span class="text-emerald font-semibold text-sm" style="font-family:'JetBrains Mono',monospace;">24/7 coverage</span>
+            <a href="ecommerce-ai-chatbot.html" class="text-blue hover:text-blue-dark text-sm font-semibold transition-colors" style="font-family:'Inter',sans-serif;">See Use Case →</a>
           </div>
         </div>
 
-        <!-- Card 2: Lead Qualification -->
-        <!-- TODO: create page -->
-        <div x-show="activeFilter === 'all' || activeFilter === 'Sales & CRM'" class="use-case-card flex flex-col">
+        <!-- Card 2: Airport AI Voice Chatbot -->
+        <div class="use-case-card flex flex-col">
           <div class="flex items-start justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(59,130,246,0.12);color:#3B82F6;border:1px solid rgba(59,130,246,0.25);font-family:'Inter',sans-serif;">Sales &amp; CRM</span>
-            <span class="text-xs text-text-muted" style="font-family:'JetBrains Mono',monospace;">Agentic AI</span>
-          </div>
-          <h3 class="text-white font-space font-semibold text-base mb-2">Lead Qualification Automation</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4 flex-1" style="font-family:'Inter',sans-serif;">Every inbound lead contacted in under 60 seconds</p>
-          <div class="flex items-center justify-between">
-            <span class="text-blue font-semibold text-sm" style="font-family:'JetBrains Mono',monospace;">&lt;60s first-touch</span>
-            <a href="#" class="text-text-muted text-sm" style="font-family:'Inter',sans-serif;">Coming soon</a>
-          </div>
-        </div>
-
-        <!-- Card 3: CRM Workflow -->
-        <div x-show="activeFilter === 'all' || activeFilter === 'Sales & CRM'" class="use-case-card flex flex-col">
-          <div class="flex items-start justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(59,130,246,0.12);color:#3B82F6;border:1px solid rgba(59,130,246,0.25);font-family:'Inter',sans-serif;">Sales &amp; CRM</span>
-            <span class="text-xs text-text-muted" style="font-family:'JetBrains Mono',monospace;">AI Automation</span>
-          </div>
-          <h3 class="text-white font-space font-semibold text-base mb-2">CRM Workflow Automation</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4 flex-1" style="font-family:'Inter',sans-serif;">Zero manual CRM entry, 100% record completeness</p>
-          <div class="flex items-center justify-between">
-            <span class="text-blue font-semibold text-sm" style="font-family:'JetBrains Mono',monospace;">0 hrs manual entry/week</span>
-            <a href="crm-workflow-automation.html" class="text-blue hover:text-blue-dark text-sm font-semibold transition-colors" style="font-family:'Inter',sans-serif;">See Use Case →</a>
-          </div>
-        </div>
-
-        <!-- Card 4: Internal Knowledge -->
-        <!-- TODO: create page -->
-        <div x-show="activeFilter === 'all' || activeFilter === 'Internal Tools'" class="use-case-card flex flex-col">
-          <div class="flex items-start justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(245,158,11,0.12);color:#F59E0B;border:1px solid rgba(245,158,11,0.25);font-family:'Inter',sans-serif;">Internal Tools</span>
-            <span class="text-xs text-text-muted" style="font-family:'JetBrains Mono',monospace;">Agentic + Engineering</span>
-          </div>
-          <h3 class="text-white font-space font-semibold text-base mb-2">Internal Knowledge Assistant</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4 flex-1" style="font-family:'Inter',sans-serif;">Team answers from your actual documents in &lt;5 seconds</p>
-          <div class="flex items-center justify-between">
-            <span class="text-amber font-semibold text-sm" style="font-family:'JetBrains Mono',monospace;">&lt;5s response</span>
-            <a href="#" class="text-text-muted text-sm" style="font-family:'Inter',sans-serif;">Coming soon</a>
-          </div>
-        </div>
-
-        <!-- Card 5: Data Processing -->
-        <div x-show="activeFilter === 'all' || activeFilter === 'Operations'" class="use-case-card flex flex-col">
-          <div class="flex items-start justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.25);font-family:'Inter',sans-serif;">Operations</span>
-            <span class="text-xs text-text-muted" style="font-family:'JetBrains Mono',monospace;">AI Automation</span>
-          </div>
-          <h3 class="text-white font-space font-semibold text-base mb-2">Data Processing &amp; Reporting</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4 flex-1" style="font-family:'Inter',sans-serif;">6-hour manual reporting run → 20-minute automated run</p>
-          <div class="flex items-center justify-between">
-            <span class="text-emerald font-semibold text-sm" style="font-family:'JetBrains Mono',monospace;">6 hrs → 20 min</span>
-            <a href="data-processing-reporting.html" class="text-blue hover:text-blue-dark text-sm font-semibold transition-colors" style="font-family:'Inter',sans-serif;">See Use Case →</a>
-          </div>
-        </div>
-
-        <!-- Card 6: Document Processing -->
-        <!-- TODO: create page -->
-        <div x-show="activeFilter === 'all' || activeFilter === 'Operations'" class="use-case-card flex flex-col">
-          <div class="flex items-start justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.25);font-family:'Inter',sans-serif;">Operations</span>
-            <span class="text-xs text-text-muted" style="font-family:'JetBrains Mono',monospace;">Automation + Engineering</span>
-          </div>
-          <h3 class="text-white font-space font-semibold text-base mb-2">Document Processing Automation</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4 flex-1" style="font-family:'Inter',sans-serif;">70–90% touchless document processing</p>
-          <div class="flex items-center justify-between">
-            <span class="text-emerald font-semibold text-sm" style="font-family:'JetBrains Mono',monospace;">70–90% touchless</span>
-            <a href="#" class="text-text-muted text-sm" style="font-family:'Inter',sans-serif;">Coming soon</a>
-          </div>
-        </div>
-
-        <!-- Card 7: Sales Workflow -->
-        <!-- TODO: create page -->
-        <div x-show="activeFilter === 'all' || activeFilter === 'Sales & CRM'" class="use-case-card flex flex-col">
-          <div class="flex items-start justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(59,130,246,0.12);color:#3B82F6;border:1px solid rgba(59,130,246,0.25);font-family:'Inter',sans-serif;">Sales &amp; CRM</span>
-            <span class="text-xs text-text-muted" style="font-family:'JetBrains Mono',monospace;">AI Automation</span>
-          </div>
-          <h3 class="text-white font-space font-semibold text-base mb-2">Sales Workflow Automation</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4 flex-1" style="font-family:'Inter',sans-serif;">30–40% of sales admin time reclaimed</p>
-          <div class="flex items-center justify-between">
-            <span class="text-blue font-semibold text-sm" style="font-family:'JetBrains Mono',monospace;">30–40% time saved</span>
-            <a href="#" class="text-text-muted text-sm" style="font-family:'Inter',sans-serif;">Coming soon</a>
-          </div>
-        </div>
-
-        <!-- Card 8: Employee Onboarding -->
-        <div x-show="activeFilter === 'all' || activeFilter === 'Operations'" class="use-case-card flex flex-col">
-          <div class="flex items-start justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.25);font-family:'Inter',sans-serif;">Operations</span>
-            <span class="text-xs text-text-muted" style="font-family:'JetBrains Mono',monospace;">AI Automation</span>
-          </div>
-          <h3 class="text-white font-space font-semibold text-base mb-2">Employee Onboarding Automation</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4 flex-1" style="font-family:'Inter',sans-serif;">45 min/hire → near zero manual work</p>
-          <div class="flex items-center justify-between">
-            <span class="text-emerald font-semibold text-sm" style="font-family:'JetBrains Mono',monospace;">45 min → ~0</span>
-            <a href="employee-onboarding-automation.html" class="text-blue hover:text-blue-dark text-sm font-semibold transition-colors" style="font-family:'Inter',sans-serif;">See Use Case →</a>
-          </div>
-        </div>
-
-        <!-- Card 9: Invoice & Billing -->
-        <!-- TODO: create page -->
-        <div x-show="activeFilter === 'all' || activeFilter === 'Finance & Admin'" class="use-case-card flex flex-col">
-          <div class="flex items-start justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(245,158,11,0.12);color:#F59E0B;border:1px solid rgba(245,158,11,0.25);font-family:'Inter',sans-serif;">Finance &amp; Admin</span>
-            <span class="text-xs text-text-muted" style="font-family:'JetBrains Mono',monospace;">AI Automation</span>
-          </div>
-          <h3 class="text-white font-space font-semibold text-base mb-2">Invoice &amp; Billing Automation</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4 flex-1" style="font-family:'Inter',sans-serif;">70–85% touchless accounts payable/receivable</p>
-          <div class="flex items-center justify-between">
-            <span class="text-amber font-semibold text-sm" style="font-family:'JetBrains Mono',monospace;">70–85% touchless</span>
-            <a href="#" class="text-text-muted text-sm" style="font-family:'Inter',sans-serif;">Coming soon</a>
-          </div>
-        </div>
-
-        <!-- Card 10: Order Operations -->
-        <!-- TODO: create page -->
-        <div x-show="activeFilter === 'all' || activeFilter === 'Operations'" class="use-case-card flex flex-col">
-          <div class="flex items-start justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.25);font-family:'Inter',sans-serif;">Operations</span>
-            <span class="text-xs text-text-muted" style="font-family:'JetBrains Mono',monospace;">Agentic AI</span>
-          </div>
-          <h3 class="text-white font-space font-semibold text-base mb-2">Order Operations Agent</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4 flex-1" style="font-family:'Inter',sans-serif;">3–5× order capacity, same-hour processing</p>
-          <div class="flex items-center justify-between">
-            <span class="text-emerald font-semibold text-sm" style="font-family:'JetBrains Mono',monospace;">3–5× capacity</span>
-            <a href="#" class="text-text-muted text-sm" style="font-family:'Inter',sans-serif;">Coming soon</a>
-          </div>
-        </div>
-
-        <!-- Card 11: AI Feature to Production -->
-        <!-- TODO: create page -->
-        <div x-show="activeFilter === 'all' || activeFilter === 'Engineering & Product'" class="use-case-card flex flex-col">
-          <div class="flex items-start justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(245,158,11,0.12);color:#F59E0B;border:1px solid rgba(245,158,11,0.25);font-family:'Inter',sans-serif;">Engineering &amp; Product</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(59,130,246,0.12);color:#3B82F6;border:1px solid rgba(59,130,246,0.25);font-family:'Inter',sans-serif;">Voice AI</span>
             <span class="text-xs text-text-muted" style="font-family:'JetBrains Mono',monospace;">AI Engineering</span>
           </div>
-          <h3 class="text-white font-space font-semibold text-base mb-2">AI Feature to Production</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4 flex-1" style="font-family:'Inter',sans-serif;">Stalled prototype → live in 4–8 weeks</p>
+          <h3 class="text-white font-space font-semibold text-base mb-2">Airport Assistance AI Voice Chatbot</h3>
+          <p class="text-text-body text-sm leading-relaxed mb-4 flex-1" style="font-family:'Inter',sans-serif;">Real-time flight, gate, and transport info via a full ASR → LLM → TTS speech pipeline</p>
           <div class="flex items-center justify-between">
-            <span class="text-amber font-semibold text-sm" style="font-family:'JetBrains Mono',monospace;">POC → production</span>
-            <a href="#" class="text-text-muted text-sm" style="font-family:'Inter',sans-serif;">Coming soon</a>
+            <span class="text-blue font-semibold text-sm" style="font-family:'JetBrains Mono',monospace;">Voice + Text</span>
+            <a href="airport-voice-chatbot.html" class="text-blue hover:text-blue-dark text-sm font-semibold transition-colors" style="font-family:'Inter',sans-serif;">See Use Case →</a>
           </div>
         </div>
 
-        <!-- Card 12: RAG Product Intelligence -->
-        <!-- TODO: create page -->
-        <div x-show="activeFilter === 'all' || activeFilter === 'Engineering & Product'" class="use-case-card flex flex-col">
+        <!-- Card 3: AI Profile Recommendation -->
+        <div class="use-case-card flex flex-col">
           <div class="flex items-start justify-between mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(245,158,11,0.12);color:#F59E0B;border:1px solid rgba(245,158,11,0.25);font-family:'Inter',sans-serif;">Engineering &amp; Product</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(245,158,11,0.12);color:#F59E0B;border:1px solid rgba(245,158,11,0.25);font-family:'Inter',sans-serif;">AI Recommendations</span>
             <span class="text-xs text-text-muted" style="font-family:'JetBrains Mono',monospace;">AI Engineering</span>
           </div>
-          <h3 class="text-white font-space font-semibold text-base mb-2">RAG Product Intelligence</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-4 flex-1" style="font-family:'Inter',sans-serif;">Accurate answers from your own data, not generic AI</p>
+          <h3 class="text-white font-space font-semibold text-base mb-2">AI Profile Recommendation Service</h3>
+          <p class="text-text-body text-sm leading-relaxed mb-4 flex-1" style="font-family:'Inter',sans-serif;">Candidate generation, feature engineering, and AI matching algorithm returning ranked profile results automatically</p>
           <div class="flex items-center justify-between">
-            <span class="text-amber font-semibold text-sm" style="font-family:'JetBrains Mono',monospace;">Source-grounded answers</span>
-            <a href="#" class="text-text-muted text-sm" style="font-family:'Inter',sans-serif;">Coming soon</a>
+            <span class="text-amber font-semibold text-sm" style="font-family:'JetBrains Mono',monospace;">Ranked output</span>
+            <a href="ai-profile-recommendation.html" class="text-blue hover:text-blue-dark text-sm font-semibold transition-colors" style="font-family:'Inter',sans-serif;">See Use Case →</a>
+          </div>
+        </div>
+
+        <!-- Card 4: E-commerce Hybrid Product Recommendation -->
+        <div class="use-case-card flex flex-col">
+          <div class="flex items-start justify-between mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(59,130,246,0.12);color:#3B82F6;border:1px solid rgba(59,130,246,0.25);font-family:'Inter',sans-serif;">E-commerce</span>
+            <span class="text-xs text-text-muted" style="font-family:'JetBrains Mono',monospace;">AI Engineering</span>
+          </div>
+          <h3 class="text-white font-space font-semibold text-base mb-2">E-commerce Hybrid Product Recommendation</h3>
+          <p class="text-text-body text-sm leading-relaxed mb-4 flex-1" style="font-family:'Inter',sans-serif;">Collaborative filtering, content signals, and ensemble learning — with feedback loop and real-time A/B testing</p>
+          <div class="flex items-center justify-between">
+            <span class="text-blue font-semibold text-sm" style="font-family:'JetBrains Mono',monospace;">Self-improving</span>
+            <a href="ecommerce-product-recommendation.html" class="text-blue hover:text-blue-dark text-sm font-semibold transition-colors" style="font-family:'Inter',sans-serif;">See Use Case →</a>
+          </div>
+        </div>
+
+        <!-- Card 5: Automated Support-to-Task Workflow -->
+        <div class="use-case-card flex flex-col">
+          <div class="flex items-start justify-between mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(59,130,246,0.12);color:#3B82F6;border:1px solid rgba(59,130,246,0.25);font-family:'Inter',sans-serif;">Workflow Automation</span>
+            <span class="text-xs text-text-muted" style="font-family:'JetBrains Mono',monospace;">AI Automation</span>
+          </div>
+          <h3 class="text-white font-space font-semibold text-base mb-2">Automated Support-to-Task Workflow</h3>
+          <p class="text-text-body text-sm leading-relaxed mb-4 flex-1" style="font-family:'Inter',sans-serif;">Ticket API → GPT-4o mini generates Todo List → Infinity record created via N8N webhook — one click</p>
+          <div class="flex items-center justify-between">
+            <span class="text-blue font-semibold text-sm" style="font-family:'JetBrains Mono',monospace;">1 click</span>
+            <a href="support-to-task-workflow.html" class="text-blue hover:text-blue-dark text-sm font-semibold transition-colors" style="font-family:'Inter',sans-serif;">See Use Case →</a>
           </div>
         </div>
 
@@ -340,7 +222,7 @@
       <div class="grid md:grid-cols-4 gap-10 mb-12">
         <div class="md:col-span-2">
           <a href="../index.html" class="font-space font-bold text-white text-xl tracking-tight flex items-center gap-2 mb-3">
-            <span class="text-blue">Open</span>Techiz <span class="text-text-muted font-mono text-sm ml-1">AI</span>
+            <span style="color: var(--brand);">OpenTechiz</span><span class="text-text-muted font-mono text-sm ml-1">AI</span>
           </a>
           <p class="text-text-muted text-sm italic mb-6" style="font-family:'Inter',sans-serif;">"AI That Works. Not Just Promises."</p>
           <a href="mailto:hoanv@opentechiz.com" class="text-text-body hover:text-blue text-sm transition-colors" style="font-family:'Inter',sans-serif;">hoanv@opentechiz.com</a>
