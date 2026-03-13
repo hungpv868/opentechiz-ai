@@ -61,6 +61,376 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/main.css">
 
+  <style>
+    /* ── Homepage-specific enhancements ── */
+
+    /* Ghost text behind hero */
+    .hero-ghost-text {
+      position: absolute;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 900;
+      font-size: clamp(160px, 28vw, 380px);
+      color: rgba(150, 199, 60, 0.028);
+      line-height: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+      z-index: 0;
+      letter-spacing: -0.05em;
+    }
+
+    /* Hero horizontal rule lines */
+    .hero-h-line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(150, 199, 60, 0.07) 30%, rgba(150, 199, 60, 0.07) 70%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Dashboard horizontal metrics grid */
+    .dashboard-h-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 640px) {
+      .dashboard-h-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .dashboard-h-metric {
+      padding: 20px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .dashboard-h-metric:last-child {
+      border-right: none;
+    }
+
+    @media (max-width: 640px) {
+      .dashboard-h-metric:nth-child(2) {
+        border-right: none;
+      }
+
+      .dashboard-h-metric:nth-child(3),
+      .dashboard-h-metric:nth-child(4) {
+        border-top: 1px solid var(--border);
+      }
+    }
+
+    /* Stats strip glow bar */
+    .stat-glow-bar {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--brand), transparent);
+      border-radius: 2px;
+      margin-top: 8px;
+      opacity: 0.5;
+    }
+
+    /* Service bento: top full-width card */
+    .service-bento-main {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 40px;
+      transition: border-color var(--transition-std), box-shadow var(--transition-std);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-bento-main::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--brand);
+      border-radius: 2px 0 0 2px;
+    }
+
+    .service-bento-main:hover {
+      border-color: rgba(150, 199, 60, 0.45);
+      box-shadow: 0 0 40px rgba(150, 199, 60, 0.1);
+    }
+
+    /* Why Choose: editorial split */
+    .why-item {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+      transition: padding-left var(--transition-std);
+    }
+
+    .why-item:last-child {
+      border-bottom: none;
+    }
+
+    .why-item:hover {
+      padding-left: 8px;
+    }
+
+    .why-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--brand);
+      background: rgba(150, 199, 60, 0.08);
+      border: 1px solid rgba(150, 199, 60, 0.2);
+      border-radius: 8px;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Integration scroll ticker */
+    .integration-ticker-wrap {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .integration-ticker-wrap::before,
+    .integration-ticker-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 80px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .integration-ticker-wrap::before {
+      left: 0;
+      background: linear-gradient(90deg, var(--bg-base), transparent);
+    }
+
+    .integration-ticker-wrap::after {
+      right: 0;
+      background: linear-gradient(-90deg, var(--bg-base), transparent);
+    }
+
+    .integration-ticker {
+      display: flex;
+      gap: 12px;
+      animation: ticker-scroll 28s linear infinite;
+      width: max-content;
+    }
+
+    .integration-ticker:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes ticker-scroll {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .integration-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-body);
+      white-space: nowrap;
+      transition: border-color 200ms, color 200ms;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .integration-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--text-muted);
+      flex-shrink: 0;
+      opacity: 0.5;
+    }
+
+    /* Industry grid with visual hierarchy */
+    .industry-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .industry-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 18px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-body);
+      background: var(--surface-1);
+      transition: border-color 200ms, color 200ms, background 200ms;
+      cursor: default;
+    }
+
+    .industry-pill:hover {
+      border-color: rgba(150, 199, 60, 0.5);
+      color: var(--brand);
+      background: rgba(150, 199, 60, 0.05);
+    }
+
+    /* CTA terminal block */
+    .cta-terminal {
+      background: var(--surface-1);
+      border: 1px solid rgba(150, 199, 60, 0.2);
+      border-radius: 12px;
+      overflow: hidden;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .cta-terminal-header {
+      background: var(--surface-2);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .cta-terminal-body {
+      padding: 20px 24px;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .term-comment {
+      color: var(--text-muted);
+    }
+
+    .term-key {
+      color: var(--brand);
+    }
+
+    .term-val {
+      color: #C5D0E8;
+    }
+
+    .term-string {
+      color: #7dd3fc;
+    }
+
+    .term-cursor {
+      display: inline-block;
+      width: 8px;
+      height: 14px;
+      background: var(--brand);
+      vertical-align: middle;
+      animation: blink 1.1s step-end infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      animation: bounce-gentle 2.5s ease-in-out infinite;
+      z-index: 10;
+    }
+
+    @keyframes bounce-gentle {
+
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 0.4;
+      }
+
+      50% {
+        transform: translateX(-50%) translateY(6px);
+        opacity: 0.8;
+      }
+    }
+
+    /* Section divider line */
+    .section-h-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 0;
+    }
+
+    /* Stats new treatment */
+    .stat-item-new {
+      text-align: center;
+      padding: 32px 20px;
+      position: relative;
+    }
+
+    .stat-item-new::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 20%;
+      bottom: 20%;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .stat-item-new:last-child::after {
+      display: none;
+    }
+
+    @media (max-width: 1024px) {
+      .stat-item-new:nth-child(2)::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .stat-item-new::after {
+        display: none;
+      }
+    }
+  </style>
+
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
   {
@@ -109,7 +479,6 @@
               <path d="M6 9l6 6 6-6" />
             </svg>
           </button>
-          <!-- Dropdown: padding-top bridges the gap so mouseleave doesn't fire prematurely -->
           <div x-show="servicesOpen" x-transition:enter="transition ease-out duration-150"
             x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0"
             x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100"
@@ -196,212 +565,222 @@
     </div>
   </nav>
 
-  <!-- ── Hero Section ─────────────────────────────────────── -->
-  <section class="hero-glow min-h-screen flex items-center" style="padding-top: 72px;">
-    <div class="orb-float orb-float-brand" style="width:600px;height:600px;top:-120px;right:-180px;z-index:0;"></div>
-    <div class="orb-float orb-float-brand-2" style="width:320px;height:320px;bottom:40px;left:-120px;z-index:0;"></div>
-    <div class="max-w-7xl mx-auto px-6 py-24 md:py-32 w-full">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
+  <!-- ── Hero Section — Centered Cinematic ────────────────── -->
+  <section class="hero-glow relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+    style="padding-top: 72px;">
 
-        <!-- Left: Copy -->
-        <div>
-          <div class="hero-label-pill">
-            <span class="pill-dot"></span>
-            AI Implementation for Operations-Driven Businesses
+    <!-- Background orbs -->
+    <div class="orb-float orb-float-brand"
+      style="width:700px;height:700px;top:-180px;right:-250px;z-index:0;"></div>
+    <div class="orb-float orb-float-brand-2"
+      style="width:400px;height:400px;bottom:-80px;left:-180px;z-index:0;"></div>
+
+    <!-- Ghost background text -->
+    <div class="hero-ghost-text">AI</div>
+
+    <!-- Horizontal structural lines -->
+    <div class="hero-h-line" style="top: 38%;"></div>
+    <div class="hero-h-line" style="bottom: 28%;"></div>
+
+    <div class="relative z-10 w-full max-w-5xl mx-auto px-6 py-20 md:py-28 text-center">
+
+      <!-- Pill label -->
+      <div class="hero-label-pill inline-flex mb-8">
+        <span class="pill-dot"></span>
+        AI Implementation for Operations-Driven Businesses
+      </div>
+
+      <!-- Main headline -->
+      <h1 class="hero-h1 mb-8" style="font-size: clamp(52px, 9vw, 100px); line-height: 1.04;">
+        Cut Operational Cost.<br>Deploy AI That<br>Actually Runs.
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-text-body leading-relaxed mb-10 max-w-2xl mx-auto"
+        style="font-family: 'Inter', sans-serif; font-size: 19px; line-height: 1.75;">
+        We design and deploy AI automation, agentic AI systems, and production-grade AI engineering — integrated
+        directly into your CRM, ERP, and internal tools.
+      </p>
+
+      <!-- CTA -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-3">
+        <a href="contact.html" class="btn-primary"
+          style="height: 56px; padding: 16px 40px; font-size: 18px; box-shadow: 0 0 32px rgba(150,199,60,0.3);">Get
+          in Touch</a>
+      </div>
+      <p class="microcopy mb-12">Email us directly. No forms, no funnels. Reply within 24 hours.</p>
+
+      <!-- Dashboard: horizontal 4-metric centered panel -->
+      <div class="hero-dashboard max-w-2xl mx-auto mb-10">
+        <div class="hero-dashboard-header">
+          <span class="dashboard-dot bg-red-400 opacity-70"></span>
+          <span class="dashboard-dot bg-yellow-400 opacity-70"></span>
+          <span class="dashboard-dot" style="background: var(--brand); opacity: 0.9;"></span>
+          <span class="text-text-muted text-xs font-mono ml-2">ai-agent · active</span>
+          <span class="ml-auto flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background: var(--brand);"></span>
+            <span class="text-xs font-mono" style="color: var(--brand);">live</span>
+          </span>
+        </div>
+        <div class="dashboard-h-grid">
+          <div class="dashboard-h-metric">
+            <p class="text-text-muted text-xs font-mono mb-1">tickets · today</p>
+            <p class="font-mono text-2xl font-bold" style="color: var(--brand);">142</p>
+            <p class="text-xs text-text-muted mt-0.5">processed</p>
           </div>
-
-          <h1 class="hero-h1 mb-7">
-            Cut Operational Cost.<br>Deploy AI That<br>Actually Runs.
-          </h1>
-
-          <p class="text-text-body leading-relaxed mb-10 max-w-xl"
-            style="font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.7;">
-            We design and deploy AI automation, agentic AI systems, and production-grade AI engineering — integrated
-            directly into your CRM, ERP, and internal tools.
-          </p>
-
-          <div class="flex flex-col sm:flex-row gap-4 mb-5">
-            <a href="contact.html" class="btn-primary"
-              style="height: 56px; padding: 16px 32px; font-size: 17px; box-shadow: 0 0 24px rgba(150,199,60,0.3);">Get
-              in Touch</a>
+          <div class="dashboard-h-metric">
+            <p class="text-text-muted text-xs font-mono mb-1">resolved autonomously</p>
+            <p class="font-mono text-2xl font-bold" style="color: var(--brand);">80%</p>
+            <p class="text-xs mt-0.5" style="color: var(--emerald);">AI handled</p>
           </div>
-
-          <p class="microcopy mb-10">Email us directly. No forms, no funnels. Reply within 24 hours.</p>
-
-          <!-- Trust Badges -->
-          <div class="flex flex-wrap gap-x-6 gap-y-3">
-            <div class="flex items-center gap-2 text-sm" style="color: var(--text-body);">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
-              Production-grade delivery
-            </div>
-            <div class="flex items-center gap-2 text-sm" style="color: var(--text-body);">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg>
-              4–8 week deployment
-            </div>
-            <div class="flex items-center gap-2 text-sm" style="color: var(--text-body);">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
-                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M23 21v-2a4 4 0 00-3-3.87" />
-                <path d="M16 3.13a4 4 0 010 7.75" />
-              </svg>
-              You own everything
-            </div>
+          <div class="dashboard-h-metric">
+            <p class="text-text-muted text-xs font-mono mb-1">avg response time</p>
+            <p class="font-mono text-2xl font-bold text-white">&lt;45s</p>
+            <p class="text-xs text-text-muted mt-0.5">vs 4h before</p>
+          </div>
+          <div class="dashboard-h-metric">
+            <p class="text-text-muted text-xs font-mono mb-1">human hours saved</p>
+            <p class="font-mono text-2xl font-bold" style="color: var(--brand);">38h</p>
+            <p class="text-xs mt-0.5" style="color: var(--emerald);">↑ 62% this week</p>
           </div>
         </div>
-
-        <!-- Right: AI Dashboard Visual -->
-        <div class="hidden lg:block">
-          <div class="hero-dashboard max-w-sm ml-auto">
-            <!-- Header -->
-            <div class="hero-dashboard-header">
-              <span class="dashboard-dot bg-red-400 opacity-70"></span>
-              <span class="dashboard-dot bg-yellow-400 opacity-70"></span>
-              <span class="dashboard-dot" style="background: var(--brand); opacity: 0.9;"></span>
-              <span class="text-text-muted text-xs font-mono ml-2">ai-agent · active</span>
-              <span class="ml-auto flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background: var(--brand);"></span>
-                <span class="text-xs font-mono" style="color: var(--brand);">live</span>
-              </span>
-            </div>
-            <!-- Metrics -->
-            <div class="p-2">
-              <div class="dashboard-metric">
-                <div>
-                  <p class="text-text-muted text-xs font-mono mb-0.5">tickets · today</p>
-                  <p class="text-white font-semibold text-sm font-space">Support Inbox</p>
-                </div>
-                <div class="text-right">
-                  <p class="font-mono text-lg font-bold" style="color: var(--brand);">142</p>
-                  <p class="text-xs text-text-muted">processed</p>
-                </div>
-              </div>
-              <div class="dashboard-metric">
-                <div>
-                  <p class="text-text-muted text-xs font-mono mb-0.5">resolved autonomously</p>
-                  <p class="text-white font-semibold text-sm font-space">AI Handled</p>
-                </div>
-                <div class="text-right">
-                  <p class="font-mono text-lg font-bold" style="color: var(--brand);">114</p>
-                  <p class="text-xs" style="color: var(--emerald);">80%</p>
-                </div>
-              </div>
-              <div class="dashboard-metric">
-                <div>
-                  <p class="text-text-muted text-xs font-mono mb-0.5">avg response time</p>
-                  <p class="text-white font-semibold text-sm font-space">Response Speed</p>
-                </div>
-                <div class="text-right">
-                  <p class="font-mono text-lg font-bold text-white">&lt;45s</p>
-                  <p class="text-xs text-text-muted">vs 4h before</p>
-                </div>
-              </div>
-              <div class="dashboard-metric">
-                <div>
-                  <p class="text-text-muted text-xs font-mono mb-0.5">human hours saved</p>
-                  <p class="text-white font-semibold text-sm font-space">This Week</p>
-                </div>
-                <div class="text-right">
-                  <p class="font-mono text-lg font-bold" style="color: var(--brand);">38h</p>
-                  <p class="text-xs" style="color: var(--emerald);">↑ 62%</p>
-                </div>
-              </div>
-            </div>
-            <!-- Footer -->
-            <div class="px-4 py-3 border-t border-border-color flex items-center justify-between">
-              <span class="text-text-muted text-xs font-mono">powered by OpenTechiz</span>
-              <span class="text-xs font-mono" style="color: var(--brand);">24/7 active</span>
-            </div>
-          </div>
-
-          <!-- Small floating stat below card -->
-          <div class="mt-4 flex justify-center gap-4 max-w-sm ml-auto">
-            <div
-              class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-1 border border-border-color text-xs text-text-muted">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
+        <div class="px-4 py-3 border-t border-border-color flex items-center justify-between">
+          <span class="text-text-muted text-xs font-mono">powered by OpenTechiz</span>
+          <div class="flex items-center gap-4">
+            <span
+              class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-2 border border-border-color text-xs text-text-muted font-mono">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
                 <polyline points="20 6 9 17 4 12" />
               </svg>
               Zero manual work
-            </div>
-            <div
-              class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-1 border border-border-color text-xs text-text-muted">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg>
-              Runs 24/7
-            </div>
+            </span>
+            <span class="text-xs font-mono" style="color: var(--brand);">24/7 active</span>
           </div>
         </div>
-
       </div>
+
+      <!-- Trust Badges -->
+      <div class="flex flex-wrap justify-center gap-x-8 gap-y-3">
+        <div class="flex items-center gap-2 text-sm" style="color: var(--text-body);">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+          Production-grade delivery
+        </div>
+        <div class="flex items-center gap-2 text-sm" style="color: var(--text-body);">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+          4–8 week deployment
+        </div>
+        <div class="flex items-center gap-2 text-sm" style="color: var(--text-body);">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 00-3-3.87" />
+            <path d="M16 3.13a4 4 0 010 7.75" />
+          </svg>
+          You own everything
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <span class="text-text-muted text-xs font-mono tracking-widest">SCROLL</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7" />
+      </svg>
     </div>
   </section>
 
-  <!-- ── Stats Strip ────────────────────────────────────────── -->
-  <section class="border-t border-border-color" style="background: var(--surface-1);">
-    <div class="max-w-7xl mx-auto px-6 py-12">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="stat-border-left pl-5">
+  <!-- ── Stats Strip — Bold centered treatment ──────────────── -->
+  <section style="background: var(--surface-1); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-2 lg:grid-cols-4">
+
+        <div class="stat-item-new">
           <p class="stat-number">40–70%</p>
-          <p class="stat-label">Reduction in manual operational tasks</p>
+          <div class="stat-glow-bar"></div>
+          <p class="stat-label mt-3">Reduction in manual operational tasks</p>
         </div>
-        <div class="stat-border-left pl-5">
+
+        <div class="stat-item-new">
           <p class="stat-number">&lt;60s</p>
-          <p class="stat-label">Response time for AI-handled inquiries</p>
+          <div class="stat-glow-bar"></div>
+          <p class="stat-label mt-3">Response time for AI-handled inquiries</p>
         </div>
-        <div class="stat-border-left pl-5">
+
+        <div class="stat-item-new" style="border-top: 1px solid var(--border);">
           <p class="stat-number">4–8 wks</p>
-          <p class="stat-label">Discovery to live production system</p>
+          <div class="stat-glow-bar"></div>
+          <p class="stat-label mt-3">Discovery to live production system</p>
         </div>
-        <div class="stat-border-left pl-5">
+
+        <div class="stat-item-new" style="border-top: 1px solid var(--border);">
           <p class="stat-number">24/7</p>
-          <p class="stat-label">Coverage on all automated workflows</p>
+          <div class="stat-glow-bar"></div>
+          <p class="stat-label mt-3">Coverage on all automated workflows</p>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ── Services Overview ─────────────────────────────────── -->
+  <!-- ── Services — Asymmetric Bento Grid ──────────────────── -->
   <section class="section bg-grid">
     <div class="max-w-7xl mx-auto px-6">
 
-      <div class="max-w-2xl mb-14">
+      <div class="max-w-2xl mb-16">
         <span class="section-accent-line"></span>
         <h2 class="section-h2 mb-4">Three Ways We Put AI to Work in Your Business</h2>
         <p class="text-text-body text-lg" style="font-family: 'Inter', sans-serif;">Each service targets a specific
           operational problem. Most clients combine two or more.</p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
+      <!-- Service 01: Full-width horizontal card -->
+      <div class="service-bento-main mb-6">
+        <div class="flex flex-col md:flex-row md:items-start gap-8">
 
-        <!-- Card 1 -->
-        <div class="service-card flex flex-col">
-          <div class="service-icon-wrap"
-            style="background: rgba(150,199,60,0.1); border: 1px solid rgba(150,199,60,0.2);">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-            </svg>
+          <!-- Left: icon + label -->
+          <div class="flex-shrink-0">
+            <div class="service-icon-wrap mb-3"
+              style="background: rgba(150,199,60,0.1); border: 1px solid rgba(150,199,60,0.2);">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+            </div>
+            <p class="service-number-tag">Service 01</p>
+            <p class="service-number-tag" style="color: var(--brand); margin-top: 2px;">AI Automation Workflow</p>
           </div>
-          <p class="service-number-tag mb-2">Service 01 · AI Automation Workflow</p>
-          <h3 class="sub-h3 mb-4">Replace Manual Processes With Reliable Pipelines.</h3>
-          <p class="text-text-body text-sm leading-relaxed mb-6 flex-1">Map your highest-volume tasks and build
-            automation pipelines that connect your existing systems — running every process the same way, every time,
-            without human involvement.</p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="outcome-tag">40–70% task time reduction</span>
-            <span class="outcome-tag">Near-zero errors</span>
-            <span class="outcome-tag">24/7 execution</span>
+
+          <!-- Middle: headline + description -->
+          <div class="flex-1">
+            <h3 class="sub-h3 mb-4">Replace Manual Processes With Reliable Pipelines.</h3>
+            <p class="text-text-body text-sm leading-relaxed" style="max-width: 540px;">
+              Map your highest-volume tasks and build automation pipelines that connect your existing systems —
+              running every process the same way, every time, without human involvement.
+            </p>
           </div>
-          <a href="services/ai-automation-workflow.html"
-            class="text-brand hover:text-brand-dark text-sm font-semibold transition-colors flex items-center gap-1"
-            style="color: var(--brand);">Explore this service <span>→</span></a>
+
+          <!-- Right: outcome tags + CTA -->
+          <div class="flex-shrink-0 flex flex-col gap-3 items-start md:items-end">
+            <div class="flex flex-col gap-2">
+              <span class="outcome-tag">40–70% task time reduction</span>
+              <span class="outcome-tag">Near-zero errors</span>
+              <span class="outcome-tag">24/7 execution</span>
+            </div>
+            <a href="services/ai-automation-workflow.html"
+              class="text-sm font-semibold transition-colors flex items-center gap-1 mt-2"
+              style="color: var(--brand);">Explore this service <span>→</span></a>
+          </div>
+
         </div>
+      </div>
+
+      <!-- Services 02 + 03: equal two-column cards -->
+      <div class="grid md:grid-cols-2 gap-6">
 
         <!-- Card 2 -->
         <div class="service-card flex flex-col">
@@ -455,150 +834,210 @@
     </div>
   </section>
 
-  <!-- ── Why Choose OpenTechiz ─────────────────────────────── -->
+  <!-- ── Why Choose OpenTechiz — Editorial split layout ────── -->
   <section class="section border-t border-border-color" style="background: var(--surface-1);">
     <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-5 gap-12 lg:gap-20 items-start">
 
-      <div class="max-w-2xl mb-12">
-        <span class="section-accent-line"></span>
-        <h2 class="section-h2 mb-4">Why Businesses Choose OpenTechiz</h2>
-        <p class="text-text-body text-lg" style="font-family: 'Inter', sans-serif;">Over consultants, SaaS tools, and
-          generic agencies.</p>
-      </div>
+        <!-- Left: section heading (sticky on large screens) -->
+        <div class="lg:col-span-2 lg:sticky lg:top-24">
+          <span class="section-accent-line"></span>
+          <h2 class="section-h2 mb-4">Why Businesses Choose OpenTechiz</h2>
+          <p class="text-text-body text-lg mb-8" style="font-family: 'Inter', sans-serif;">Over consultants, SaaS
+            tools, and generic agencies.</p>
 
-      <div class="grid md:grid-cols-2 gap-5">
-
-        <div class="diff-item">
-          <div class="diff-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-            </svg>
-          </div>
-          <div>
-            <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">We
-              Build. We Don't Just Advise.</h3>
-            <p class="text-text-body text-sm leading-relaxed">Consulting firms give you a strategy deck. We give you a
-              running system connected to your real tools.</p>
+          <!-- Decorative element -->
+          <div class="hidden lg:block p-5 rounded-xl border border-border-color bg-bg-base">
+            <p class="text-text-muted text-xs font-mono mb-3 uppercase tracking-wider">Our commitment</p>
+            <div class="space-y-2.5">
+              <div class="flex items-center gap-2.5 text-sm text-text-body">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Real systems, not strategy decks
+              </div>
+              <div class="flex items-center gap-2.5 text-sm text-text-body">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Business outcomes, not vanity metrics
+              </div>
+              <div class="flex items-center gap-2.5 text-sm text-text-body">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Your stack stays, AI works inside it
+              </div>
+              <div class="flex items-center gap-2.5 text-sm text-text-body">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Full ownership, zero lock-in
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="diff-item">
-          <div class="diff-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2">
-              <path d="M12 20V10" />
-              <path d="M18 20V4" />
-              <path d="M6 20v-4" />
-            </svg>
-          </div>
-          <div>
-            <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">We
-              Measure in Business Outcomes.</h3>
-            <p class="text-text-body text-sm leading-relaxed">Hours saved. Error rate. Operational cost. Not model
-              accuracy or API response time.</p>
-          </div>
-        </div>
+        <!-- Right: numbered list -->
+        <div class="lg:col-span-3">
 
-        <div class="diff-item">
-          <div class="diff-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg>
+          <div class="why-item">
+            <div class="why-num">01</div>
+            <div>
+              <h3 class="text-white font-semibold text-lg mb-2"
+                style="font-family: 'Space Grotesk', sans-serif;">We Build. We Don't Just Advise.</h3>
+              <p class="text-text-body text-sm leading-relaxed">Consulting firms give you a strategy deck. We give you a
+                running system connected to your real tools.</p>
+            </div>
           </div>
-          <div>
-            <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">We
-              Work With What You Have.</h3>
-            <p class="text-text-body text-sm leading-relaxed">No rip-and-replace. AI built to operate inside your
-              existing CRM, ERP, and workflow stack.</p>
-          </div>
-        </div>
 
-        <div class="diff-item">
-          <div class="diff-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#96c73c" stroke-width="2">
-              <rect x="3" y="11" width="18" height="11" rx="2" />
-              <path d="M7 11V7a5 5 0 0110 0v4" />
-            </svg>
+          <div class="why-item">
+            <div class="why-num">02</div>
+            <div>
+              <h3 class="text-white font-semibold text-lg mb-2"
+                style="font-family: 'Space Grotesk', sans-serif;">We Measure in Business Outcomes.</h3>
+              <p class="text-text-body text-sm leading-relaxed">Hours saved. Error rate. Operational cost. Not model
+                accuracy or API response time.</p>
+            </div>
           </div>
-          <div>
-            <h3 class="text-white font-semibold text-base mb-2" style="font-family: 'Space Grotesk', sans-serif;">You
-              Own Everything We Build.</h3>
-            <p class="text-text-body text-sm leading-relaxed">Code, architecture, documentation, runbook. All of it.
-              There is no lock-in.</p>
-          </div>
-        </div>
 
+          <div class="why-item">
+            <div class="why-num">03</div>
+            <div>
+              <h3 class="text-white font-semibold text-lg mb-2"
+                style="font-family: 'Space Grotesk', sans-serif;">We Work With What You Have.</h3>
+              <p class="text-text-body text-sm leading-relaxed">No rip-and-replace. AI built to operate inside your
+                existing CRM, ERP, and workflow stack.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="why-num">04</div>
+            <div>
+              <h3 class="text-white font-semibold text-lg mb-2"
+                style="font-family: 'Space Grotesk', sans-serif;">You Own Everything We Build.</h3>
+              <p class="text-text-body text-sm leading-relaxed">Code, architecture, documentation, runbook. All of it.
+                There is no lock-in.</p>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
-  <!-- ── Industries + Integrations ─────────────────────────── -->
+
+  <!-- ── Industries ─────────────────────────────────────────── -->
   <section class="section border-t border-border-color">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-16 items-start">
+      <div class="flex flex-col lg:flex-row lg:items-start gap-12 lg:gap-20">
 
-        <!-- Industries -->
-        <div>
+        <!-- Label column -->
+        <div class="flex-shrink-0 lg:w-64">
           <span class="section-accent-line"></span>
-          <h2 class="section-h2 mb-4">Industries We Work In</h2>
-          <p class="text-text-body text-base mb-8" style="font-family: 'Inter', sans-serif;">Operations-heavy businesses
+          <h2 class="section-h2 mb-3">Industries We Work In</h2>
+          <p class="text-text-body text-base" style="font-family: 'Inter', sans-serif;">Operations-heavy businesses
             where manual work creates the most cost.</p>
-          <div class="flex flex-wrap gap-2.5">
-            <span class="industry-tag">E-commerce</span>
-            <span class="industry-tag">Logistics</span>
-            <span class="industry-tag">Professional Services</span>
-            <span class="industry-tag">SaaS</span>
-            <span class="industry-tag">Healthcare Admin</span>
-            <span class="industry-tag">Recruitment</span>
-            <span class="industry-tag">Finance &amp; Accounting</span>
-            <span class="industry-tag">Manufacturing</span>
-          </div>
         </div>
 
-        <!-- Integrations -->
-        <div>
-          <span class="section-accent-line"></span>
-          <h2 class="section-h2 mb-4">Integrates With Your Stack</h2>
-          <p class="text-text-body text-base mb-8" style="font-family: 'Inter', sans-serif;">Your CRM stays. Your ERP
-            stays. We make AI work inside them.</p>
-          <div class="flex flex-wrap gap-2">
-            <span
-              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">Salesforce</span>
-            <span
-              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">HubSpot</span>
-            <span
-              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">SAP</span>
-            <span
-              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">Notion</span>
-            <span
-              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">Slack</span>
-            <span
-              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">WhatsApp</span>
-            <span
-              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">Google
-              Workspace</span>
-            <span
-              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">Airtable</span>
-            <span
-              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">PostgreSQL</span>
-            <span
-              class="px-3 py-1.5 rounded-lg text-sm text-text-body font-medium border border-border-color bg-surface-2">REST
-              APIs</span>
-          </div>
-          <p class="text-text-muted text-xs mt-4" style="font-family: 'Inter', sans-serif;">If it has an API, we can
-            build to it.</p>
+        <!-- Tags -->
+        <div class="flex-1 industry-grid">
+          <span class="industry-pill">E-commerce</span>
+          <span class="industry-pill">Logistics</span>
+          <span class="industry-pill">Professional Services</span>
+          <span class="industry-pill">SaaS</span>
+          <span class="industry-pill">Healthcare Admin</span>
+          <span class="industry-pill">Recruitment</span>
+          <span class="industry-pill">Finance &amp; Accounting</span>
+          <span class="industry-pill">Manufacturing</span>
         </div>
 
       </div>
     </div>
   </section>
-  <!-- ── Final CTA Block ───────────────────────────────────── -->
+
+  <!-- ── Integrations — Full-width scrolling ticker ─────────── -->
+  <section class="border-t border-border-color py-12" style="background: var(--surface-1);">
+    <div class="max-w-7xl mx-auto px-6 mb-8">
+      <div class="flex flex-col lg:flex-row lg:items-end gap-4 lg:gap-16">
+        <div class="flex-shrink-0">
+          <span class="section-accent-line"></span>
+          <h2 class="section-h2 mb-2">Integrates With Your Stack</h2>
+          <p class="text-text-body text-base" style="font-family: 'Inter', sans-serif;">Your CRM stays. Your ERP
+            stays. We make AI work inside them.</p>
+        </div>
+        <p class="text-text-muted text-sm lg:mb-2" style="font-family: 'Inter', sans-serif;">If it has an API, we can
+          build to it.</p>
+      </div>
+    </div>
+
+    <!-- Scrolling ticker -->
+    <div class="integration-ticker-wrap px-0">
+      <div class="integration-ticker px-6">
+        <!-- First set -->
+        <span class="integration-badge">Salesforce</span>
+        <span class="integration-badge">HubSpot</span>
+        <span class="integration-badge">SAP</span>
+        <span class="integration-badge">Notion</span>
+        <span class="integration-badge">Slack</span>
+        <span class="integration-badge">WhatsApp</span>
+        <span class="integration-badge">Google Workspace</span>
+        <span class="integration-badge">Airtable</span>
+        <span class="integration-badge">PostgreSQL</span>
+        <span class="integration-badge">REST APIs</span>
+        <!-- Duplicate for seamless loop -->
+        <span class="integration-badge">Salesforce</span>
+        <span class="integration-badge">HubSpot</span>
+        <span class="integration-badge">SAP</span>
+        <span class="integration-badge">Notion</span>
+        <span class="integration-badge">Slack</span>
+        <span class="integration-badge">WhatsApp</span>
+        <span class="integration-badge">Google Workspace</span>
+        <span class="integration-badge">Airtable</span>
+        <span class="integration-badge">PostgreSQL</span>
+        <span class="integration-badge">REST APIs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Final CTA Block — Terminal style ──────────────────── -->
   <section class="section border-t border-border-color cta-section">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="section-h2 mb-6">Ready to Stop Running Operations on Manual?</h2>
-      <p class="text-text-body text-base leading-relaxed mb-8 max-w-xl mx-auto"
-        style="font-family: 'Inter', sans-serif;">Send us an email. Tell us what you're trying to automate. We'll give
-        you a straight answer on what's buildable — no sales scripts, no commitment.</p>
-      <a href="mailto:hoanv@opentechiz.com" class="btn-primary inline-flex">Email Us Directly</a>
-      <p class="microcopy mt-4">hoanv@opentechiz.com · We respond within 24 business hours.</p>
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+        <!-- Left: copy -->
+        <div>
+          <h2 class="section-h2 mb-6">Ready to Stop Running Operations on Manual?</h2>
+          <p class="text-text-body text-base leading-relaxed mb-8"
+            style="font-family: 'Inter', sans-serif;">Send us an email. Tell us what you're trying to automate. We'll give
+            you a straight answer on what's buildable — no sales scripts, no commitment.</p>
+          <a href="mailto:hoanv@opentechiz.com" class="btn-primary inline-flex mb-4">Email Us Directly</a>
+          <p class="microcopy">hoanv@opentechiz.com · We respond within 24 business hours.</p>
+        </div>
+
+        <!-- Right: terminal visual -->
+        <div class="cta-terminal">
+          <div class="cta-terminal-header">
+            <span class="dashboard-dot" style="background:#ef4444;opacity:0.7;"></span>
+            <span class="dashboard-dot" style="background:#eab308;opacity:0.7;"></span>
+            <span class="dashboard-dot" style="background:var(--brand);opacity:0.9;"></span>
+            <span class="text-text-muted text-xs font-mono ml-2">new-message.txt</span>
+          </div>
+          <div class="cta-terminal-body">
+            <p class="term-comment"># Draft your message</p>
+            <br>
+            <p><span class="term-key">To:</span> <span class="term-string">hoanv@opentechiz.com</span></p>
+            <p><span class="term-key">Subject:</span> <span class="term-val">Let's talk AI automation</span></p>
+            <br>
+            <p class="term-comment"># Tell us what you want to automate:</p>
+            <p class="term-val">Hey, we're currently handling [process]</p>
+            <p class="term-val">manually and spending [X hours/week].</p>
+            <p class="term-val">Wondering if this is automatable...</p>
+            <br>
+            <p><span class="term-comment"># We reply within 24h</span> <span class="term-cursor"></span></p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
